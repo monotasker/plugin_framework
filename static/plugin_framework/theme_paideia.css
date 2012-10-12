@@ -24,14 +24,14 @@
 }
 @font-face {
   font-family: 'EstrangeloEdessaRegular';
-  src: url('../static/plugin_framework/fonts/estre-webfont.eot');
+  src: url('../plugin_framework/fonts/estre-webfont.eot');
   src: local('☺'), url('../static/plugin_framework/fonts/estre-webfont.woff') format('woff'), url('../static/plugin_framework/fonts/estre-webfont.ttf') format('truetype'), url('../static/plugin_framework/fonts/estre-webfont.svg#webfont7YE92Obt') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'SBLHebrewRegular';
-  src: url('../static/plugin_framework/fonts/sbl_hbrw-webfont.eot');
+  src: url('../plugin_framework/fonts/sbl_hbrw-webfont.eot');
   src: local('☺'), url('../static/plugin_framework/fonts/sbl_hbrw-webfont.woff') format('woff'), url('../static/plugin_framework/fonts/sbl_hbrw-webfont.ttf') format('truetype'), url('../static/plugin_framework/fonts/sbl_hbrw-webfont.svg#webfontUHtlyWNi') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -1747,15 +1747,15 @@ body footer #poweredby {
 }
 /* ================= iPad in portrait ================= */
 @media all and (orientation: portrait) {
-  
+
 }
 /* ================= iPad in landscape ================= */
 @media all and (orientation: landscape) {
-  
+
 }
 /* ================= iPhone4 (retina screen) ================= */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
-  
+
 }
 /* ================= Intermediate browser viewing area (480px+)================= */
 @media screen and (max-width: 480px) {
@@ -1771,13 +1771,13 @@ body footer #poweredby {
 }
 /* ================= Wide browser viewing area (768px +) ==================== */
 @media only screen and (max-width: 768px) {
-  
+
 }
 /* ================= Max browser viewing area (1140px +) ==================== */
 @media only screen and (min-width: 1140px) {
-  
+
 }
 /* ============================================================================= Print styles. Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ ========================================================================== */
 @media print {
-  
+
 }
