@@ -463,8 +463,21 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
         h4                 {color: @sol_yellow;
                             font-size: @typeheight2;}
+
+        /* common styles for reporting tables */
+        table              {text-align:left;
+                            border-collapse:separate;
+                            border-spacing:2px;
+            th             {font-weight:bold;
+                            background-color:@white;
+                            vertical-align:middle;
+                            text-align:center;}
+            td             {background-color: @sol_beige;
+                            padding: (@typeheight / 2) @typeheight;}
+            }   
         }
 
+    /* summary stats (badges) tab */
     p.overview             {
         li                 {color: @sol_yellow;
                             padding-left: @lineheight3;}
@@ -509,26 +522,17 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
     /* calendar for monthly user statistics */
     table.paideia_monthcal_table
-                           {border-collapse:separate;
-                            border-spacing:2px;
-
+                           {border-spacing:2px;
         thead td           {height: @lineheight;
                             font-size: @smalltype;
-                            background: transparent;
-                            text-align: center;}
-
+                            background: transparent;}
         td                 {width:@lineheight * 2;
                             height:@lineheight * 2;
-                            background-color:@sol_beige;
                             color:#aaa;
                             font-size:@typeheight;
                             position:relative;
-
             span.cal_num   {position:relative;
-                            padding:4px, 2px;
-                            top:0;
-                            left:0;}
-
+                            padding:4px, 2px;}
             span.cal_count {position:relative;
                             font-size:@typeheight2;
                             font-weight:bold;
@@ -539,24 +543,43 @@ body #page             {margin-top:-(@lineheight2 + 14);
             }
         }
 
+    /*** step logs on user profile ***/
+    .step_log_table        {max-width:100%;
+                            min-width:100%;
+        .step              {max-width: 7%;}    
+        .prompt            {max-width: 40%;
+                            min-width: 40%;}    
+        .count             {max-width: 7%;
+                            color: @sol_blue;}    
+        .right             {max-width: 7%;
+                            color: @moss;}    
+        .wrong             {max-width: 7%;
+                            color: @sol_red;}    
+        .last_wrong        {max-width: 14%;
+                            color: @sol_red;
+                            min-width: 14%;}    
+        .right_since       {max-width: 7%;
+                            color: @moss;}    
+        .tags              {width:auto;
+                            min-width: 20%;}    
+        }
+
+    /*** tag records on user profile ***/
+    #tag_records_table     {
+        td:first-child     {color: @sol_blue;}
+        td:nth-child(2)    {color: @sol_green;}
+        td:nth-child(3)    {color: @sol_red;}
+        }
+
+    /*** tag progress on user profile ***/
+    #tag_progress_table    {
+        td:first-child     {color: @sol_blue;}
+        }
+
     /*** bug reports on user profile ***/
-
-    #tab_bug_reports table {text-align:left;
-                            border-collapse:separate;
-                            border-spacing:3px;
-
-        th                 {font-weight:bold;
-                            background-color:#efefef;
-                            border:1px solid #eee;
-                            vertical-align:middle;
-                            text-align:center;}
-
-        tr td              {min-width:140px;
-                            background-color:#f5f5f5;
-
-            &:nth-child(3) {min-width:100px;
-                            background-color:#f5f5f5;
-                            border:1px solid #eee;}
+    #tab_bug_reports table {
+        td                 {min-width:140px;
+            &:nth-child(3) {min-width:100px;}
             }
         }
     }
