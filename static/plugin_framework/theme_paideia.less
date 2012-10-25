@@ -358,7 +358,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
                             height:680px;}
         }
     .prompt,
-    .responder                     {margin-top: @lineheight;
+    .responder                     {margin-top: @lineheight/2;
                                     margin-left:260px;
                                     max-width: 65%;
                                     font-size: @typeheight * 1.25;
@@ -373,11 +373,12 @@ body #page             {margin-top:-(@lineheight2 + 14);
             td.w2p_fl:first-child  {display: none;}
             }
         ul                         {padding-left: @lineheight;
-            li                     {font-size: @typeheight;
+            li                     {font-size: @typeheight * 1.25;
                                     color:@sol_yellow;}
             }
         .button            {display:inline-block;}
-        .quiz_type         {}
+        .prompt_image      {height: 200px;
+                            float: right;}
         .guidelines        {z-index:10;
                             clear:both;}
         .q_counter         {color:#ccc;
@@ -387,8 +388,10 @@ body #page             {margin-top:-(@lineheight2 + 14);
         .readable_long     {color:@sol_green;}
         .prompt_badges_wrapper,
         .bug_reporter_wrapper
-                           {display:inline-block;
-                            float:right;}
+                           {display: block;
+                            position: absolute;
+                            bottom: -@typeheight;
+                            right: -@typeheight;}
         .prompt_badges,
         .bug_reporter      {font-size: @typeheight;
                             line-height: @lineheight;
@@ -403,15 +406,21 @@ body #page             {margin-top:-(@lineheight2 + 14);
             a              {font-size: @typeheight;}
             }
         }
-        .prompt_badges         {top:0;}
+        .prompt_badges         {}
+        .bug_reporter_icon,
         .prompt_badges_icon    {.sticker(@lineheight2, @typeheight2);
                                 background-color: @moss;
-                                color: @cream;
+                                color: @white;
                                 font-size: @lineheight / 2;
+                                line-height: @lineheight2;
+                                text-align: center;
                                 border:2px solid @white;}
     .prompt                {.speech-bubble-left(@lineheight, @typeheight);
-                            z-index:4;}
-    .responder             {.speech-bubble-down(@lineheight, @typeheight, @greyf5);
+                            min-height: @typeheight * 4;
+                            z-index:4;
+        div                {.group();} /* clearfix class */
+        }
+    .responder             {.speech-bubble-down(@lineheight, @typeheight, @sol_grey1);
                             z-index:3;}
     }
 

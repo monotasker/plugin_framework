@@ -376,7 +376,15 @@ div.error      {background-color: @red;
                 padding: 3px;}
 
 /* non-semantic utility classes */
-.clear         {clear:both; padding:0;}
+.clear         {clear: both; padding: 0;}
+/* clearfix class; see http://css-tricks.com/snippets/css/clear-fix/ */
+.group()       {zoom: 1; /* activate hasLayout in ie6-7 */
+    &:before   {content: " ";
+                display:block;}
+    &:after    {content: " ";
+                display: table;
+                clear: both;}
+    }
 
 .text-shadow(@x:0, @y:2px, @blur:3px, @color:rgba(0,0,0,0.5))
                {-moz-text-shadow:@arguments;
