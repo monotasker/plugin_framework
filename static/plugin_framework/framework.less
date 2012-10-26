@@ -604,11 +604,11 @@ a:active .tip,                     {display:block;
 .red-sticker   {background-color:@red; color:#fff; .sticker; }
 
 /* collapsible divs or panels using :target pseudo-element */
-ul li.collapsible_parent           {
-    ul.collapsible_child           {height:0;
+.collapsible_parent                {
+    .collapsible_child             {height:0;
                                     overflow: hidden;
                                     .transition();}
-    &:target ul.collapsible_child  {height:auto;
+    &:target .collapsible_child    {height:auto;
                                    .transition();}
     }
 
