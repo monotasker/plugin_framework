@@ -451,6 +451,14 @@ div.error      {background-color: @red;
                     -ms-transition:@target @time @easing;
                     transition:@target @time @easing;}
 
+/* css lines */
+
+.line(@thickness:2px, @length:100px, @color: @sol_grey3, @angle)    {
+                    height: @thickness;
+                    width: @length;
+                    background-color: @color;
+}
+
 /* css triangles */
 .arrow(@width:@typeheight) {width: 0;
                             height: 0;
