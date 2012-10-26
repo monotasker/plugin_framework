@@ -463,19 +463,19 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
         h4                 {color: @sol_yellow;
                             font-size: @typeheight2;}
-
-        /* common styles for reporting tables */
-        table              {text-align:left;
-                            border-collapse:separate;
-                            border-spacing:2px;
-            th             {font-weight:bold;
-                            background-color:@white;
-                            vertical-align:middle;
-                            text-align:center;}
-            td             {background-color: @sol_beige;
-                            padding: (@typeheight / 2) @typeheight;}
-            }   
         }
+
+    /* common styles for reporting tables */
+    table              {text-align:left;
+                        border-collapse:separate;
+                        border-spacing:2px;
+        th             {font-weight:bold;
+                        background-color:@white;
+                        vertical-align:middle;
+                        text-align:center;}
+        td             {background-color: @sol_beige;
+                        padding: (@typeheight / 2) @typeheight;}
+        }   
 
     /* summary stats (badges) tab */
     p.overview             {
@@ -526,11 +526,12 @@ body #page             {margin-top:-(@lineheight2 + 14);
         thead td           {height: @lineheight;
                             font-size: @smalltype;
                             background: transparent;}
-        td                 {width:@lineheight * 2;
-                            height:@lineheight * 2;
+        td                 {width:@lineheight * 2.5;
+                            height:@lineheight * 2.5;
                             color:#aaa;
                             font-size:@typeheight;
                             position:relative;
+                            padding:2px;
             span.cal_num   {position:relative;
                             padding:4px, 2px;}
             span.cal_count {position:relative;
