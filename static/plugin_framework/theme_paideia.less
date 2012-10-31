@@ -358,26 +358,33 @@ body #page             {margin-top:-(@lineheight2 + 14);
                             height:680px;}
         }
     .prompt,
-    .responder                     {margin-top: @lineheight;
+    .responder                     {margin-top: @lineheight/2;
                                     margin-left:260px;
                                     max-width: 65%;
                                     font-size: @typeheight * 1.25;
                                     line-height: @lineheight * 1.25;
         p                          {margin:0;}
-        #no_table_response__row    {
-            td.w2p_fl:first-child  {display: none;}
-            input                  {font-size: @lineheight2;
-                                    font-family: SBLGreekRegular}
+        #no_table_response__row        {
+            td                         {text-align: left;
+                label                  {margin-left: @typeheight;
+                                        text-transform: lowercase;
+                                        font-size: @lineheight2;
+                                        font-family: SBLGreekRegular}
+                &.w2p_fl:first-child   {display: none;}
+                }
+            input                      {font-size: @lineheight2;
+                                        font-family: SBLGreekRegular}
             }
         #submit_record__row        {
             td.w2p_fl:first-child  {display: none;}
             }
         ul                         {padding-left: @lineheight;
-            li                     {font-size: @typeheight;
+            li                     {font-size: @typeheight * 1.25;
                                     color:@sol_yellow;}
             }
         .button            {display:inline-block;}
-        .quiz_type         {}
+        .prompt_image      {height: 200px;
+                            float: right;}
         .guidelines        {z-index:10;
                             clear:both;}
         .q_counter         {color:#ccc;
@@ -387,11 +394,14 @@ body #page             {margin-top:-(@lineheight2 + 14);
         .readable_long     {color:@sol_green;}
         .prompt_badges_wrapper,
         .bug_reporter_wrapper
-                           {display:inline-block;
-                            float:right;}
+                           {display: block;
+                            position: absolute;
+                            bottom: -@typeheight;
+                            right: -@typeheight;}
         .prompt_badges,
         .bug_reporter      {font-size: @typeheight;
                             line-height: @lineheight;
+                            color: @grey6;
                             padding: @lineheight;
                             left:-320px;
                             top:-@lineheight * 3;
@@ -403,15 +413,22 @@ body #page             {margin-top:-(@lineheight2 + 14);
             a              {font-size: @typeheight;}
             }
         }
-        .prompt_badges         {top:0;}
+        .prompt_badges         {}
+        .bug_reporter_icon,
         .prompt_badges_icon    {.sticker(@lineheight2, @typeheight2);
                                 background-color: @moss;
-                                color: @cream;
+                                color: @white;
                                 font-size: @lineheight / 2;
+                                line-height: @lineheight2;
+                                text-align: center;
                                 border:2px solid @white;}
     .prompt                {.speech-bubble-left(@lineheight, @typeheight);
-                            z-index:4;}
-    .responder             {.speech-bubble-down(@lineheight, @typeheight, @greyf5);
+                            min-height: @typeheight * 4;
+                            z-index:4;
+        div                {.group();} /* clearfix class */
+        }
+    .responder             {.speech-bubble-down(@lineheight, @typeheight, @sol_grey1);
+                            color: @chalk;
                             z-index:3;}
     }
 
@@ -463,19 +480,19 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
         h4                 {color: @sol_yellow;
                             font-size: @typeheight2;}
-
-        /* common styles for reporting tables */
-        table              {text-align:left;
-                            border-collapse:separate;
-                            border-spacing:2px;
-            th             {font-weight:bold;
-                            background-color:@white;
-                            vertical-align:middle;
-                            text-align:center;}
-            td             {background-color: @sol_beige;
-                            padding: (@typeheight / 2) @typeheight;}
-            }
         }
+
+    /* common styles for reporting tables */
+    table              {text-align:left;
+                        border-collapse:separate;
+                        border-spacing:2px;
+        th             {font-weight:bold;
+                        background-color:@white;
+                        vertical-align:middle;
+                        text-align:center;}
+        td             {background-color: @sol_beige;
+                        padding: (@typeheight / 2) @typeheight;}
+        }   
 
     /* summary stats (badges) tab */
     p.overview             {
@@ -526,11 +543,12 @@ body #page             {margin-top:-(@lineheight2 + 14);
         thead td           {height: @lineheight;
                             font-size: @smalltype;
                             background: transparent;}
-        td                 {width:@lineheight * 2;
-                            height:@lineheight * 2;
+        td                 {width:@lineheight * 2.5;
+                            height:@lineheight * 2.5;
                             color:#aaa;
                             font-size:@typeheight;
                             position:relative;
+                            padding:2px;
             span.cal_num   {position:relative;
                             padding:4px, 2px;}
             span.cal_count {position:relative;
