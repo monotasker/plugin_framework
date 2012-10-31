@@ -364,10 +364,16 @@ body #page             {margin-top:-(@lineheight2 + 14);
                                     font-size: @typeheight * 1.25;
                                     line-height: @lineheight * 1.25;
         p                          {margin:0;}
-        #no_table_response__row    {
-            td.w2p_fl:first-child  {display: none;}
-            input                  {font-size: @lineheight2;
-                                    font-family: SBLGreekRegular}
+        #no_table_response__row        {
+            td                         {text-align: left;
+                label                  {margin-left: @typeheight;
+                                        text-transform: lowercase;
+                                        font-size: @lineheight2;
+                                        font-family: SBLGreekRegular}
+                &.w2p_fl:first-child   {display: none;}
+                }
+            input                      {font-size: @lineheight2;
+                                        font-family: SBLGreekRegular}
             }
         #submit_record__row        {
             td.w2p_fl:first-child  {display: none;}
@@ -395,6 +401,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
         .prompt_badges,
         .bug_reporter      {font-size: @typeheight;
                             line-height: @lineheight;
+                            color: @grey6;
                             padding: @lineheight;
                             left:-320px;
                             top:-@lineheight * 3;
@@ -421,6 +428,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
         div                {.group();} /* clearfix class */
         }
     .responder             {.speech-bubble-down(@lineheight, @typeheight, @sol_grey1);
+                            color: @chalk;
                             z-index:3;}
     }
 
