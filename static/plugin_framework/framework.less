@@ -1,3 +1,6 @@
+
+@import url(http://fonts.googleapis.com/css?family=Petrona);
+
 /* apply a natural box layout model to all elements */
 * { -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -72,7 +75,7 @@
                     line-height:@lineheight2;}
 .Syriac            {font-family:'EstrangeloEdessaRegular';
                     direction: ltr; }
-.Latin, .English   {font-family:Palatino, 'Palatino Linotype', serif; }
+.Latin, .English   {font-family:Petrona, Palatino, 'Palatino Linotype', serif; }
 
 /* layout dimensions */
 @pagewidth: @typeheight * 60;
@@ -213,8 +216,10 @@ body                   {.fixed-page;
                         font-family: @fonts1;
                         color:@grey6;}
 
-.blockletter()         {text-transform:uppercase;
-                        font-family:@fonts3;}
+.blockletter()         {font-size: @typeheight;
+                        text-transform:uppercase;
+                        font-family:@fonts3;
+                        letter-spacing: 2px;}
 .blockletter-small()   {.blockletter;
                         font-size:@smalltype;}
 
