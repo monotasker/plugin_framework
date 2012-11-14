@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Petrona);
 /* Paideia theme */
 /* a sub-theme for the "framework" layout plugin for web2py */
 /* copyright Ian W. Scott, 2011-2012 */
@@ -67,7 +68,7 @@
 }
 .Latin,
 .English {
-  font-family: Palatino, 'Palatino Linotype', serif;
+  font-family: Petrona, Palatino, 'Palatino Linotype', serif;
 }
 /* layout dimensions */
 /* text dimensions */
@@ -258,8 +259,10 @@ select {
 }
 form label {
   line-height: 36px;
+  font-size: 16px;
   text-transform: uppercase;
   font-family: ubuntu, calibri, arial, sans-serif;
+  letter-spacing: 2px;
   font-size: 12.8px;
 }
 input[type=submit] {
@@ -901,8 +904,10 @@ body header h1 a {
   overflow: hidden;
   padding: 0 16px;
   letter-spacing: 4px;
+  font-size: 16px;
   text-transform: uppercase;
   font-family: ubuntu, calibri, arial, sans-serif;
+  letter-spacing: 2px;
 }
 /* main navigation menu */
 nav {
@@ -910,8 +915,10 @@ nav {
   padding: 0;
   margin: 6px 64px 0 0;
   height: 32px;
+  font-size: 16px;
   text-transform: uppercase;
   font-family: ubuntu, calibri, arial, sans-serif;
+  letter-spacing: 2px;
   font-size: 12.8px;
   /* hoverfish menu */
 
@@ -1186,8 +1193,10 @@ body #page #updates .news_create_link {
   float: right;
   margin-right: 60px;
   color: #809240;
+  font-size: 16px;
   text-transform: uppercase;
   font-family: ubuntu, calibri, arial, sans-serif;
+  letter-spacing: 2px;
   font-size: 12.8px;
 }
 body #page #town_map {
@@ -1350,6 +1359,17 @@ body #page #right_sidebar div:hover {
 #page.exploring .responder p {
   margin: 0;
 }
+#page.exploring .prompt #no_table_response__row td,
+#page.exploring .responder #no_table_response__row td {
+  text-align: left;
+}
+#page.exploring .prompt #no_table_response__row td label,
+#page.exploring .responder #no_table_response__row td label {
+  margin-left: 16px;
+  text-transform: lowercase;
+  font-size: 36px;
+  font-family: SBLGreekRegular;
+}
 #page.exploring .prompt #no_table_response__row td.w2p_fl:first-child,
 #page.exploring .responder #no_table_response__row td.w2p_fl:first-child {
   display: none;
@@ -1413,6 +1433,7 @@ body #page #right_sidebar div:hover {
 #page.exploring .responder .bug_reporter {
   font-size: 16px;
   line-height: 24px;
+  color: #666666;
   padding: 24px;
   left: -320px;
   top: -72px;
@@ -1598,6 +1619,7 @@ body #page #right_sidebar div:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   background: #586e75;
   min-height: 36px;
+  color: #fcfbf7;
   z-index: 3;
 }
 #page.exploring .responder:after {
@@ -1673,8 +1695,10 @@ body #page #right_sidebar div:hover {
 #page.profile .ui-widget-header,
 #page.user .ui-widget-header {
   background: #eee8d5;
+  font-size: 16px;
   text-transform: uppercase;
   font-family: ubuntu, calibri, arial, sans-serif;
+  letter-spacing: 2px;
   font-size: 12.8px;
   border: 1px solid transparent;
 }
@@ -1789,18 +1813,96 @@ body #page #right_sidebar div:hover {
 #page.user table.summary_stats td.total_cat1 {
   background-color: #852625;
 }
-#page.profile table.paideia_monthcal_table,
-#page.user table.paideia_monthcal_table {
+#page.profile .paideia_monthcal,
+#page.user .paideia_monthcal {
+  position: relative;
+  width: 430px;
+}
+#page.profile .paideia_monthcal .monthcal_intro_line,
+#page.user .paideia_monthcal .monthcal_intro_line {
+  zoom: 1;
+  /* activate hasLayout in ie6-7 */
+
+  margin-bottom: 8px;
+}
+#page.profile .paideia_monthcal .monthcal_intro_line:before,
+#page.user .paideia_monthcal .monthcal_intro_line:before {
+  content: " ";
+  display: block;
+}
+#page.profile .paideia_monthcal .monthcal_intro_line:after,
+#page.user .paideia_monthcal .monthcal_intro_line:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+#page.profile .paideia_monthcal h4,
+#page.user .paideia_monthcal h4 {
+  display: block;
+  margin: 8px 120px;
+  text-align: center;
+}
+#page.profile .paideia_monthcal .monthcal_next_link,
+#page.user .paideia_monthcal .monthcal_next_link,
+#page.profile .paideia_monthcal .monthcal_prev_link,
+#page.user .paideia_monthcal .monthcal_prev_link {
+  display: inline-block;
+  /* Fix for webkit clickability issue */
+
+  color: #eee8d5;
+  font-size: 0;
+  margin-top: 8px;
+}
+#page.profile .paideia_monthcal .monthcal_next_link .accessible,
+#page.user .paideia_monthcal .monthcal_next_link .accessible,
+#page.profile .paideia_monthcal .monthcal_prev_link .accessible,
+#page.user .paideia_monthcal .monthcal_prev_link .accessible {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+#page.profile .paideia_monthcal .monthcal_next_link:after,
+#page.user .paideia_monthcal .monthcal_next_link:after,
+#page.profile .paideia_monthcal .monthcal_prev_link:after,
+#page.user .paideia_monthcal .monthcal_prev_link:after {
+  opacity: 0.7;
+}
+#page.profile .paideia_monthcal .monthcal_next_link,
+#page.user .paideia_monthcal .monthcal_next_link {
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-right: none;
+  border-left: 16px solid #808080;
+}
+#page.profile .paideia_monthcal .monthcal_prev_link,
+#page.user .paideia_monthcal .monthcal_prev_link {
+  float: left;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-left: none;
+  border-right: 16px solid #808080;
+}
+#page.profile .paideia_monthcal .paideia_monthcal_table,
+#page.user .paideia_monthcal .paideia_monthcal_table {
   border-spacing: 2px;
 }
-#page.profile table.paideia_monthcal_table thead td,
-#page.user table.paideia_monthcal_table thead td {
+#page.profile .paideia_monthcal .paideia_monthcal_table thead td,
+#page.user .paideia_monthcal .paideia_monthcal_table thead td {
   height: 24px;
   font-size: 12.8px;
   background: transparent;
 }
-#page.profile table.paideia_monthcal_table td,
-#page.user table.paideia_monthcal_table td {
+#page.profile .paideia_monthcal .paideia_monthcal_table td,
+#page.user .paideia_monthcal .paideia_monthcal_table td {
   width: 60px;
   height: 60px;
   color: #aaa;
@@ -1808,13 +1910,13 @@ body #page #right_sidebar div:hover {
   position: relative;
   padding: 2px;
 }
-#page.profile table.paideia_monthcal_table td span.cal_num,
-#page.user table.paideia_monthcal_table td span.cal_num {
+#page.profile .paideia_monthcal .paideia_monthcal_table td span.cal_num,
+#page.user .paideia_monthcal .paideia_monthcal_table td span.cal_num {
   position: relative;
   padding: 4px, 2px;
 }
-#page.profile table.paideia_monthcal_table td span.cal_count,
-#page.user table.paideia_monthcal_table td span.cal_count {
+#page.profile .paideia_monthcal .paideia_monthcal_table td span.cal_count,
+#page.user .paideia_monthcal .paideia_monthcal_table td span.cal_count {
   position: relative;
   font-size: 24px;
   font-weight: bold;
@@ -1891,65 +1993,6 @@ body #page #right_sidebar div:hover {
 #page.profile #tab_bug_reports table td:nth-child(3),
 #page.user #tab_bug_reports table td:nth-child(3) {
   min-width: 100px;
-}
-/* plugin_listandedit */
-#page .list_control {
-  padding: 0;
-  background: #aaaaaa;
-  border-right: 1px solid #888888;
-  border-left: 1px solid #888888;
-}
-#page .list_control h2 {
-  font-weight: normal;
-  color: #eeeeee;
-  margin-right: 24px;
-  margin-left: 24px;
-  margin-top: 0;
-  line-height: 60px;
-  display: inline-block;
-  height: 60px;
-  font-size: 24px;
-  -moz-text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  -webkit-text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  -o-text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  -ms-text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-}
-#page .list_control a {
-  float: right;
-  color: #e4edf7;
-  display: block;
-  line-height: 60px;
-  height: 60px;
-  margin-right: 24px;
-}
-#page .list_control a:hover {
-  color: #ffffff;
-  -moz-text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
-  -webkit-text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
-  -o-text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
-  -ms-text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
-}
-#viewpane:before {
-  content: ' ';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 14px;
-  top: 0px;
-  overflow: hidden;
-  background-image: -moz-radial-gradient(50% 53%, ellipse closest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 100%);
-  background-image: -webkit-radial-gradient(50% 53%, ellipse closest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 100%);
-  background-image: -o-radial-gradient(50% 53%, ellipse closest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 100%);
-  background-image: -ms-radial-gradient(50% 53%, ellipse closest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 100%);
-  background-image: radial-gradient(50% 53%, ellipse closest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 100%);
-  background-position: 0 -10px;
-  background-repeat: no-repeat;
-}
-#viewpane form {
-  padding: 0;
-  margin: 0;
 }
 /* main page footer */
 body footer {
