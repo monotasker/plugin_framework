@@ -538,26 +538,45 @@ body #page             {margin-top:-(@lineheight2 + 14);
         }
 
     /* calendar for monthly user statistics */
-    table.paideia_monthcal_table
-                           {border-spacing:2px;
-        thead td           {height: @lineheight;
-                            font-size: @smalltype;
-                            background: transparent;}
-        td                 {width:@lineheight * 2.5;
-                            height:@lineheight * 2.5;
-                            color:#aaa;
-                            font-size:@typeheight;
-                            position:relative;
-                            padding:2px;
-            span.cal_num   {position:relative;
-                            padding:4px, 2px;}
-            span.cal_count {position:relative;
-                            font-size:@typeheight2;
-                            font-weight:bold;
-                            top:@lineheight;
-                            float:right;
-                            padding-right:2px;
-                            color:@sol_blue;}
+    .paideia_monthcal          {position: relative;
+                                width: 430px;
+        .monthcal_intro_line   {.group;
+                                margin-bottom: @typeheight/2;}
+        h4                     {display: block;
+                                margin: (@typeheight/2) 120px;
+                                text-align: center;}
+        .monthcal_next_link,
+        .monthcal_prev_link    {.icon-only;
+                                color: @sol_beige;
+                                font-size: 0;
+                                margin-top: @typeheight/2;
+            &:after            {opacity: 0.7;}
+            }
+        .monthcal_next_link    {float: right;
+                                .arrow-right;}
+        .monthcal_prev_link    {float:left;
+                                .arrow-left;}
+        .paideia_monthcal_table
+                               {border-spacing:2px;
+            thead td           {height: @lineheight;
+                                font-size: @smalltype;
+                                background: transparent;}
+            td                 {width:@lineheight * 2.5;
+                                height:@lineheight * 2.5;
+                                color:#aaa;
+                                font-size:@typeheight;
+                                position:relative;
+                                padding:2px;
+                span.cal_num   {position:relative;
+                                padding:4px, 2px;}
+                span.cal_count {position:relative;
+                                font-size:@typeheight2;
+                                font-weight:bold;
+                                top:@lineheight;
+                                float:right;
+                                padding-right:2px;
+                                color:@sol_blue;}
+                }
             }
         }
 
