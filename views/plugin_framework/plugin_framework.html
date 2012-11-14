@@ -8,7 +8,7 @@
         <!--[if IE]><![endif]-->
         <!-- Always force latest IE rendering engine & Chrome Frame; Remove if you use .htaccess -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{=response.title or request.application}}</title>
+    <title>{{=response.title or request.application}} ~ {{=request.controller}} ~ {{=request.function}} ~ {{for a in request.args:}}{{=a}}{{pass}}</title>
         <!-- http://dev.w3.org/html5/markup/meta.name.html -->
     <meta name="application-name" content="{{=response.title}}" />
         <!-- http://google.com/webmasters -->
