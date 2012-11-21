@@ -557,37 +557,38 @@ div.error      {background-color: @red;
                     background:transparent;}
     }
 /* tooltips */
+.tip(@max:300px, @min:100px)   {background: #eee;
+                                border: 1px solid #ccc;
+                                padding: @lineheight;
+                                border-radius: @typeheight;
+                                position: absolute;
+                                max-width: @max;
+                                min-width: @min;
+                                display:none;
+                                z-index:99;
+                                .transition();
+    &.tip-visible                  {display:block;
+                                    .transition();}
+    }
+
 .tip_wrapper                       {display: inline-block;
                                     position: relative;
-                                    overflow: visible}
-
-.tip(@max:300px, @min:100px)       {background: #eee;
-                                    border: 1px solid #ccc;
-                                    padding: @lineheight;
-                                    border-radius: @typeheight;
-                                    position: absolute;
-                                    max-width: @max;
-                                    min-width: @min;
-                                    display:none; /* hide until hover */
-                                    z-index:99; /* to lift it above surrounding tips */
-                                    .transition();
-    &.tip-visible                  {display:block;
-                                    .transition();}
-    }
-.tip-top(@max:300px, @min:100px)   {.speech-bubble-down(); .tip(@max, @min);}
+                                    overflow: visible;
+    &:target div.tip       {display:block;
+                            .transition();}
+    } /* make tip div visible */
+.tip-top(@max:300px, @min:100px)
+                       {.speech-bubble-down();
+                        .tip(@max, @min);}
 .tip-left(@bgcolor:@white, @color:grey, @br:@lineheight2, @width:@typeheight, @max:300px, @min:100px)
-                                   {.speech-bubble-right(@br, @width, @bgcolor, @color);
-                                    .tip(@max, @min);
-    &.tip-visible                  {display:block;
-                                    .transition();}
-    }
-.tip-right(@max:300px, @min:100px) {.speech-bubble-left(); .tip(@max, @min);}
-.tip-bottom(@max:300px, @min:100px){.speech-bubble-up(); .tip(@max, @min);}
-
-a:hover .tip,
-a:active .tip,                     {display:block;
-                                    .transition();}
-
+                       {.speech-bubble-right(@br, @width, @bgcolor, @color);
+                        .tip(@max, @min);}
+.tip-right(@max:300px, @min:100px)
+                       {.speech-bubble-left();
+                        .tip(@max, @min);}
+.tip-bottom(@max:300px, @min:100px)
+                       {.speech-bubble-up();
+                        .tip(@max, @min);}
 /* border images */
 .border-image(@img, @a, @b, @c, @d, @bwidth) {
                 border: @bwidth solid transparent;

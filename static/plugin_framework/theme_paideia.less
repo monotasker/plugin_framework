@@ -393,13 +393,15 @@ body #page             {margin-top:-(@lineheight2 + 14);
         .readable_short,
         .readable_long     {color:@sol_green;}
         .prompt_badges_wrapper,
-        .bug_reporter_wrapper
+        .bug_reporter_wrapper,
+        .prompt_tips_wrapper
                            {display: block;
                             position: absolute;
                             bottom: -@typeheight;
                             right: -@typeheight;}
         .prompt_badges,
-        .bug_reporter      {font-size: @typeheight;
+        .bug_reporter,
+        .prompt_tips       {font-size: @typeheight;
                             line-height: @lineheight;
                             color: @grey6;
                             padding: @lineheight;
@@ -413,9 +415,9 @@ body #page             {margin-top:-(@lineheight2 + 14);
             a              {font-size: @typeheight;}
             }
         }
-        .prompt_badges         {}
         .bug_reporter_icon,
-        .prompt_badges_icon    {.sticker(@lineheight2, @typeheight2);
+        .prompt_badges_icon,
+        .prompt_tips_icon      {.sticker(@lineheight2, @typeheight2);
                                 background-color: @moss;
                                 color: @white;
                                 font-size: @lineheight / 2;
@@ -492,7 +494,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
                         text-align:center;}
         td             {background-color: @sol_beige;
                         padding: (@typeheight / 2) @typeheight;}
-        }   
+        }
 
     /* summary stats (badges) tab */
     p.overview             {
