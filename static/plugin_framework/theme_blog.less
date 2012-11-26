@@ -5,8 +5,19 @@
 
 @import "framework";
 
-body                               {background-color:@greye;
-                                    .linear-gradient(@greye,@greyd);
+
+@accent1: @sol_orange;
+@accent2: @sol_green;
+@accent3: @sol_cyan;
+@neutral1: @sol_cream;
+@neutral2: @sol_beige;
+@neutral3: @sol_grey4;
+@neutral4: @sol_grey2;
+@neutral5: @sol_aqua;
+@text: @neutral4;
+
+body                               {background-color:@neutral3;
+                                    .linear-gradient(@neutral3,@neutral4);
                                     background-repeat: no-repeat;
                                     z-index:1;
                                     .English;}
@@ -61,9 +72,9 @@ nav                                {background-color:transparent;
 
             li                     {line-height: @lineheight2;
                                     height: @lineheight2;
-                                    background-color:@grey3;
+                                    background-color:@neutral5;
                                     .blockletter-small;
-                a:hover            {color:@sky;}
+                a:hover            {color:@accent3;}
                 }
             }
 
@@ -99,31 +110,43 @@ nav                                {background-color:transparent;
     a:first-child              { border-right:none;}
     }
 
-#page                          {background-color:@greyf5;
+#page                          {background-color:@neutral1;
                                 .box-shadow(0,2px,6px,rgba(0,0,0,0.3));
                                 z-index:1;
 
-    article                    {padding:@lineheight3;
+    article                    {position:relative;
+                                padding:@lineheight3;
                                 padding-left:@lineheight * 4;
                                 margin-right:30%;
                                 padding-right:@lineheight * 4;
                                 text-align:justify;
                                 -moz-hyphens:auto;
                                 -webkit-hyphens:auto;
-                                color:#666;
-        h2                     {color:@cranberry;
+                                color:@text;
+        h2                     {color:@accent1;
                                 .blockletter;
                                 text-transform:uppercase;
-                                text-align: left;}
-        h3                     {color:@dusky-blue1;
+                                text-align: left;
+            a,
+            a:link,
+            a:visited,
+            a:active           {color:@accent1;}
+            }
+        h3                     {color:@accent3;
                                 .blockletter();}
-        .date_created          {display:block;
-                                color:@sky;}
+        .article_date          {display:block;
+                                position:absolute;
+                                width:@lineheight * 6;
+                                color:@accent2;
+                                .rotate(270deg);
+                                margin-left:-(@lineheight2);
+                                top: @typeheight;
+                                text-align:right;}
         .article_wrapper       {padding:0;}
         p                      { }
         ul                     {padding-left:@lineheight;}
         li                     {list-style-type: disc;
-                                color:@sol_grey2;
+                                color:@neutral4;
                                 list-style-position: outside;
             ul                 {padding-left:@lineheight;}
             &.comment_list     {line-height: @lineheight;
@@ -131,16 +154,19 @@ nav                                {background-color:transparent;
             }
         a,
         a:link,
-        a:visited              {color: @dusky-blue1;}
-        a:hover                {color: @dusky-blue2;}
+        a:visited              {color: @accent3;}
+        a:hover                {color: @accent3;}
         }
 
     &.index                    {
         article                {padding-bottom:0;
                                 padding-top:@lineheight;
+            &:first-of-type    {padding-top:@lineheight3;}
             &:last-of-type     {padding-bottom:@lineheight3;}
             }
         }
+
+
 
     .comments                  {padding: 0;
                                 margin-top: @lineheight3;
@@ -148,9 +174,9 @@ nav                                {background-color:transparent;
                                 padding-bottom: @lineheight;
                                 margin-bottom: @lineheight;
                                 border-bottom: 1px solid #e6e6e6;
-                                color: #888;
-            .comment_author    {color: @red;}
-            .comment_date      {color: #aaa;
+                                color: @neutral4;
+            .comment_author    {color: @accent1;}
+            .comment_date      {color: @accent2;
                                 display: block;
                                 float: right;}
             .comment_body      {display: block;}
@@ -171,8 +197,8 @@ nav                                {background-color:transparent;
                                 cursor:pointer;}
         a,
         a:link,
-        a:visited              {color:@cranberry;}
-        a:hover                {color:@red;}
+        a:visited              {color:@accent1;}
+        a:hover                {color:@accent1;}
         div                    {padding: 0;
                                 margin-bottom: @lineheight;
             ul                 {display:none;
@@ -185,13 +211,13 @@ nav                                {background-color:transparent;
     #viewpane,
     #listpane                  {position:relative;
                                 padding:0;}
-    
+
 
     &.appadmin                 {padding: @lineheight3;}
     }
 
 footer                             {background-color:transparent;
-                                    color:@dusky-blue1;
+                                    color:@accent3;
 
     .copyright                     {font-size: @typeheight * .8;
                                     background-color: transparent;}
