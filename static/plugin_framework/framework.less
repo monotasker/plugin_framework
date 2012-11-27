@@ -456,7 +456,7 @@ div.error      {background-color: @red;
                     -ms-transition:@target @time @easing;
                     transition:@target @time @easing;}
 
-.rotate(@angle, @origin_v, @origin_h){
+.rotate(@angle, @origin_v:0, @origin_h:0){
                     -webkit-transform: rotate(@angle);
                     -webkit-transform-origin: @origin_h @origin_v;
                     -o-transform: rotate(@angle);
@@ -466,8 +466,19 @@ div.error      {background-color: @red;
                     -ms-transform: rotate(@angle);
                     -ms-transform-origin: @origin_h @origin_v;
                     transform: rotate(@angle);
-                    transform-origin: @origin_h @origin_v;
-    }
+                    transform-origin: @origin_h @origin_v;}
+
+.translatex(@x, @origin_v:0, @origin_h:0)   
+                   {-webkit-transform: translatex(@x);
+                    -webkit-transform-origin: @origin_h @origin_v;
+                    -o-transform: translatex(@x);
+                    -o-transform-origin: @origin_h @origin_v;
+                    -moz-transform: translatex(@x);
+                    -moz-transform-origin: @origin_h @origin_v;
+                    -ms-transform: translatex(@x);
+                    -ms-transform-origin: @origin_h @origin_v;
+                    transform: translatex(@x);
+                    transform-origin: @origin_h @origin_v;}
 
 /* css lines */
 
