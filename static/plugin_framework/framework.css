@@ -475,11 +475,6 @@ div.error {
   line-height: 24px;
   padding: 0;
   text-align: center;
-  -moz-border-radius: 16px 16px 16px 16px;
-  -webkit-border-radius: 16px 16px 16px 16px;
-  -o-border-radius: 16px 16px 16px 16px;
-  -ms-border-radius: 16px 16px 16px 16px;
-  border-radius: 16px 16px 16px 16px;
   font-weight: bold;
   -moz-border-radius: 16px 16px 16px 16px;
   -webkit-border-radius: 16px 16px 16px 16px;
