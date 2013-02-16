@@ -6,7 +6,30 @@
 @import "framework";
 @navheight:@lineheight2 - 4;
 
-body       {background-color: @chalk;
+@accent1: @cranberry;
+@accent2: @sol_yellow;
+@accent3: @dusky-blue2;
+@accent4: @moss;
+@accent5: @sky;
+@accent6: @sol_blue;
+@accent7: @mist;
+@accent8: @sol_green;
+@accent9: #852625;
+@accent10: #AAE557;
+@accent11: #809240;
+@accent12: @sol_red;
+@neutral1: @chalk;
+@neutral2: @cream;
+@neutral3: @sol_grey1;
+@neutral4: @sol_aqua;
+@neutral5: @sol_beige;
+@neutral6: @grey6;
+@neutral7: #aaa;
+@neutral8: #eee;
+@neutral9: #f5f5f5;
+@white: #fff;
+
+body       {background-color: @neutral1;
             background-image: url('/paideia/static/images/mosaic_texture1.png');
             background-repeat: repeat;
             z-index:1;
@@ -25,8 +48,8 @@ body header    {height:@navheight;
                 margin: 6px 0 0 65px;
 
         a      {display:block;
-                background-color:@cream;
-                color: @cranberry;
+                background-color:@neutral2;
+                color: @accent1;
                 font-size:@typeheight2;
                 height:@navheight;
                 line-height:@navheight;
@@ -53,7 +76,7 @@ nav                        {background-color:@cream;
             /* first-level menu links */
             a,
             a:link,
-            a:visited      {color:@cranberry;
+            a:visited      {color:@accent1;
                             font-weight:bold;
                             padding:0 @typeheight;
                             border:0;
@@ -68,17 +91,17 @@ nav                        {background-color:@cream;
             .sfHover   {background-color:transparent;
                 li     {line-height: @lineheight2;
                         height: @lineheight2;
-                        background-color:@grey3;
+                        background-color:@neutral4;
                         font-weight:normal;
                     a  {color:@white;
-                        &:hover {color:@sky;}
+                        &:hover {color:@accent5;}
                     }
                 }
             }
         }
     }
 
-.auth_navbar           {color:@cranberry;
+.auth_navbar           {color:@accent1;
                         height:@navheight;
                         line-height:@navheight;
                         display:block;
@@ -96,7 +119,7 @@ nav                        {background-color:@cream;
     a:link,
     a:visited          {height:@navheight;
                         line-height:@navheight;
-                        color:@cranberry;
+                        color:@accent1;
                         display:block;
                         float:right;
                         margin:0 0 0 0;
@@ -113,14 +136,14 @@ body #page             {margin-top:-(@lineheight2 + 14);
                         border:65px solid transparent;
                         .border-image('/paideia/static/images/page_border.png', 170, 170, 170, 171, 65);
                         border-image-width:65px;
-                        background:@chalk;
+                        background:@neutral1;
                         overflow: hidden;
                         min-height:670px;
     /* handle any nested page elements */
     #page              {.border-image('', 0, 0, 0, 0, 0);}
 
     /*Utility panel for development and debugging*/
-    #utils             {background-color:#666;
+    #utils             {background-color:@neutral1;
                         color: #fff;
                         .inset-text;
                         position: absolute;
@@ -138,8 +161,8 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
         input          {width:@lineheight3;
                         margin-right:@typeheight;}
-        a              {color: #fff;
-            &:hover    {color: yellow;}
+        a              {color: @white;
+            &:hover    {color: @accent5;}
             }
         .icon-gear     {display: block;
                         position: absolute;
@@ -155,7 +178,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
     /*Main headings for page-level content*/
     h2                 {padding-left: @lineheight3;
                         margin-top: @lineheight2;
-                        color: @dusky-blue2;
+                        color: @accent3;
                         text-shadow:0 0 6px #fff;}
     div,
     aside              {padding:0;}
@@ -167,17 +190,17 @@ body #page             {margin-top:-(@lineheight2 + 14);
                         -moz-hyphens:auto;
                         -webkit-hyphens:auto;
                         font-family:prociono;
-                        color:#666;
+                        color:@neutral3;
         section        {padding:0;}
 
         h2             {padding-left:0;}
 
         h3,
-        h3 a           {color:@sol_yellow;
+        h3 a           {color:@accent2;
                         padding-top:@lineheight;}
 
         .date_created  {display:block;
-                        color:@sky;}
+                        color:@accent5;}
         .article_wrapper {padding:0;}
 
         p              {margin:0;
@@ -195,8 +218,8 @@ body #page             {margin-top:-(@lineheight2 + 14);
             }
         a,
         a:link,
-        a:visited      {color: @sol_blue;
-            &:hover    {color: @dusky-blue2;}
+        a:visited      {color: @accent6;
+            &:hover    {color: @accent3;}
             &.button-green-grad
                        {color: @white;
                         margin-top:@lineheight;
@@ -210,7 +233,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
         h3 {
             margin-left: @lineheight3;
-            color:@cranberry;
+            color:@accent1;
             text-transform:uppercase;
             letter-spacing:2px;
         }
@@ -218,7 +241,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
         .news_create_link {
             float: right;
             margin-right: @lineheight3;
-            color: @moss;
+            color: @accent4;
             .blockletter-small();
         }
 
@@ -235,7 +258,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
                                             top:@typeheight;
                                             right:@typeheight;
                                             color:@white;
-                                            background-color: @moss;
+                                            background-color: @accent4;
                                             line-height: @lineheight2 + 4px;
                                             height: @lineheight2 + 4px;
                                             width: @lineheight2 + 4px;
@@ -259,7 +282,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
                                             border: (@lineheight / 2) solid @white;
         &.tip-visible                      {display:block;}
         img                                {width:277px;
-                                            border: 2px solid @sol_beige}
+                                            border: 2px solid @neutral5}
         }
 
 
@@ -276,10 +299,10 @@ body #page             {margin-top:-(@lineheight2 + 14);
             color: #888;
 
             .comment_author{
-                color: @red;
+                color: @accent12;
             }
             .comment_date {
-                color: #aaa;
+                color: @neutral7;
                 display: block;
                 float: right;
             }
@@ -309,7 +332,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
             font-size: @typeheight;
             letter-spacing: 2px;
             font-weight: normal;
-            color: #aaa;
+            color: @neutral7;
         }
 
         a, a:link, a:visited {
@@ -334,7 +357,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
 }
 
 #page.start {
-    background:@mist;
+    background:@accent7;
     overflow: hidden;
 
 }
@@ -380,7 +403,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
             }
         ul                         {padding-left: @lineheight;
             li                     {font-size: @typeheight * 1.25;
-                                    color:@sol_yellow;}
+                                    color:@accent2;}
             }
         .button            {display:inline-block;}
         .prompt_image      {height: 200px;
@@ -391,7 +414,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
                             width:100%;
                             font-size:@typeheight;}
         .readable_short,
-        .readable_long     {color:@sol_green;}
+        .readable_long     {color:@accent7;}
         .prompt_badges_wrapper,
         .bug_reporter_wrapper,
         .prompt_tips_wrapper
@@ -403,7 +426,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
         .bug_reporter,
         .prompt_tips       {font-size: @typeheight;
                             line-height: @lineheight;
-                            color: @grey6;
+                            color: @neutral6;
                             padding: @lineheight;
                             left:-320px;
                             top:-@lineheight * 3;
@@ -418,7 +441,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
         .bug_reporter_icon,
         .prompt_badges_icon,
         .prompt_tips_icon      {.sticker(@lineheight2, @typeheight2);
-                                background-color: @moss;
+                                background-color: @accent4;
                                 color: @white;
                                 font-size: @lineheight / 2;
                                 line-height: @lineheight2;
@@ -429,13 +452,13 @@ body #page             {margin-top:-(@lineheight2 + 14);
                             z-index:4;
         div                {.group();} /* clearfix class */
         }
-    .responder             {.speech-bubble-down(@lineheight, @typeheight, @sol_grey1);
-                            color: @chalk;
+    .responder             {.speech-bubble-down(@lineheight, @typeheight, @neutral3);
+                            color: @neutral1;
                             z-index:3;}
     }
 
 #page.listing              {
-    #viewpane              {background-color:@chalk;
+    #viewpane              {background-color:@neutral1;
 
         input[type=text],
         textarea           {width:100%;}
@@ -444,7 +467,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
         .plugin_ajaxselect select[multiple=multiple]
                            {height:300px;}
-        label              {color:@moss;
+        label              {color:@accent4;
                             line-height:@lineheight;}
         .w2p_fl            {margin-top:@lineheight;}
 
@@ -463,28 +486,29 @@ body #page             {margin-top:-(@lineheight2 + 14);
 #page.user                 {
     /* jquery ui tabs */
     .ui-widget-content     {border:1px solid transparent;}
-    .ui-widget-header      {background: @sol_beige;
+    .ui-widget-header      {background: @neutral5;
                             .blockletter-small;
                             border:1px solid transparent;
 
         .ui-state-default  {background: transparent;
                             border:1px solid transparent;}
         .ui-state-default.ui-state-active
-                           {background: @chalk;
-            a              {color: @cranberry;}
+                           {background: @neutral1;
+            a              {color: @accent1;}
             }
         }
 
     /* tab content */
     div.tab                {padding:@lineheight;
-                            background-color:@chalk;
+                            background-color:@neutral1;
                             .textdefaults;
 
-        h4                 {color: @sol_yellow;
+        h4                 {color: @accent2;
                             font-size: @typeheight2;}
         }
 
     /* common styles for reporting tables */
+
     table              {text-align:left;
                         border-collapse:separate;
                         border-spacing:2px;
@@ -492,25 +516,27 @@ body #page             {margin-top:-(@lineheight2 + 14);
                         background-color:@white;
                         vertical-align:middle;
                         text-align:center;}
-        td             {background-color: @sol_beige;
+        td             {background-color: @neutral5;
                         padding: (@typeheight / 2) @typeheight;}
         }
 
     /* summary stats (badges) tab */
     p.overview             {
-        li                 {color: @sol_yellow;
+        li                 {color: @accent2;
                             padding-left: @lineheight3;}
-        .total_len         {background:#f5f5f5;
-                            border:3px solid #eee;
+        .total_len,
+        .max_set           {background:@neutral9;
+                            border:3px solid @neutral8;
                             display:inline-block;
                             height: @lineheight2;
                             width: @lineheight2;
                             border-radius:@lineheight2 / 2;
-                            color:#aaa;
+                            color:@neutral7;
                             line-height:@lineheight2;
                             text-align:center;
                             box-shadow:0px 2px 6px rgba(0,0,0,0.3);}
         }
+        .most_recent       {color: @accent2;}
     table.summary_stats    {border-collapse:separate;
                             border-spacing:2px;
                             border-radius: @lineheight/4;
@@ -518,7 +544,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
                             background:@white;
 
         td                 {vertical-align:middle;
-                            background: @sol_beige;
+                            background: @neutral5;
                             padding: 0 @lineheight;}
 
         td.total_cat1,
@@ -533,10 +559,10 @@ body #page             {margin-top:-(@lineheight2 + 14);
                             padding:0;
                             font-family:"Droid Sans", @fonts3;
                             text-shadow:0px 1px 3px rgba(0,0,0,0.3);}
-        td.total_cat4      {background-color:#809240;}
-        td.total_cat3      {background-color:#AAE557;}
-        td.total_cat2      {background-color:@sol_yellow;}
-        td.total_cat1      {background-color:#852625;}
+        td.total_cat4      {background-color:@accent11;}
+        td.total_cat3      {background-color:@accent10;}
+        td.total_cat2      {background-color:@accent2;}
+        td.total_cat1      {background-color:@accent9;}
         }
 
     /* calendar for monthly user statistics */
@@ -549,7 +575,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
                                 text-align: center;}
         .monthcal_next_link,
         .monthcal_prev_link    {.icon-only;
-                                color: @sol_beige;
+                                color: @neutral5;
                                 font-size: 0;
                                 margin-top: @typeheight/2;
             &:after            {opacity: 0.7;}
@@ -565,7 +591,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
                                 background: transparent;}
             td                 {width:@lineheight * 2.5;
                                 height:@lineheight * 2.5;
-                                color:#aaa;
+                                color:@neutral7;
                                 font-size:@typeheight;
                                 position:relative;
                                 padding:2px;
@@ -577,7 +603,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
                                 top:@lineheight;
                                 float:right;
                                 padding-right:2px;
-                                color:@sol_blue;}
+                                color:@accent6;}
                 }
             }
         }
@@ -589,30 +615,53 @@ body #page             {margin-top:-(@lineheight2 + 14);
         .prompt            {max-width: 40%;
                             min-width: 40%;}
         .count             {max-width: 7%;
-                            color: @sol_blue;}
+                            color: @accent6;}
         .right             {max-width: 7%;
-                            color: @moss;}
+                            color: @accent4;}
         .wrong             {max-width: 7%;
-                            color: @sol_red;}
+                            color: @accent12;}
         .last_wrong        {max-width: 14%;
-                            color: @sol_red;
+                            color: @accent12;
                             min-width: 14%;}
         .right_since       {max-width: 7%;
-                            color: @moss;}
+                            color: @accent4;}
         .tags              {width:auto;
                             min-width: 20%;}
         }
 
     /*** tag records on user profile ***/
     #tag_records_table     {
-        td:first-child     {color: @sol_blue;}
-        td:nth-child(2)    {color: @sol_green;}
-        td:nth-child(3)    {color: @sol_red;}
+        td:first-child     {max-width:7%;}
+        td:nth-child(2)    {color: #fff;
+                            padding-left:0;
+                            padding-right:0;
+            span           {height:@typeheight;
+                            display:inline-block;
+                            position:relative;
+                &.right    {.linear-gradient(lighten(@accent8, 10%), darken(@accent8, 5%));}
+                &.right_num {color: @accent8;
+                             margin-left: @typeheight/4;
+                             top:-1px;
+                             vertical-align: top;}
+                &.wrong    {.linear-gradient(lighten(@accent12, 10%), darken(@accent12, 5%));}
+                &.wrong_num {color: @accent12;
+                             margin-left: @typeheight/4;
+                             top:-1px;
+                             vertical-align: top;}
+                &.ratio    {.linear-gradient(lighten(@accent6, 10%), darken(@accent6, 5%));}
+                &.ratio_num {color: @accent6;
+                             margin-left: @typeheight/4;
+                             top:-1px;
+                             vertical-align: top;}
+                }
+            }
+        td:nth-child(3)    {color: @accent6;}
+        td:nth-child(4)    {color: @accent12;}
         }
 
     /*** tag progress on user profile ***/
     #tag_progress_table    {
-        td:first-child     {color: @sol_blue;}
+        td:first-child     {color: @accent6;}
         }
 
     /*** bug reports on user profile ***/
@@ -625,7 +674,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
 /* main page footer */
 body footer                {background-color:transparent;
-                            color:@dusky-blue2;
+                            color:@accent3;
                             .text-shadow();
 
     #poweredby             {float: right;}

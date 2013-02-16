@@ -5,7 +5,6 @@
 
 @import "framework";
 
-
 @accent1: @sol_orange;
 @accent2: @sol_green;
 @accent3: @sol_cyan;
@@ -138,10 +137,10 @@ nav                                {background-color:transparent;
                                 position:absolute;
                                 width:@lineheight * 6;
                                 color:@accent2;
-                                .rotate(270deg);
-                                margin-left:-(@lineheight2);
-                                top: @typeheight;
-                                text-align:right;}
+                                .rotate(270deg, 0, 100%);
+                                margin-left:-((@lineheight * 6) + @lineheight2);
+                                text-align:right;
+        }
         .article_wrapper       {padding:0;}
         p                      { }
         ul                     {padding-left:@lineheight;}
