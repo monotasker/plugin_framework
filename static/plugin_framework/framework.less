@@ -165,12 +165,12 @@
 
 @purple:#58007D;
 @aubergine:#772953; /* ubuntu */
-@pink:#D8D;
+@pink: #D8D;
 
-@brown1:#D99E52;
-@brown2:#956929;
-@warm-brown:#960; /* ocp - not in active use */
-@swamp:#BEB013;
+@brown1: #D99E52;
+@brown2: #956929;
+@warm-brown: #960; /* ocp - not in active use */
+@swamp: #BEB013;
 @mud1:#494738; /* ocp - footer and top of header gradient */
 @mud2:#38362b; /* ocp - bottom of header gradient */
 
@@ -263,6 +263,12 @@ aside                  {padding:14px;}
 form div               {padding:0;}
 
 /* modal dialogue *****************************************/
+
+/* custom modal mask */
+
+/* custom modal closer */
+
+/* custom modal dialog */
 
 //jquery-ui dialog
 .ui-resizable-handle   {padding:0;}
@@ -568,6 +574,7 @@ div.error      {background-color: @red;
                     background:transparent;}
     }
 /* tooltips */
+
 .tip(@max:300px, @min:100px)   {background: #eee;
                                 border: 1px solid #ccc;
                                 padding: @lineheight;
@@ -578,28 +585,37 @@ div.error      {background-color: @red;
                                 display:none;
                                 z-index:99;
                                 .transition();
-    &.tip-visible                  {display:block;
-                                    .transition();}
+    &.tip-visible,
+    &:target                   {display:block;
+                                .transition();} 
     }
+
+.tip-top(@max:300px, @min:100px)
+                               {.speech-bubble-down();
+                                .tip(@max, @min);
+    &.tip-visible,
+    &:target                   {display:block;
+                                .transition();} 
+    }
+.tip-left(@bgcolor:@white, @color:grey, @br:@lineheight2, @width:@typeheight, @max:300px, @min:100px)
+                               {.speech-bubble-right(@br, @width, @bgcolor, @color);
+                                .tip(@max, @min);}
+.tip-right(@max:300px, @min:100px)
+                               {.speech-bubble-left();
+                                .tip(@max, @min);}
+.tip-bottom(@max:300px, @min:100px)
+                               {.speech-bubble-up();
+                                .tip(@max, @min);}
 
 .tip_wrapper                       {display: inline-block;
                                     position: relative;
                                     overflow: visible;
-    &:target div.tip       {display:block;
-                            .transition();}
-    } /* make tip div visible */
-.tip-top(@max:300px, @min:100px)
-                       {.speech-bubble-down();
-                        .tip(@max, @min);}
-.tip-left(@bgcolor:@white, @color:grey, @br:@lineheight2, @width:@typeheight, @max:300px, @min:100px)
-                       {.speech-bubble-right(@br, @width, @bgcolor, @color);
-                        .tip(@max, @min);}
-.tip-right(@max:300px, @min:100px)
-                       {.speech-bubble-left();
-                        .tip(@max, @min);}
-.tip-bottom(@max:300px, @min:100px)
-                       {.speech-bubble-up();
-                        .tip(@max, @min);}
+    .tooltip-left              {.tip-left();}                                
+    .tooltip-right             {.tip-right();}                                
+    .tooltip-top               {.tip-top();}                                
+    .tooltip-bottom            {.tip-bottom();}                                
+    }
+
 /* border images */
 .border-image(@img, @a, @b, @c, @d, @bwidth) {
                 border: @bwidth solid transparent;

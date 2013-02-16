@@ -508,6 +508,7 @@ body #page             {margin-top:-(@lineheight2 + 14);
         }
 
     /* common styles for reporting tables */
+
     table              {text-align:left;
                         border-collapse:separate;
                         border-spacing:2px;
@@ -630,9 +631,32 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
     /*** tag records on user profile ***/
     #tag_records_table     {
-        td:first-child     {color: @accent6;}
-        td:nth-child(2)    {color: @accent8;}
-        td:nth-child(3)    {color: @accent12;}
+        td:first-child     {max-width:7%;}
+        td:nth-child(2)    {color: #fff;
+                            padding-left:0;
+                            padding-right:0;
+            span           {height:@typeheight;
+                            display:inline-block;
+                            position:relative;
+                &.right    {.linear-gradient(lighten(@accent8, 10%), darken(@accent8, 5%));}
+                &.right_num {color: @accent8;
+                             margin-left: @typeheight/4;
+                             top:-1px;
+                             vertical-align: top;}
+                &.wrong    {.linear-gradient(lighten(@accent12, 10%), darken(@accent12, 5%));}
+                &.wrong_num {color: @accent12;
+                             margin-left: @typeheight/4;
+                             top:-1px;
+                             vertical-align: top;}
+                &.ratio    {.linear-gradient(lighten(@accent6, 10%), darken(@accent6, 5%));}
+                &.ratio_num {color: @accent6;
+                             margin-left: @typeheight/4;
+                             top:-1px;
+                             vertical-align: top;}
+                }
+            }
+        td:nth-child(3)    {color: @accent6;}
+        td:nth-child(4)    {color: @accent12;}
         }
 
     /*** tag progress on user profile ***/
