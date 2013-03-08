@@ -545,7 +545,11 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
         td                 {vertical-align:middle;
                             background: @neutral5;
-                            padding: 0 @lineheight;}
+                            padding: (@lineheight/2) @lineheight;
+            ul             {max-height: @lineheight * 6;
+                            overflow: auto;}
+          
+            }
 
         td.total_cat1,
         td.total_cat2,
