@@ -294,6 +294,7 @@ ul             {margin: 0;
 
 /* forms **************************************************/
 input[type=text],
+input[type=password],
 select,
 textarea           {border:1px solid #eee;
                     .textdefaults;
@@ -321,16 +322,22 @@ form label         {line-height:@lineheight2;
                     .blockletter-small();}
 
 input[type=submit] {.button-green-grad;
-                    border:1px solid @green;}
+                    border:1px solid @green;
+                    .blockletter-small();}
 
 /* tables **************************************************/
 
 td                     {vertical-align:top;}
 
 //tables in forms
-form tr td             {min-height:@lineheight2;
-    &:first-child      {text-align:right;
-                        padding-right:@typeheight;}
+form table             {padding: @typeheight;
+    tr                 {
+        &:first-child  {padding-top: @typeheight;}
+        td              {min-height:@lineheight2;
+            &:first-child  {text-align: left;
+                            padding-right:@typeheight;}
+            }
+        }
     }
 
 /* layout **************************************************/
@@ -396,6 +403,17 @@ div.error      {background-color: @red;
                 display: table;
                 clear: both;}
     }
+
+.centered-horizontalA(@vmargin:0)      {margin: @vmargin auto;}
+.centered-horizontalB(@width:200px)    {position: relative;
+                                        left: 50%;
+                                        margin-left: -(@width/2);}
+.centered-vertical-block(@height:200px){position: relative;
+                                        top: 25%;}
+.centered-vertical-text(@parent-height: @lineheight * 2) 
+                                       {height: @parent-height;
+                                        line-height: @parent-height;
+                                        vertical-align: middle}                
 
 .text-shadow(@x:0, @y:2px, @blur:3px, @color:rgba(0,0,0,0.5))
                {-moz-text-shadow:@arguments;

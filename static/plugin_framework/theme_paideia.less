@@ -362,6 +362,31 @@ body #page             {margin-top:-(@lineheight2 + 14);
 
 }
 
+#page.login                {
+    .loginform             {width: 450px;
+                            /*.centered-vertical-block(240px);*/
+                            .centered-horizontalB(450px);
+                            margin-top: @lineheight2;
+        form               {width: 100%;
+            table          {border-collapse: collapse;
+                            width: 100%;
+                input[type=text],
+                input[type=password] {width: 90%}
+                }
+            } 
+        }
+        a                  {display:block;
+                            width:100%;
+                            background-color: @sol_green;
+                            color: @white;
+                            line-height: @lineheight2;
+                            height: @lineheight2;
+                            padding-left: @lineheight;
+                            .blockletter-small();
+            &:last-child   {background-color: @sol_yellow;}
+            }
+    }
+
 #page.exploring            {overflow: hidden;
 
     .bg_image              {position: absolute;

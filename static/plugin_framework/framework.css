@@ -208,6 +208,7 @@ ul {
 }
 /* forms **************************************************/
 input[type=text],
+input[type=password],
 select,
 textarea {
   border: 1px solid #eee;
@@ -282,6 +283,11 @@ input[type=submit] {
   background-image: -o-linear-gradient(#84c63c, #489615);
   background-image: -ms-linear-gradient(#84c63c, #489615);
   border: 1px solid #5ba917;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: ubuntu, calibri, arial, sans-serif;
+  letter-spacing: 2px;
+  font-size: 12.8px;
 }
 input[type=submit]:hover {
   -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
@@ -299,11 +305,17 @@ input[type=submit]:hover {
 td {
   vertical-align: top;
 }
-form tr td {
+form table {
+  padding: 16px;
+}
+form table tr:first-child {
+  padding-top: 16px;
+}
+form table tr td {
   min-height: 36px;
 }
-form tr td:first-child {
-  text-align: right;
+form table tr td:first-child {
+  text-align: left;
   padding-right: 16px;
 }
 /* layout **************************************************/
@@ -678,11 +690,6 @@ div.error {
   line-height: 24px;
   padding: 0;
   text-align: center;
-  -moz-border-radius: 16px 16px 16px 16px;
-  -webkit-border-radius: 16px 16px 16px 16px;
-  -o-border-radius: 16px 16px 16px 16px;
-  -ms-border-radius: 16px 16px 16px 16px;
-  border-radius: 16px 16px 16px 16px;
   font-weight: bold;
   -moz-border-radius: 16px 16px 16px 16px;
   -webkit-border-radius: 16px 16px 16px 16px;
