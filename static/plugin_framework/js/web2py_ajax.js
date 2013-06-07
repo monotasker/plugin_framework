@@ -18,7 +18,7 @@ function ajax(u,s,t) {
         }
         if (pcs.length>0){query = pcs.join("&");}
     }
-    jQuery.ajax({type: "POST", url: u, data: query, success: function(msg) { if(t) { if(t==':eval') eval(msg); else jQuery("#" + t).html(msg); } } }); 
+    jQuery.ajax({type: "POST", url: u, data: query, success: function(msg) { if(t) { if(t==':eval') eval(msg); else jQuery("#" + t).html(msg); } } });
 }
 
 String.prototype.reverse = function () { return this.split('').reverse().join('');};
@@ -27,10 +27,10 @@ function web2py_ajax_init() {
   jQuery('.error').hide().slideDown('slow');
   jQuery('.flash').click(function(e) { jQuery(this).fadeOut('slow'); e.preventDefault(); });
   // jQuery('input[type=submit]').click(function(){var t=jQuery(this);t.hide();t.after('<input class="submit_disabled" disabled="disabled" type="submit" name="'+t.attr("name")+'_dummy" value="'+t.val()+'">')});
-  jQuery('input.integer').live('keyup', function(){this.value=this.value.reverse().replace(/[^0-9\-]|\-(?=.)/g,'').reverse();});
-  jQuery('input.double,input.decimal').live('keyup', function(){this.value=this.value.reverse().replace(/[^0-9\-\.,]|[\-](?=.)|[\.,](?=[0-9]*[\.,])/g,'').reverse();});
+  jQuery('input.integer').on('keyup', function(){this.value=this.value.reverse().replace(/[^0-9\-]|\-(?=.)/g,'').reverse();});
+  jQuery('input.double,input.decimal').on('keyup', function(){this.value=this.value.reverse().replace(/[^0-9\-\.,]|[\-](?=.)|[\.,](?=[0-9]*[\.,])/g,'').reverse();});
   var confirm_message = (typeof w2p_ajax_confirm_message != 'undefined') ? w2p_ajax_confirm_message : "Are you sure you want to delete this object?";
-  jQuery("input[type='checkbox'].delete").live('click', function(){ if(this.checked) if(!confirm(confirm_message)) this.checked=false; });
+  jQuery("input[type='checkbox'].delete").on('click', function(){ if(this.checked) if(!confirm(confirm_message)) this.checked=false; });
   var date_format = (typeof w2p_ajax_date_format != 'undefined') ? w2p_ajax_date_format : "%Y-%m-%d";
   var datetime_format = (typeof w2p_ajax_datetime_format != 'undefined') ? w2p_ajax_datetime_format : "%Y-%m-%d %H:%M:%S";
   try {
@@ -43,7 +43,7 @@ function web2py_ajax_init() {
   } catch(e) {};
 };
 
-jQuery(function() {   
+jQuery(function() {
    var flash = jQuery('.flash');
    flash.hide();
    if(flash.html()) flash.slideDown();
@@ -67,15 +67,15 @@ function web2py_ajax_page(method,action,data,target) {
       xhr.setRequestHeader('web2py-component-element',target);},
     'complete':function(xhr,text){
       var html=xhr.responseText;
-      var content=xhr.getResponseHeader('web2py-component-content'); 
+      var content=xhr.getResponseHeader('web2py-component-content');
       var command=xhr.getResponseHeader('web2py-component-command');
       var flash=xhr.getResponseHeader('web2py-component-flash');
       var t = jQuery('#'+target);
-      if(content=='prepend') t.prepend(html); 
+      if(content=='prepend') t.prepend(html);
       else if(content=='append') t.append(html);
-      else if(content!='hide') t.html(html);  
+      else if(content!='hide') t.html(html);
       web2py_trap_form(action,target);
-      web2py_ajax_init();      
+      web2py_ajax_init();
       if(command) eval(command);
       if(flash) jQuery('.flash').html(flash).slideDown();
       }
