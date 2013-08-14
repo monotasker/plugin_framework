@@ -106,7 +106,7 @@
                               {{=request.function}}
                               {{for a in request.args:}}{{=a}}{{pass}}">
         {{if left_sidebar_cols:}}
-        <div class="{{='span{} left-sidebar'.format(str(left_sidebar_cols))}}">
+        <div id="left-sidebar" class="{{='span{} left-sidebar'.format(str(left_sidebar_cols))}}">
             {{block left_sidebar}}
             <h3>L</h3>
             <p></p>
@@ -114,14 +114,14 @@
         </div>
         {{pass}}
 
-        <div class="{{=middle_columns}}">
+        <div id="page" class="{{=middle_columns}}">
             {{block center}}
             {{include}}
             {{end}}
         </div>
 
         {{if right_sidebar_cols:}}
-        <div class="{{='span{} right-sidebar'.format(str(right_sidebar_cols))}}">
+        <div id="right_sidebar" class="{{='span{} right-sidebar'.format(str(right_sidebar_cols))}}">
             {{block right_sidebar}}
             <h3>R</h3>
             <p></p>
