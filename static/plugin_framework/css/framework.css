@@ -1239,6 +1239,11 @@ a:focus {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  -o-border-radius: 6px 0 0 0;
+  -ms-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
 }
 .img-polaroid {
   padding: 4px;
@@ -1248,11 +1253,21 @@ a:focus {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .img-circle {
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px;
+  -moz-border-radius: 500px 0 0 0;
+  -webkit-border-radius: 500px 0 0 0;
+  -o-border-radius: 500px 0 0 0;
+  -ms-border-radius: 500px 0 0 0;
+  border-radius: 500px 0 0 0;
 }
 .row {
   margin-left: -20px;
@@ -2182,6 +2197,11 @@ pre {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  -moz-border-radius: 3px 0 0 0;
+  -webkit-border-radius: 3px 0 0 0;
+  -o-border-radius: 3px 0 0 0;
+  -ms-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
 }
 code {
   padding: 2px 4px;
@@ -2206,6 +2226,11 @@ pre {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
 }
 pre.prettyprint {
   margin-bottom: 20px;
@@ -2291,6 +2316,11 @@ input[type="color"],
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
   vertical-align: middle;
 }
 input,
@@ -2322,6 +2352,11 @@ input[type="color"],
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
   -webkit-transition: border linear .2s, box-shadow linear .2s;
   -moz-transition: border linear .2s, box-shadow linear .2s;
   -o-transition: border linear .2s, box-shadow linear .2s;
@@ -2356,6 +2391,11 @@ input[type="color"]:focus,
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6) 2px 6px rgba(0, 0, 0, 0.3);
 }
 input[type="radio"],
 input[type="checkbox"] {
@@ -2412,6 +2452,11 @@ input[type="checkbox"]:focus {
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025) 2px 6px rgba(0, 0, 0, 0.3);
   cursor: not-allowed;
 }
 .uneditable-input {
@@ -2711,6 +2756,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.warning input:focus,
 .control-group.warning select:focus,
@@ -2719,6 +2769,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.warning .input-prepend .add-on,
 .control-group.warning .input-append .add-on {
@@ -2745,6 +2800,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.warning input:focus,
 .control-group.warning select:focus,
@@ -2753,6 +2813,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.warning .input-prepend .add-on,
 .control-group.warning .input-append .add-on {
@@ -2779,6 +2844,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.error input:focus,
 .control-group.error select:focus,
@@ -2787,6 +2857,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.error .input-prepend .add-on,
 .control-group.error .input-append .add-on {
@@ -2813,6 +2888,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.error input:focus,
 .control-group.error select:focus,
@@ -2821,6 +2901,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.error .input-prepend .add-on,
 .control-group.error .input-append .add-on {
@@ -2847,6 +2932,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.success input:focus,
 .control-group.success select:focus,
@@ -2855,6 +2945,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.success .input-prepend .add-on,
 .control-group.success .input-append .add-on {
@@ -2881,6 +2976,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.success input:focus,
 .control-group.success select:focus,
@@ -2889,6 +2989,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.success .input-prepend .add-on,
 .control-group.success .input-append .add-on {
@@ -2915,6 +3020,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.info input:focus,
 .control-group.info select:focus,
@@ -2923,6 +3033,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.info .input-prepend .add-on,
 .control-group.info .input-append .add-on {
@@ -2949,6 +3064,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.info input:focus,
 .control-group.info select:focus,
@@ -2957,6 +3077,11 @@ input[type="checkbox"][readonly] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3 2px 6px rgba(0, 0, 0, 0.3);
 }
 .control-group.info .input-prepend .add-on,
 .control-group.info .input-append .add-on {
@@ -2977,6 +3102,11 @@ select:focus:invalid:focus {
   -webkit-box-shadow: 0 0 6px #f8b9b7;
   -moz-box-shadow: 0 0 6px #f8b9b7;
   box-shadow: 0 0 6px #f8b9b7;
+  -moz-box-shadow: 0 0 6px #f8b9b7 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 6px #f8b9b7 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 0 6px #f8b9b7 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 0 6px #f8b9b7 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px #f8b9b7 2px 6px rgba(0, 0, 0, 0.3);
 }
 .form-actions {
   padding: 19px 20px 20px;
@@ -3054,6 +3184,11 @@ select:focus:invalid:focus {
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0 0 0 0;
+  -webkit-border-radius: 0 4px 4px 0 0 0 0;
+  -o-border-radius: 0 4px 4px 0 0 0 0;
+  -ms-border-radius: 0 4px 4px 0 0 0 0;
+  border-radius: 0 4px 4px 0 0 0 0;
 }
 .input-append input:focus,
 .input-prepend input:focus,
@@ -3088,6 +3223,11 @@ select:focus:invalid:focus {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -moz-border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
 }
 .input-append .active,
 .input-prepend .active {
@@ -3103,6 +3243,11 @@ select:focus:invalid:focus {
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 4px 0 0 0;
+  -o-border-radius: 4px 0 0 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 4px 0 0 0;
+  border-radius: 4px 0 0 4px 0 0 0;
 }
 .input-append input,
 .input-append select,
@@ -3110,6 +3255,11 @@ select:focus:invalid:focus {
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 4px 0 0 0;
+  -o-border-radius: 4px 0 0 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 4px 0 0 0;
+  border-radius: 4px 0 0 4px 0 0 0;
 }
 .input-append input + .btn-group .btn:last-child,
 .input-append select + .btn-group .btn:last-child,
@@ -3117,6 +3267,11 @@ select:focus:invalid:focus {
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0 0 0 0;
+  -webkit-border-radius: 0 4px 4px 0 0 0 0;
+  -o-border-radius: 0 4px 4px 0 0 0 0;
+  -ms-border-radius: 0 4px 4px 0 0 0 0;
+  border-radius: 0 4px 4px 0 0 0 0;
 }
 .input-append .add-on,
 .input-append .btn,
@@ -3129,6 +3284,11 @@ select:focus:invalid:focus {
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0 0 0 0;
+  -webkit-border-radius: 0 4px 4px 0 0 0 0;
+  -o-border-radius: 0 4px 4px 0 0 0 0;
+  -ms-border-radius: 0 4px 4px 0 0 0 0;
+  border-radius: 0 4px 4px 0 0 0 0;
 }
 .input-prepend.input-append input,
 .input-prepend.input-append select,
@@ -3136,6 +3296,11 @@ select:focus:invalid:focus {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -moz-border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
 }
 .input-prepend.input-append input + .btn-group .btn,
 .input-prepend.input-append select + .btn-group .btn,
@@ -3143,6 +3308,11 @@ select:focus:invalid:focus {
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0 0 0 0;
+  -webkit-border-radius: 0 4px 4px 0 0 0 0;
+  -o-border-radius: 0 4px 4px 0 0 0 0;
+  -ms-border-radius: 0 4px 4px 0 0 0 0;
+  border-radius: 0 4px 4px 0 0 0 0;
 }
 .input-prepend.input-append .add-on:first-child,
 .input-prepend.input-append .btn:first-child {
@@ -3150,6 +3320,11 @@ select:focus:invalid:focus {
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 4px 0 0 0;
+  -o-border-radius: 4px 0 0 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 4px 0 0 0;
+  border-radius: 4px 0 0 4px 0 0 0;
 }
 .input-prepend.input-append .add-on:last-child,
 .input-prepend.input-append .btn:last-child {
@@ -3157,6 +3332,11 @@ select:focus:invalid:focus {
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0 0 0 0;
+  -webkit-border-radius: 0 4px 4px 0 0 0 0;
+  -o-border-radius: 0 4px 4px 0 0 0 0;
+  -ms-border-radius: 0 4px 4px 0 0 0 0;
+  border-radius: 0 4px 4px 0 0 0 0;
 }
 .input-prepend.input-append .btn-group:first-child {
   margin-left: 0;
@@ -3172,6 +3352,11 @@ input.search-query {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
+  -moz-border-radius: 15px 0 0 0;
+  -webkit-border-radius: 15px 0 0 0;
+  -o-border-radius: 15px 0 0 0;
+  -ms-border-radius: 15px 0 0 0;
+  border-radius: 15px 0 0 0;
 }
 /* Allow for input prepend/append in search forms */
 .form-search .input-append .search-query,
@@ -3179,26 +3364,51 @@ input.search-query {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -moz-border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
 }
 .form-search .input-append .search-query {
   -webkit-border-radius: 14px 0 0 14px;
   -moz-border-radius: 14px 0 0 14px;
   border-radius: 14px 0 0 14px;
+  -moz-border-radius: 14px 0 0 14px 0 0 0;
+  -webkit-border-radius: 14px 0 0 14px 0 0 0;
+  -o-border-radius: 14px 0 0 14px 0 0 0;
+  -ms-border-radius: 14px 0 0 14px 0 0 0;
+  border-radius: 14px 0 0 14px 0 0 0;
 }
 .form-search .input-append .btn {
   -webkit-border-radius: 0 14px 14px 0;
   -moz-border-radius: 0 14px 14px 0;
   border-radius: 0 14px 14px 0;
+  -moz-border-radius: 0 14px 14px 0 0 0 0;
+  -webkit-border-radius: 0 14px 14px 0 0 0 0;
+  -o-border-radius: 0 14px 14px 0 0 0 0;
+  -ms-border-radius: 0 14px 14px 0 0 0 0;
+  border-radius: 0 14px 14px 0 0 0 0;
 }
 .form-search .input-prepend .search-query {
   -webkit-border-radius: 0 14px 14px 0;
   -moz-border-radius: 0 14px 14px 0;
   border-radius: 0 14px 14px 0;
+  -moz-border-radius: 0 14px 14px 0 0 0 0;
+  -webkit-border-radius: 0 14px 14px 0 0 0 0;
+  -o-border-radius: 0 14px 14px 0 0 0 0;
+  -ms-border-radius: 0 14px 14px 0 0 0 0;
+  border-radius: 0 14px 14px 0 0 0 0;
 }
 .form-search .input-prepend .btn {
   -webkit-border-radius: 14px 0 0 14px;
   -moz-border-radius: 14px 0 0 14px;
   border-radius: 14px 0 0 14px;
+  -moz-border-radius: 14px 0 0 14px 0 0 0;
+  -webkit-border-radius: 14px 0 0 14px 0 0 0;
+  -o-border-radius: 14px 0 0 14px 0 0 0;
+  -ms-border-radius: 14px 0 0 14px 0 0 0;
+  border-radius: 14px 0 0 14px 0 0 0;
 }
 .form-search input,
 .form-inline input,
@@ -3370,6 +3580,11 @@ table {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
 }
 .table-bordered th,
 .table-bordered td {
@@ -4056,9 +4271,19 @@ table th[class*="span"],
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  -o-border-radius: 6px 0 0 0;
+  -ms-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 2px 6px rgba(0, 0, 0, 0.3);
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -4169,6 +4394,11 @@ table th[class*="span"],
   -webkit-border-radius: 0 6px 6px 6px;
   -moz-border-radius: 0 6px 6px 6px;
   border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px 6px 0 0 0;
+  -webkit-border-radius: 0 6px 6px 6px 0 0 0;
+  -o-border-radius: 0 6px 6px 6px 0 0 0;
+  -ms-border-radius: 0 6px 6px 6px 0 0 0;
+  border-radius: 0 6px 6px 6px 0 0 0;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -4181,6 +4411,11 @@ table th[class*="span"],
   -webkit-border-radius: 5px 5px 5px 0;
   -moz-border-radius: 5px 5px 5px 0;
   border-radius: 5px 5px 5px 0;
+  -moz-border-radius: 5px 5px 5px 0 0 0 0;
+  -webkit-border-radius: 5px 5px 5px 0 0 0 0;
+  -o-border-radius: 5px 5px 5px 0 0 0 0;
+  -ms-border-radius: 5px 5px 5px 0 0 0 0;
+  border-radius: 5px 5px 5px 0 0 0 0;
 }
 .dropdown-submenu > a:after {
   display: block;
@@ -4207,6 +4442,11 @@ table th[class*="span"],
   -webkit-border-radius: 6px 0 6px 6px;
   -moz-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px 0 0 0;
+  -webkit-border-radius: 6px 0 6px 6px 0 0 0;
+  -o-border-radius: 6px 0 6px 6px 0 0 0;
+  -ms-border-radius: 6px 0 6px 6px 0 0 0;
+  border-radius: 6px 0 6px 6px 0 0 0;
 }
 .dropdown .dropdown-menu .nav-header {
   padding-left: 20px;
@@ -4218,6 +4458,11 @@ table th[class*="span"],
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
 }
 .well {
   min-height: 20px;
@@ -4228,9 +4473,19 @@ table th[class*="span"],
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .well blockquote {
   border-color: #ddd;
@@ -4241,12 +4496,22 @@ table th[class*="span"],
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  -o-border-radius: 6px 0 0 0;
+  -ms-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
 }
 .well-small {
   padding: 9px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  -moz-border-radius: 3px 0 0 0;
+  -webkit-border-radius: 3px 0 0 0;
+  -o-border-radius: 3px 0 0 0;
+  -ms-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
 }
 .fade {
   opacity: 0;
@@ -4340,10 +4605,20 @@ button.close {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
   *margin-left: .3em;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .btn:hover,
 .btn:focus,
@@ -4406,6 +4681,11 @@ button.close {
   -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .btn.disabled,
 .btn[disabled] {
@@ -4416,6 +4696,11 @@ button.close {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  -moz-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
 }
 .btn-large {
   padding: 11px 19px;
@@ -4423,6 +4708,11 @@ button.close {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  -o-border-radius: 6px 0 0 0;
+  -ms-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
 }
 .btn-large [class^="icon-"],
 .btn-large [class*=" icon-"] {
@@ -4434,6 +4724,11 @@ button.close {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  -moz-border-radius: 3px 0 0 0;
+  -webkit-border-radius: 3px 0 0 0;
+  -o-border-radius: 3px 0 0 0;
+  -ms-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
 }
 .btn-small [class^="icon-"],
 .btn-small [class*=" icon-"] {
@@ -4449,6 +4744,11 @@ button.close {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  -moz-border-radius: 3px 0 0 0;
+  -webkit-border-radius: 3px 0 0 0;
+  -o-border-radius: 3px 0 0 0;
+  -ms-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
 }
 .btn-block {
   display: block;
@@ -4784,6 +5084,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  -moz-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
 }
 .btn-link {
   border-color: transparent;
@@ -4792,6 +5097,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -moz-border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
 }
 .btn-link:hover,
 .btn-link:focus {
@@ -4840,6 +5150,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -moz-border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
 }
 .btn-group > .btn + .btn {
   margin-left: -1px;
@@ -4910,6 +5225,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
   *padding-top: 5px;
   *padding-bottom: 5px;
 }
@@ -4934,6 +5254,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .btn-group.open .btn.dropdown-toggle {
   background-color: #e6e6e6;
@@ -4998,6 +5323,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -moz-border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
 }
 .btn-group-vertical > .btn + .btn {
   margin-left: 0;
@@ -5007,21 +5337,41 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0 0 0 0;
+  -webkit-border-radius: 4px 4px 0 0 0 0 0;
+  -o-border-radius: 4px 4px 0 0 0 0 0;
+  -ms-border-radius: 4px 4px 0 0 0 0 0;
+  border-radius: 4px 4px 0 0 0 0 0;
 }
 .btn-group-vertical > .btn:last-child {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px 0 0 0;
+  -webkit-border-radius: 0 0 4px 4px 0 0 0;
+  -o-border-radius: 0 0 4px 4px 0 0 0;
+  -ms-border-radius: 0 0 4px 4px 0 0 0;
+  border-radius: 0 0 4px 4px 0 0 0;
 }
 .btn-group-vertical > .btn-large:first-child {
   -webkit-border-radius: 6px 6px 0 0;
   -moz-border-radius: 6px 6px 0 0;
   border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0 0 0 0;
+  -webkit-border-radius: 6px 6px 0 0 0 0 0;
+  -o-border-radius: 6px 6px 0 0 0 0 0;
+  -ms-border-radius: 6px 6px 0 0 0 0 0;
+  border-radius: 6px 6px 0 0 0 0 0;
 }
 .btn-group-vertical > .btn-large:last-child {
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px 0 0 0;
+  -webkit-border-radius: 0 0 6px 6px 0 0 0;
+  -o-border-radius: 0 0 6px 6px 0 0 0;
+  -ms-border-radius: 0 0 6px 6px 0 0 0;
+  border-radius: 0 0 6px 6px 0 0 0;
 }
 .alert {
   padding: 8px 35px 8px 14px;
@@ -5032,6 +5382,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
 }
 .alert,
 .alert h4 {
@@ -5202,6 +5557,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0 0 0 0;
+  -webkit-border-radius: 4px 4px 0 0 0 0 0;
+  -o-border-radius: 4px 4px 0 0 0 0 0;
+  -ms-border-radius: 4px 4px 0 0 0 0 0;
+  border-radius: 4px 4px 0 0 0 0 0;
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
@@ -5224,6 +5584,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -o-border-radius: 5px 0 0 0;
+  -ms-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0;
 }
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover,
@@ -5245,6 +5610,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -moz-border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
 }
 .nav-tabs.nav-stacked > li:first-child > a {
   -webkit-border-top-right-radius: 4px;
@@ -5277,11 +5647,21 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px 0 0 0;
+  -webkit-border-radius: 0 0 6px 6px 0 0 0;
+  -o-border-radius: 0 0 6px 6px 0 0 0;
+  -ms-border-radius: 0 0 6px 6px 0 0 0;
+  border-radius: 0 0 6px 6px 0 0 0;
 }
 .nav-pills .dropdown-menu {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  -o-border-radius: 6px 0 0 0;
+  -ms-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
 }
 .nav .dropdown-toggle .caret {
   border-top-color: #0088cc;
@@ -5378,6 +5758,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px 0 0 0;
+  -webkit-border-radius: 0 0 4px 4px 0 0 0;
+  -o-border-radius: 0 0 4px 4px 0 0 0;
+  -ms-border-radius: 0 0 4px 4px 0 0 0;
+  border-radius: 0 0 4px 4px 0 0 0;
 }
 .tabs-below > .nav-tabs > li > a:hover,
 .tabs-below > .nav-tabs > li > a:focus {
@@ -5409,6 +5794,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 4px 0 0 0;
+  -o-border-radius: 4px 0 0 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 4px 0 0 0;
+  border-radius: 4px 0 0 4px 0 0 0;
 }
 .tabs-left > .nav-tabs > li > a:hover,
 .tabs-left > .nav-tabs > li > a:focus {
@@ -5430,6 +5820,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0 0 0 0;
+  -webkit-border-radius: 0 4px 4px 0 0 0 0;
+  -o-border-radius: 0 4px 4px 0 0 0 0;
+  -ms-border-radius: 0 4px 4px 0 0 0 0;
+  border-radius: 0 4px 4px 0 0 0 0;
 }
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {
@@ -5472,9 +5867,19 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065) 2px 6px rgba(0, 0, 0, 0.3);
   *zoom: 1;
 }
 .navbar-inner:before,
@@ -5609,6 +6014,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
+  -moz-border-radius: 15px 0 0 0;
+  -webkit-border-radius: 15px 0 0 0;
+  -o-border-radius: 15px 0 0 0;
+  -ms-border-radius: 15px 0 0 0;
+  border-radius: 15px 0 0 0;
 }
 .navbar-static-top {
   position: static;
@@ -5618,6 +6028,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -moz-border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
 }
 .navbar-fixed-top,
 .navbar-fixed-bottom {
@@ -5641,6 +6056,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -moz-border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
 }
 .navbar-static-top .container,
 .navbar-fixed-top .container,
@@ -5655,6 +6075,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
   -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
   box-shadow: 0 1px 10px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 1px 10px rgba(0,0,0,.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 1px 10px rgba(0,0,0,.1) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 10px rgba(0,0,0,.1) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .navbar-fixed-bottom {
   bottom: 0;
@@ -5663,6 +6088,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: 0 -1px 10px rgba(0,0,0,.1);
   -moz-box-shadow: 0 -1px 10px rgba(0,0,0,.1);
   box-shadow: 0 -1px 10px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 -1px 10px rgba(0,0,0,.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 -1px 10px rgba(0,0,0,.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 -1px 10px rgba(0,0,0,.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 -1px 10px rgba(0,0,0,.1) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -1px 10px rgba(0,0,0,.1) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .navbar .nav {
   position: relative;
@@ -5703,6 +6133,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .navbar .btn-navbar {
   display: none;
@@ -5729,6 +6164,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .navbar .btn-navbar:hover,
 .navbar .btn-navbar:focus,
@@ -5766,9 +6206,19 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
+  -moz-border-radius: 1px 0 0 0;
+  -webkit-border-radius: 1px 0 0 0;
+  -o-border-radius: 1px 0 0 0;
+  -ms-border-radius: 1px 0 0 0;
+  border-radius: 1px 0 0 0;
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .btn-navbar .icon-bar + .icon-bar {
   margin-top: 3px;
@@ -5852,6 +6302,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 6px 0 6px 6px;
   -moz-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px 0 0 0;
+  -webkit-border-radius: 6px 0 6px 6px 0 0 0;
+  -o-border-radius: 6px 0 6px 6px 0 0 0;
+  -ms-border-radius: 6px 0 6px 6px 0 0 0;
+  border-radius: 6px 0 6px 6px 0 0 0;
 }
 .navbar-inverse .navbar-inner {
   background-color: #1b1b1b;
@@ -5931,6 +6386,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
   -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
   box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15) 2px 6px rgba(0, 0, 0, 0.3);
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
@@ -5969,6 +6429,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15) 2px 6px rgba(0, 0, 0, 0.3);
   outline: 0;
 }
 .navbar-inverse .btn-navbar {
@@ -6025,6 +6490,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
 }
 .breadcrumb > li {
   display: inline-block;
@@ -6055,9 +6525,19 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .pagination ul > li {
   display: inline;
@@ -6207,6 +6687,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
+  -moz-border-radius: 15px 0 0 0;
+  -webkit-border-radius: 15px 0 0 0;
+  -o-border-radius: 15px 0 0 0;
+  -ms-border-radius: 15px 0 0 0;
+  border-radius: 15px 0 0 0;
 }
 .pager li > a:hover,
 .pager li > a:focus {
@@ -6262,9 +6747,19 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  -o-border-radius: 6px 0 0 0;
+  -ms-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3) 2px 6px rgba(0, 0, 0, 0.3);
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box;
@@ -6314,9 +6809,19 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px 0 0 0;
+  -webkit-border-radius: 0 0 6px 6px 0 0 0;
+  -o-border-radius: 0 0 6px 6px 0 0 0;
+  -ms-border-radius: 0 0 6px 6px 0 0 0;
+  border-radius: 0 0 6px 6px 0 0 0;
   -webkit-box-shadow: inset 0 1px 0 #ffffff;
   -moz-box-shadow: inset 0 1px 0 #ffffff;
   box-shadow: inset 0 1px 0 #ffffff;
+  -moz-box-shadow: inset 0 1px 0 #ffffff 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 0 #ffffff 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 0 #ffffff 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 0 #ffffff 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 #ffffff 2px 6px rgba(0, 0, 0, 0.3);
   *zoom: 1;
 }
 .modal-footer:before,
@@ -6387,6 +6892,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
 }
 .tooltip-arrow {
   position: absolute;
@@ -6441,9 +6951,19 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  -o-border-radius: 6px 0 0 0;
+  -ms-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 2px 6px rgba(0, 0, 0, 0.3);
   white-space: normal;
 }
 .popover.top {
@@ -6469,6 +6989,11 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0 0 0 0;
+  -webkit-border-radius: 5px 5px 0 0 0 0 0;
+  -o-border-radius: 5px 5px 0 0 0 0 0;
+  -ms-border-radius: 5px 5px 0 0 0 0 0;
+  border-radius: 5px 5px 0 0 0 0 0;
 }
 .popover-title:empty {
   display: none;
@@ -6587,9 +7112,19 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055) 2px 6px rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -6606,6 +7141,11 @@ a.thumbnail:focus {
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .thumbnail > img {
   display: block;
@@ -6663,6 +7203,11 @@ a.thumbnail:focus {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  -moz-border-radius: 3px 0 0 0;
+  -webkit-border-radius: 3px 0 0 0;
+  -o-border-radius: 3px 0 0 0;
+  -ms-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
 }
 .badge {
   padding-left: 9px;
@@ -6670,6 +7215,11 @@ a.thumbnail:focus {
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
+  -moz-border-radius: 9px 0 0 0;
+  -webkit-border-radius: 9px 0 0 0;
+  -o-border-radius: 9px 0 0 0;
+  -ms-border-radius: 9px 0 0 0;
+  border-radius: 9px 0 0 0;
 }
 .label:empty,
 .badge:empty {
@@ -6787,9 +7337,19 @@ a.badge:focus {
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) 2px 6px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
 }
 .progress .bar {
   width: 0%;
@@ -6810,6 +7370,11 @@ a.badge:focus {
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15) 2px 6px rgba(0, 0, 0, 0.3);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -6827,6 +7392,11 @@ a.badge:focus {
   -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15);
   -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15);
   box-shadow: inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15);
+  -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15) 2px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15) 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15) 2px 6px rgba(0, 0, 0, 0.3);
 }
 .progress-striped .bar {
   background-color: #149bdf;
@@ -6936,6 +7506,11 @@ a.badge:focus {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
 }
 .accordion-heading {
   border-bottom: 0;
@@ -7026,6 +7601,11 @@ a.badge:focus {
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
   border-radius: 23px;
+  -moz-border-radius: 23px 0 0 0;
+  -webkit-border-radius: 23px 0 0 0;
+  -o-border-radius: 23px 0 0 0;
+  -ms-border-radius: 23px 0 0 0;
+  border-radius: 23px 0 0 0;
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -7093,6 +7673,11 @@ a.badge:focus {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  -o-border-radius: 6px 0 0 0;
+  -ms-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
 }
 .hero-unit h1 {
   margin-bottom: 0;
@@ -8856,6 +9441,11 @@ a.badge:focus {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    -moz-border-radius: 3px 0 0 0;
+    -webkit-border-radius: 3px 0 0 0;
+    -o-border-radius: 3px 0 0 0;
+    -ms-border-radius: 3px 0 0 0;
+    border-radius: 3px 0 0 0;
   }
   .nav-collapse .btn {
     padding: 4px 10px 4px;
@@ -8863,6 +9453,11 @@ a.badge:focus {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    -moz-border-radius: 4px 0 0 0;
+    -webkit-border-radius: 4px 0 0 0;
+    -o-border-radius: 4px 0 0 0;
+    -ms-border-radius: 4px 0 0 0;
+    border-radius: 4px 0 0 0;
   }
   .nav-collapse .dropdown-menu li + li a {
     margin-bottom: 2px;
@@ -8901,9 +9496,19 @@ a.badge:focus {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    -o-border-radius: 0 0 0 0;
+    -ms-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    -moz-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: none 2px 6px rgba(0, 0, 0, 0.3);
   }
   .nav-collapse .open > .dropdown-menu {
     display: block;
@@ -8929,6 +9534,11 @@ a.badge:focus {
     -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1) 2px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1) 2px 6px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1) 2px 6px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1) 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1) 2px 6px rgba(0, 0, 0, 0.3);
   }
   .navbar-inverse .nav-collapse .navbar-form,
   .navbar-inverse .nav-collapse .navbar-search {
@@ -9060,6 +9670,11 @@ ul.icons-ul > li .icon-li {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  -moz-border-radius: 3px 0 0 0;
+  -webkit-border-radius: 3px 0 0 0;
+  -o-border-radius: 3px 0 0 0;
+  -ms-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
 }
 .icon-2x {
   font-size: 2em;
@@ -9069,6 +9684,11 @@ ul.icons-ul > li .icon-li {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
 }
 .icon-3x {
   font-size: 3em;
@@ -9078,6 +9698,11 @@ ul.icons-ul > li .icon-li {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -o-border-radius: 5px 0 0 0;
+  -ms-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0;
 }
 .icon-4x {
   font-size: 4em;
@@ -9087,6 +9712,11 @@ ul.icons-ul > li .icon-li {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  -o-border-radius: 6px 0 0 0;
+  -ms-border-radius: 6px 0 0 0;
+  border-radius: 6px 0 0 0;
 }
 .icon-5x {
   font-size: 5em;
@@ -9096,6 +9726,11 @@ ul.icons-ul > li .icon-li {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
+  -moz-border-radius: 7px 0 0 0;
+  -webkit-border-radius: 7px 0 0 0;
+  -o-border-radius: 7px 0 0 0;
+  -ms-border-radius: 7px 0 0 0;
+  border-radius: 7px 0 0 0;
 }
 .pull-right {
   float: right;
@@ -10496,24 +11131,6 @@ ul.icons-ul > li .icon-li {
 /*{height: @parent-height;*/
 /*line-height: @parent-height;*/
 /*vertical-align: middle}                */
-/*.border-radius(@a:0, @b:0, @c:0, @d:0)*/
-/*{-moz-border-radius: @arguments;*/
-/*-webkit-border-radius: @arguments;*/
-/*-o-border-radius: @arguments;*/
-/*-ms-border-radius: @arguments;*/
-/*border-radius: @arguments;}*/
-/*.box-shadow(@x: 0, @y:2px, @blur:6px, @color:rgba(0,0,0,0.3))*/
-/*{-moz-box-shadow: @arguments;*/
-/*-webkit-box-shadow: @arguments;*/
-/*-o-box-shadow: @arguments;*/
-/*-ms-box-shadow: @arguments;*/
-/*box-shadow: @arguments;}*/
-/*.box-shadow-inset(@x:0, @y:1px, @blur:4px, @color:rgba(0,0,0,0.2))*/
-/*{-moz-box-shadow:@arguments inset;*/
-/*-webkit-box-shadow: @arguments inset;*/
-/*-o-box-shadow: @arguments inset;*/
-/*-ms-box-shadow: @arguments inset;*/
-/*box-shadow: @arguments inset;}*/
 /*.linear-gradient(@col1:#fff, @col2:#fff){*/
 /*background-color:@col2;*/
 /*background-image:-moz-linear-gradient(@col1, @col2);*/
