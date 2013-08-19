@@ -1,0 +1,336 @@
+/* css icon-fonts ***************************************************************/
+/* Ian W Scott */
+/* public domain */
+.icon-only {
+  display: inline-block;
+}
+.icon-only .accessible {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+/*[> TODO: hide from screen readers: <span aria-hidden="true" data-icon="S"></span> <]*/
+.icon-gear:before {
+  content: 'S';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-profile:before {
+  content: 'U';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-logout:before {
+  content: 'X';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-image:before {
+  content: 'I';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-cloud:before {
+  content: 'C';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-folder:before {
+  content: 'F';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-archive:before {
+  content: 'Z';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-move:before {
+  content: 'M';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-logout:before {
+  content: 'X';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-html:before {
+  content: 'H';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-a:before {
+  content: 'T';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-terminal:before {
+  content: '_';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-paperclip:before {
+  content: 'A';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-indent:before {
+  content: 'n';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-outdent:before {
+  content: 'o';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-ul:before {
+  content: 'p';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-ol:before {
+  content: 'q';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-lock:before {
+  content: 'x';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-page:before {
+  content: 'a';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-plus-circle:before {
+  content: '+';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-close-circle:before {
+  content: 'x';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-scale:before {
+  content: '&';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-back-circle:before {
+  content: '(';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-next-circle:before {
+  content: ')';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-back:before {
+  content: '<';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-next:before {
+  content: '>';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-rotate-circle:before {
+  content: '*';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-close:before {
+  content: "'";
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-twitter:before {
+  content: 't';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-facebook:before {
+  content: 'f';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-linkedin:before {
+  content: 'l';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-google-plus:before {
+  content: 'g';
+  font-family: Websymbols;
+}
+.icon-rss-square:before {
+  content: 'r';
+  font-family: Websymbols;
+}
+.icon-vimeo:before {
+  content: 'm';
+  font-family: Websymbols;
+}
+.icon-youtube:before {
+  content: 'y';
+  font-family: Websymbols;
+}
+.icon-tumblr:before {
+  content: 'k';
+  font-family: Websymbols;
+}
+.icon-lettery:before {
+  content: 'z';
+  font-family: Websymbols;
+}
+.icon-odnoklassniki:before {
+  content: 'Q';
+  font-family: Websymbols;
+}
+.icon-star:before {
+  content: 'R';
+  font-family: Websymbols;
+}
+.icon-tag-diagonal:before {
+  content: ',';
+  font-family: Websymbols;
+}
+.icon-speech-squared:before {
+  content: 'c';
+  font-family: Websymbols;
+}
+.icon-speech:before {
+  content: 'd';
+  font-family: Websymbols;
+}
+.icon-speech-dots:before {
+  content: 'e';
+  font-family: Websymbols;
+}
+.icon-bars:before {
+  content: 'u';
+  font-family: Websymbols;
+}
+.icon-location:before {
+  content: '?';
+  font-family: Websymbols;
+  padding-right: 0.3333333333333333em;
+}
+.icon-heart:before {
+  content: 'N';
+  font-family: Websymbols;
+}
+.icon-heart-outline:before {
+  content: 'O';
+  font-family: Websymbols;
+}
+.icon-search:before {
+  content: 'L';
+  font-family: Websymbols;
+}
+.icon-cycle-squared:before {
+  content: 'J';
+  font-family: Websymbols;
+}
+.icon-new-window:before {
+  content: 'D';
+  font-family: Websymbols;
+}
+.icon-clock:before {
+  content: 'P';
+  font-family: Websymbols;
+}
+.icon-chain:before {
+  content: 'K';
+  font-family: Websymbols;
+}
+.icon-mail:before {
+  content: '@';
+  font-family: Websymbols;
+}
+.icon-sort-down:before {
+  content: '{';
+  font-family: Websymbols;
+}
+.icon-sort-up:before {
+  content: '}';
+  font-family: Websymbols;
+}
+.icon-unfold:before {
+  content: '[';
+  font-family: Websymbols;
+}
+.icon-fold:before {
+  content: ']';
+  font-family: Websymbols;
+}
+.icon-grid:before {
+  content: '1';
+  font-family: Websymbols;
+}
+.icon-list:before {
+  content: '2';
+  font-family: Websymbols;
+}
+.icon-grid-list:before {
+  content: '3';
+  font-family: Websymbols;
+}
+.icon-reply:before {
+  content: 'h';
+  font-family: Websymbols;
+}
+.icon-reply-all:before {
+  content: 'i';
+  font-family: Websymbols;
+}
+.icon-right-arrow:before {
+  content: 'j';
+  font-family: Websymbols;
+}
+.icon-full-screen:before {
+  content: '%';
+  font-family: Websymbols;
+}
+.icon-checkmark:before {
+  content: '.';
+  font-family: Websymbols;
+}
+.icon-alert:before {
+  content: 'W';
+  font-family: Websymbols;
+}
+.icon-cycle-rounded:before {
+  content: 'V';
+  font-family: Websymbols;
+}
+.icon-skype:before {
+  content: 's';
+  font-family: Websymbols;
+}
+.icon-vkontakte:before {
+  content: 'v';
+  font-family: Websymbols;
+}
+.icon-target:before {
+  content: '`';
+  font-family: Websymbols;
+}
+.icon-page-landscape:before {
+  content: 'b';
+  font-family: Websymbols;
+}
+.icon-unlocked:before {
+  content: 'w';
+  font-family: Websymbols;
+}
+.icon-up-down:before {
+  content: '~';
+  font-family: Websymbols;
+}

@@ -4,146 +4,10 @@
 /* licensed under GPL 3.0 as a free, open-source resource */
 
 @import "../framework.less";
-@import "../../../../../plugin_ajaxselect/static/plugin_ajaxselect/plugin_ajaxselect.less";
-@import "../../../../../plugin_listandedit/static/plugin_listandedit/plugin_listandedit.less";
+/*@import "../../../../../plugin_ajaxselect/static/plugin_ajaxselect/plugin_ajaxselect.less";*/
+/*@import "../../../../../plugin_listandedit/static/plugin_listandedit/plugin_listandedit.less";*/
 /*@import "../../../../../plugin_widgets/static/plugin_widgets/plugin_widgets.less";*/
 /*@import "../../../../../plugin_slider/static/plugin_slider/plugin_slider.less";*/
-
-/*colors*/
-
-/* basic palette */
-
-@black: #000;
-@gray: #555;
-@grayDark: #333;
-@grayDarker: #222;
-@grayLight: #999;
-@grayLighter: #eee;
-@white: #fff;
-
-@neutralLighter: @chalk;
-@neutralLight: @cream; 
-@putty: #d8d3b3;
-@green: #96BC44; 
-@greenDark: #809240;
-@red: #9d261d; 
-@blueDark: #006699; 
-@blue: lighten(@blueDark, 20%); 
-@orange: #f89406;
-@pink: #c3325f;
-@purple: #7a43b6;
-
-@danger: #bd362f;
-@info: #5bc0de;
-@infoDark: #2f96b4;
-@warning: @orange
-
-/*Pallette*/
-
-@textColor: @grayDark;
-@palletteBG: @neutralLighter;
-@pallette1: @neutralLight;
-@pallette2: @putty;
-@pallette3: @green;
-@pallette4: @greenDark;
-@accent1: @red;
-@accent2: @blueDark;
-@accent3: @orange;
-
-/*Applied Colours*/
-
-@bodyBackground: @palletteBG;
-@linkColor: @accent2;
-@linkColorHover: darken(@linkColor, 10%);
-@hrBorder: @accent3;
-@headingsColor: @accent1;
-
-/*Typography*/
-
-@sansFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-@serifFontFamily: 'SBL Greek', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', Times, serif;
-@monoFontFamily: Monaco, Menlo, Consolas, 'Courier New', monospace;
-@baseFontSize: 16px;
-@basebaseLineHeight: 24px;
-@headingsFontFamily: inherit;
-@headingsFontWeight: normal;
-@baseFontFamily: @serifFontFamily;
-@altFontFamily: @sansFontFamily;
-
-/*Tables*/
-
-@tableBackground: transparent;
-@tableBackgroundAccent: @pallette1;
-@tableBackgroundHover: lighten(@pallette1, 10%);
-@tableBorder: @pallette2;
-
-/*Buttons*/
-@btnBackground: @pallette1;
-@btnBackgroundHighlight: darken(@btnBackground, 10%);
-@btnBorder: @pallette2;
-@btnDangerBackground: @accent1;
-@btnDangerBackgroundHighlight: @danger;
-@btnInfoBackground: @info;
-@btnInfoBackgroundHighlight: @infoDark;
-@btnInverseBackground: darken(@pallette2, 20%);
-@btnInverseBackgroundHighlight: darken(@pallette2, 40%);
-@btnPrimaryBackground: @accent2;
-@btnPrimaryBackgroundHighlight: spin(@btnPrimaryBackground, 15%);
-@btnSuccessBackground: @pallette3;
-@btnSuccessBackgroundHighlight: darken(@btnSuccessBackground, 10%);
-@btnWarningBackground: lighten(@warning, 15%);
-@btnWarningBackgroundHighlight: @warning;
-
-/*Forms*/
-@inputBackground: @white;
-@inputBorder: @pallette2;
-@inputBorderRadius: @baseBorderRadius;
-@inputDisabledBackground: @pallette1;
-@formActionsBackground: lighten(@navbarBackground, 9%);
-@placeholderText: darken(@pallette2, 20%);
-@inputHeight: @basebaseLineHeight + 10px;
-@dropdownBackground: @white;
-@dropdownBorder: @pallette2;
-@dropdownDividerBottom: @white;
-@dropdownDividerTop: #e5e5e5;
-@dropdownLinkColor: @linkColor;
-@dropdownLinkColorHover: @palletteBG;
-@dropdownLinkColorActive: @white;
-@dropdownLinkBackgroundActive: @linkColor;
-@dropdownLinkBackgroundHover: @navbarBackground;
-
-/*Navbar*/
-@navbarBackground: @pallette1;
-@navbarBackgroundHighlight: @pallette2;
-@navbarBorder: transparent;
-@navbarBrandColor: @accent1;
-@navbarHeight: @baseLineHeight * 3;
-@navbarLinkBackgroundActive: lighten(@navbarBackground, 9%);
-@navbarLinkBackgroundHover: lighten(@navbarBackground, 3%);
-@navbarLinkColor: @pallette3;
-@navbarLinkColorActive: #ffc;
-@navbarLinkColorHover: #ffc;
-@navbarSearchBackground: lighten(@navbarBackground, 55%);
-@navbarSearchBackgroundFocus: @white;
-@navbarSearchBorder: darken(@navbarSearchBackground, 30%);
-@navbarSearchPlaceholderColor: #ccc;
-@navbarText: @pallette2;
-@navbarCollapseWidth: 979px;
-@navbarCollapseDesktopWidth: @navbarCollapseWidth + 1;
-@navbarInverseBackground: #111111;
-@navbarInverseBackgroundHighlight: #222222;
-@navbarInverseBorder: #252525;
-@navbarInverseText: @grayLight;
-@navbarInverseLinkColor: @grayLight;
-@navbarInverseLinkColorHover: @white;
-@navbarInverseLinkColorActive: @navbarInverseLinkColorHover;
-@navbarInverseLinkBackgroundHover: transparent;
-@navbarInverseLinkBackgroundActive: @navbarInverseBackground;
-@navbarInverseSearchBackground: lighten(@navbarInverseBackground, 25%);
-@navbarInverseSearchBackgroundFocus: @white;
-@navbarInverseSearchBorder: @navbarInverseBackground;
-@navbarInverseSearchPlaceholderColor: #ccc;
-@navbarInverseBrandColor: @navbarInverseLinkColor;
 
 /*Hero Unit*/
 @heroUnitBackground: @pallette2;
@@ -274,10 +138,10 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
                                             right:@baseFontSize;
                                             color:@white;
                                             background-color: @white;
-                                            line-height: @basebaseLineHeight * 1.5 + 4px;
-                                            height: @basebaseLineHeight * 1.5 + 4px;
-                                            width: @basebaseLineHeight * 1.5 + 4px;
-                                            border-radius: (@basebaseLineHeight * 1.5 / 2) + 2px;
+                                            line-height: @baseLineHeight * 1.5 + 4px;
+                                            height: @baseLineHeight * 1.5 + 4px;
+                                            width: @baseLineHeight * 1.5 + 4px;
+                                            border-radius: (@baseLineHeight * 1.5 / 2) + 2px;
                                             border:4px solid @white;
                                             text-align: center;
                                             z-index:10;
@@ -288,8 +152,8 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
             #townmap_key           {position: absolute;
                                     height:181px + ((@baseLineHeight /2) * 2);
                                     display:block;
-                                    top: @basebaseLineHeight * 1.5;
-                                    right:@basebaseLineHeight * 1.5;
+                                    top: @baseLineHeight * 1.5;
+                                    right:@baseLineHeight * 1.5;
                                     background-color: #fff;
                                     .box-shadow();
                                     display:none;
@@ -315,11 +179,11 @@ body #main.exploring #page           {
             td                         {text-align: left;
                 label                  {margin-left: @baseFontSize;
                                         text-transform: lowercase;
-                                        font-size: @basebaseLineHeight * 1.5;
+                                        font-size: @baseLineHeight * 1.5;
                                         font-family: SBLGreekRegular}
                 &.w2p_fl:first-child   {display: none;}
                 }
-            input                      {font-size: @basebaseLineHeight * 1.5;
+            input                      {font-size: @baseLineHeight * 1.5;
                                         font-family: SBLGreekRegular}
             }
         #submit_record__row        {
@@ -364,11 +228,11 @@ body #main.exploring #page           {
         }
         .bug_reporter_icon,
         .prompt_badges_icon,
-        .prompt_tips_icon      {.sticker(@basebaseLineHeight * 1.5, @baseFontSize2);
+        .prompt_tips_icon      {.sticker(@baseLineHeight * 1.5, @baseFontSize2);
                                 background-color: @accent4;
                                 color: @white;
                                 font-size: @baseLineHeight / 2;
-                                line-height: @basebaseLineHeight * 1.5;
+                                line-height: @baseLineHeight * 1.5;
                                 text-align: center;
                                 border:2px solid @white;}
     .prompt                {.speech-bubble-left(@baseLineHeight, @baseFontSize);
@@ -452,11 +316,11 @@ body #main.exploring #page           {
         /*.max_set           {background:@neutral9;*/
                             /*border:3px solid @neutral8;*/
                             /*display:inline-block;*/
-                            /*height: @basebaseLineHeight * 1.5;*/
-                            /*width: @basebaseLineHeight * 1.5;*/
-                            /*border-radius:@basebaseLineHeight * 1.5 / 2;*/
+                            /*height: @baseLineHeight * 1.5;*/
+                            /*width: @baseLineHeight * 1.5;*/
+                            /*border-radius:@baseLineHeight * 1.5 / 2;*/
                             /*color:@neutral7;*/
-                            /*line-height:@basebaseLineHeight * 1.5;*/
+                            /*line-height:@baseLineHeight * 1.5;*/
                             /*text-align:center;*/
                             /*box-shadow:0px 2px 6px rgba(0,0,0,0.3);}*/
         /*}*/

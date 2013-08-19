@@ -1,5 +1,21 @@
-@import url(http://fonts.googleapis.com/css?family=Petrona|Prociono);
-/*A reusable UI framework based on Bootstrap, FontAwesome, and the web2py "welcome" application. This file is intended to be imported into a theme.less file, which provides specific details and overrides for the project at hand.*/
+/*
+A css framework for web2py
+based on Bootstrap, FontAwesome, and the web2py "welcome" application
+and modularized using LESS css. 
+
+by Ian W Scott
+(this file is in the public domain)
+
+This is a hub file which aggregates the various reusable class files. This file
+should then be imported into a my-theme.less file, which will provide 
+specific details and overrides for the project at hand.
+
+That my-theme.less file should then be imported into a file called
+myapp/static/css/theme.less. If that file is pre-compiled into css, the 
+resulting theme.css file can serve as the only css import listed in the head 
+of framework.html. If you are going to use dynamic compiling via javascript,
+just list the myapp/static/css/theme.less itself in the page head.
+*/
 /*less files relative to framework.less, but css imports relative to final processed file (theme.css)*/
 .calendar {
   z-index: 99;
@@ -1224,7 +1240,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #f8f0e5;
 }
 a {
   color: #0088cc;
@@ -3231,8 +3247,8 @@ select:focus:invalid:focus {
 }
 .input-append .active,
 .input-prepend .active {
-  background-color: #a8eb6e;
-  border-color: #5ba917;
+  background-color: #d5e4b5;
+  border-color: #96bc44;
 }
 .input-prepend .add-on,
 .input-prepend .btn {
@@ -3566,7 +3582,7 @@ table {
   border-top: 2px solid #dddddd;
 }
 .table .table {
-  background-color: #ffffff;
+  background-color: #f8f0e5;
 }
 .table-condensed th,
 .table-condensed td {
@@ -5571,7 +5587,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
   color: #555555;
-  background-color: #ffffff;
+  background-color: #f8f0e5;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -10861,10 +10877,12 @@ ul.icons-ul > li .icon-li {
 .icon-share-sign:before {
   content: "\f14d";
 }
-/*apply a natural box layout model to all elements */
-/** { -moz-box-sizing: border-box;*/
-/*-webkit-box-sizing: border-box;*/
-/*box-sizing: border-box; }*/
+/*@import "./colours.less";*/
+/* reusable classes for css transitions *************************************/
+/* Font styles for my reusable UI framework */
+/* Ian W Scott */
+/* public domain */
+/* non-Roman scripts */
 @font-face {
   font-family: 'SBLGreekRegular';
   src: url('../plugin_framework/fonts/sbl_grk-webfont.eot');
@@ -10894,103 +10912,40 @@ ul.icons-ul > li .icon-li {
   font-style: normal;
 }
 /* typography for non-Roman scripts */
-/*.Ethiopic          {font-family:AbyssinicaSIL;*/
-/*font-size:@baseFontSize * 1.5;}*/
-/*.Aramaic, .Hebrew  {font-family:SBLHebrewRegular, 'Ezra SIL', 'Times New Roman';*/
-/*font-size:@baseFontSize * 1.75;*/
-/*direction: rtl;*/
-/*line-height:@baseLineHeight * 1.5;}*/
-/*.Greek             {font-family:SBLGreekRegular, Gentium, 'Galatia SIL', Palatino, 'Palatino Linotype', 'Times New Roman', xyz;*/
-/*font-size:@baseFontSize * 1.25;*/
-/*direction: ltr;*/
-/*line-height:@baseLineHeight * 1.5;}*/
-/*.Syriac            {font-family:'EstrangeloEdessaRegular';*/
-/*direction: ltr; }*/
-/*.Latin, .English   {font-family:Petrona, Palatino, 'Palatino Linotype', serif; }*/
-/* COLOURS ***********************************/
-/* solarized */
-/* background - charcoal */
-/* background - dark aqua */
-/* content - dark grey */
-/* content - dark grey */
-/* content - mid-grey */
-/* content - mid-grey */
-/* background - beige */
-/* background - cream */
-/* golden yellow */
-/* paideia */
-/* paideia */
-/* paideia */
-/* ubuntu */
-/* ocp */
-/* ocp - book title */
-/* ocp -- text headings on white or on mud; edition label */
-/* ocp - not in active use */
-/* ocp - not in active use */
-/* ocp - read text link on intro pages; maybe headings on white? */
-/* ocp - footer and top of header gradient */
-/* ocp - bottom of header gradient */
-/* ocp - accent with chalk, table lines */
-/* ocp - sidebars and control buttons */
-/* ocp */
-/* ocp */
-/* ocp - text on latte */
-/* yellows */
-/* ocp - book title */
-/* greens */
-/* ocp -- text headings on white or on mud; edition label */
-/* ocp - not in active use */
-/* paideia */
-/* blues */
-/* ocp - not in active use */
-/* ocp - read text link on intro pages; maybe headings on white? */
-/* ubuntu */
-/* ocp - not in active use */
-/* ocp - footer and top of header gradient */
-/* ocp - bottom of header gradient */
-/* ocp - table cell background */
-/* paideia */
-/* paideia */
-/* ocp - accent with chalk, table lines */
-/* ocp - sidebars and control buttons */
-/* ocp */
-/* ocp */
-/*google light background*/
-/* ocp - text on latte */
-/*google black*/
-/*[> page <]*/
-/*body                   {.fixed-page;*/
-/*.textdefaults;}*/
-/*[> fonts and typography ***************************************<]*/
-/*@fonts1:"Palatino Linotype", Palatino, serif;*/
-/*@fonts2:"Palatino Linotype", Palatino, serif;*/
-/*@fonts3:ubuntu, calibri, arial, sans-serif;*/
-/*.textdefaults()        {font-size: @baseFontSize;*/
-/*line-height: @baseLineHeight;*/
-/*font-family: @fonts1;*/
-/*color:@grey6;}*/
-/*.blockletter()         {font-size: @baseFontSize;*/
-/*text-transform:uppercase;*/
-/*font-family:@fonts3;*/
-/*letter-spacing: 2px;}*/
-/*.blockletter-small()   {.blockletter;*/
-/*font-size:@smalltype;}*/
-/*.formfieldtext()       {.textdefaults;}*/
-/*[>****       *****<]*/
-/*[>**** links *****<]*/
-/*[>****       *****<]*/
-/*a              {text-decoration: none;*/
-/*&:hover,*/
-/*&:active,*/
-/*&:link     {text-decoration: none;}*/
-/*}*/
-/*[> the main action button or link in a region or form <]*/
-/*.button_primary {*/
-/*}*/
-/*.button_secondary {*/
-/*}*/
-/*[>**** headings *****************************************<]*/
-/*[> basic classes to apply to all heading levels <]*/
+.Ethiopic {
+  font-family: AbyssinicaSIL;
+  font-size: 1.5em;
+}
+.Aramaic,
+.Hebrew {
+  font-family: SBLHebrewRegular, 'Ezra SIL', 'Times New Roman';
+  font-size: 1.75em;
+  direction: rtl;
+}
+.Greek {
+  font-family: SBLGreekRegular, Gentium, 'Galatia SIL', Palatino, 'Palatino Linotype', 'Times New Roman';
+  font-size: 1.25em;
+  direction: ltr;
+}
+.Syriac {
+  font-family: 'EstrangeloEdessaRegular';
+  direction: ltr;
+}
+.Latin,
+.English {
+  font-family: Petrona, Palatino, 'Palatino Linotype', serif;
+}
+/* typography ****************************************/
+/***** links ******/
+a {
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:link {
+  text-decoration: none;
+}
+/***** headings ******************************************/
 /*.heading()             {font-family: @fonts1;*/
 /*display:block;*/
 /*margin:0;}*/
@@ -10999,232 +10954,7 @@ ul.icons-ul > li .icon-li {
 /*.heading;}*/
 /*h2,*/
 /*h3                     {.heading;}*/
-/*[> text divisions ***************************************<]*/
-/*div,*/
-/*section,*/
-/*aside                  {padding:14px;}*/
-/*form div               {padding:0;}*/
-/*[> modal dialogue ****************************************<]*/
-/*[> custom modal mask <]*/
-/*[> custom modal closer <]*/
-/*[> custom modal dialog <]*/
-/*//jquery-ui dialog*/
-/*.ui-resizable-handle   {padding:0;}*/
-/*#modal_frame   {display:none;*/
-/*position:absolute;*/
-/*top:15%;*/
-/*left:50%;*/
-/*padding:24px;*/
-/*width:400px;*/
-/*min-height:260px;*/
-/*background-color:#fff;*/
-/*border-radius:2px;*/
-/*z-index:1;*/
-/*margin-left:-200px;*/
-/*.box-shadow(0,2px,12px,rgba(0,0,0,0.7));}*/
-/*[> lists **************************************************<]*/
-/*ul             {margin: 0;*/
-/*padding: 0;*/
-/*list-style-position: inside;*/
-/*list-style-type: none;}*/
-/*[> forms *************************************************<]*/
-/*input[type=text],*/
-/*input[type=password],*/
-/*select,*/
-/*textarea           {border:1px solid #eee;*/
-/*.textdefaults;*/
-/*.transition();}*/
-/*input[type=text]:focus,*/
-/*textarea:focus     {.box-shadow-inset(0, 1px, 2px, rgba(0,0,0,0.4));*/
-/*border:1px solid @green;*/
-/*.transition();}*/
-/*textarea           {padding:0 @baseFontSize;*/
-/*.formfieldtext;}*/
-/*input[type=text],*/
-/*select             {line-height:@baseLineHeight * 1.5;*/
-/*option         {padding-left:@baseFontSize;}*/
-/*}*/
-/*select             {background:#fff;*/
-/*border:1px solid #eee;*/
-/*max-width:90%;*/
-/*width:90%;}*/
-/*form label         {line-height:@baseLineHeight * 1.5;*/
-/*.blockletter-small();}*/
-/*input[type=submit] {.button-green-grad;*/
-/*border:1px solid @green;*/
-/*.blockletter-small();}*/
-/*[> tables *************************************************<]*/
-/*td                     {vertical-align:top;}*/
-/*//tables in forms*/
-/*form table             {padding: @baseFontSize;*/
-/*tr                 {*/
-/*&:first-child  {padding-top: @baseFontSize;}*/
-/*td              {min-height:@baseLineHeight * 1.5;*/
-/*&:first-child  {text-align: left;*/
-/*padding-right:@baseFontSize;}*/
-/*}*/
-/*}*/
-/*}*/
-/*[> layout *************************************************<]*/
-/*.fluid-page()          {*/
-/*header,*/
-/*#page,*/
-/*footer             {width: 100%}*/
-/*}*/
-/*.fixed-page()          {*/
-/*header,*/
-/*#page,*/
-/*footer             {position: relative;*/
-/*width:@pagewidth;*/
-/*min-width:@minpagewidth;*/
-/*background-color: @white;*/
-/*margin:0 auto;*/
-/*padding:0;}*/
-/*}*/
-/*header                 {background-color: #f5f5f5;}*/
-/*nav                    {margin:0;*/
-/*float:right;}*/
-/*#page                  {min-height: 480px;}*/
-/*[> web2py specific ***************************************<]*/
-/*.auth_navbar   {position: relative;*/
-/*display:block;*/
-/*float:right;*/
-/*height:@baseLineHeight * 1.5;*/
-/*line-height:@baseLineHeight * 1.5;}*/
-/*div.flash      {font-weight: bold;*/
-/*display: none;*/
-/*position: fixed;*/
-/*padding: @baseFontSize;*/
-/*top: 0;*/
-/*right: 0px;*/
-/*min-width: 280px;*/
-/*opacity: 0.85;*/
-/*margin: 0px 0px 10px 10px;*/
-/*color: #fff;*/
-/*vertical-align: middle;*/
-/*cursor: pointer;*/
-/*background-color: rgba(0,0,0,0.8);*/
-/*border: 1px solid #ccc;*/
-/*z-index: 100;*/
-/*.border-radius(0,0,5px,5px);*/
-/*.box-shadow;}*/
-/*div.error      {background-color: @red;*/
-/*color: @white;*/
-/*padding: 3px;}*/
-/*[> non-semantic utility classes <]*/
-/*.clear         {clear: both; padding: 0;}*/
-/*[> clearfix class; see http://css-tricks.com/snippets/css/clear-fix/ <]*/
-/*.group()       {zoom: 1; [> activate hasLayout in ie6-7 <]*/
-/*&:before   {content: " ";*/
-/*display:block;}*/
-/*&:after    {content: " ";*/
-/*display: table;*/
-/*clear: both;}*/
-/*}*/
-/*.centered-horizontalA(@vmargin:0)      {margin: @vmargin auto;}*/
-/*.centered-horizontalB(@width:200px)    {position: relative;*/
-/*left: 50%;*/
-/*margin-left: -(@width/2);}*/
-/*.centered-vertical-block(@height:200px){position: relative;*/
-/*top: 25%;}*/
-/*.centered-vertical-text(@parent-height: @baseLineHeight * 2) */
-/*{height: @parent-height;*/
-/*line-height: @parent-height;*/
-/*vertical-align: middle}                */
-/*.linear-gradient(@col1:#fff, @col2:#fff){*/
-/*background-color:@col2;*/
-/*background-image:-moz-linear-gradient(@col1, @col2);*/
-/*background-image:-webkit-gradient(linear, 0 0, 0 100%, from(@col1), to(@col2));*/
-/*background-image:-o-linear-gradient(@col1, @col2);*/
-/*background-image:-ms-linear-gradient(@col1, @col2);}*/
-/*[> css lines <]*/
-/*[> css triangles <]*/
-/*[> css speech bubbles <]*/
-/*[> tooltips <]*/
-/*.tip(@max:300px, @min:100px)   {background: #eee;*/
-/*border: 1px solid #ccc;*/
-/*padding: @baseLineHeight;*/
-/*border-radius: @baseFontSize;*/
-/*position: absolute;*/
-/*max-width: @max;*/
-/*min-width: @min;*/
-/*display:none;*/
-/*z-index:99;*/
-/*.transition();*/
-/*&.tip-visible,*/
-/*&:target                   {display:block;*/
-/*.transition();} */
-/*}*/
-/*.tip-top(@max:300px, @min:100px)*/
-/*{.speech-bubble-down();*/
-/*.tip(@max, @min);*/
-/*&.tip-visible,*/
-/*&:target                   {display:block;*/
-/*.transition();} */
-/*}*/
-/*.tip-left(@bgcolor:@white, @color:grey, @br:@baseLineHeight * 1.5, @width:@baseFontSize, @max:300px, @min:100px)*/
-/*{.speech-bubble-right(@br, @width, @bgcolor, @color);*/
-/*.tip(@max, @min);}*/
-/*.tip-right(@max:300px, @min:100px)*/
-/*{.speech-bubble-left();*/
-/*.tip(@max, @min);}*/
-/*.tip-bottom(@max:300px, @min:100px)*/
-/*{.speech-bubble-up();*/
-/*.tip(@max, @min);}*/
-/*.tip_wrapper                       {display: inline-block;*/
-/*position: relative;*/
-/*overflow: visible;*/
-/*.tooltip-left              {.tip-left();}                                */
-/*.tooltip-right             {.tip-right();}                                */
-/*.tooltip-top               {.tip-top();}                                */
-/*.tooltip-bottom            {.tip-bottom();}                                */
-/*}*/
-/*[> border images <]*/
-/*.border-image(@img, @a, @b, @c, @d, @bwidth) {*/
-/*border: @bwidth solid transparent;*/
-/*-moz-border-image: url(@img) @a @b @c @d repeat repeat;*/
-/*-webkit-border-image: url(@img) @a @b @c @d repeat repeat;*/
-/*-o-border-image: url(@img) @a @b @c @d repeat repeat;*/
-/*border-image: url(@img) @a @b @c @d repeat repeat;*/
-/*}*/
-/*[> buttons <]*/
-/*.button        {display:inline-block;*/
-/*line-height:@baseLineHeight * 1.5;*/
-/*height:@baseLineHeight * 1.5;*/
-/*margin-left:@baseFontSize;*/
-/*padding:0 @baseFontSize;*/
-/*color:#fff;*/
-/*.transition();*/
-/*&:hover    {.box-shadow(0, 2px, 6px, rgba(0,0,0,0.4));*/
-/*.transition();}*/
-/*}*/
-/*.button-green-grad     {.button; .linear-gradient(#84C63C, #489615);}*/
-/*.button-yellow-grad    {.button; .linear-gradient(#FFD272, #EFAD1F);}*/
-/*[> a circular button with white border <]*/
-/*.sticker(@diam:@baseLineHeight, @rad:@baseFontSize)*/
-/*{display:inline-block;*/
-/*width:@diam;*/
-/*height:@diam;*/
-/*line-height:@diam;*/
-/*padding:0;*/
-/*text-align:center;*/
-/*.border-radius(@rad,@rad,@rad,@rad);*/
-/*font-weight:bold;*/
-/*.border-radius(@rad,@rad,@rad,@rad);*/
-/*.transition();*/
-/*&:hover    {.box-shadow(0, 2px, 4px);*/
-/*.transition(); }*/
-/*}*/
-/*.red-sticker   {background-color:@red; color:#fff; .sticker; }*/
-/*[> collapsible divs or panels using :target pseudo-element <]*/
-/*.collapsible_parent                {*/
-/*.collapsible_child             {height:0;*/
-/*overflow: hidden;*/
-/*.transition();}*/
-/*&:target .collapsible_child    {height:auto;*/
-/*.transition();}*/
-/*}*/
-/*[> labels for new items <]*/
+/* labels ******************************************************************/
 /*.label_new                             {*/
 /*&:before                           {content:'new';*/
 /*color: @spring-green;*/
@@ -11234,4 +10964,20 @@ ul.icons-ul > li .icon-li {
 /*margin-left: -(@baseLineHeight * 2);*/
 /*display: inline-block;}*/
 /*}*/
-/*[> icon-fonts *************<]*/
+/*@import "./icon-fonts.less";*/
+/* corners, gradients, and shadows for my reusable UI framework */
+/* Ian W Scott */
+/* public domain */
+/*@import "./buttons.less";*/
+/* css drawing helper classes */
+/* Ian W Scott */
+/* public domain */
+/*[> css lines <]*/
+/*[> css triangles <]*/
+/*[> css speech bubbles <]*/
+/*@import "./layouts.less";*/
+/*@import "./lists.less";*/
+/*@import "./tables.less";*/
+/*@import "./forms.less";*/
+/*@import "./tooltips.less";*/
+/*@import "./jquery-ui-custom.less";*/
