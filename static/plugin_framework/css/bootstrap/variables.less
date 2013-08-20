@@ -45,6 +45,9 @@
 @info: #5bc0de;
 @infoDark: #2f96b4;
 @warning: @orange;
+@error: @red;
+@success: @pallette3;
+@successDark: @pallette4;
 
 // Applied Pallette (modded)
 // -------------------------
@@ -81,7 +84,7 @@
 @altFontFamily:         @sansFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         @accent1;
 
 
@@ -89,6 +92,7 @@
 // -------------------------
 // Based on 14px font-size and 20px line-height
 
+@fontSizeLargest:       @baseFontSize * 2; // ~20px
 @fontSizeLarge:         @baseFontSize * 1.25; // ~20px
 @fontSizeSmall:         @baseFontSize * 0.85; // ~13.4px
 @fontSizeMini:          @baseFontSize * 0.75; // ~12px
@@ -98,8 +102,8 @@
 @paddingMini:           0 (@baseFontSize/2);   // default 0 6px (22px)
 
 @baseBorderRadius:      0px; //default 4px
-@borderRadiusLarge:     6px;
-@borderRadiusSmall:     3px;
+@borderRadiusLarge:     0px;
+@borderRadiusSmall:     0px;
 
 
 // Tables
@@ -200,7 +204,7 @@
 
 // Wells
 // -------------------------
-@wellBackground:                  #f5f5f5;
+@wellBackground:                  @pallette1; //#f5f5f5;
 
 
 // Navbar
@@ -260,27 +264,27 @@
 
 // Hero unit
 // -------------------------
-@heroUnitBackground:              @grayLighter;
-@heroUnitHeadingColor:            inherit;
+@heroUnitBackground:              @pallette1;
+@heroUnitHeadingColor:            @pallette4;
 @heroUnitLeadColor:               inherit;
 
 
 // Form states and alerts
 // -------------------------
-@warningText:             #c09853;
+@warningText:             @warning; //#c09853;
 @warningBackground:       #fcf8e3;
 @warningBorder:           darken(spin(@warningBackground, -10), 3%);
 
-@errorText:               #b94a48;
+@errorText:               @error; //#b94a48;
 @errorBackground:         #f2dede;
 @errorBorder:             darken(spin(@errorBackground, -10), 3%);
 
-@successText:             #468847;
-@successBackground:       #dff0d8;
+@successText:             @successDark; //#468847;
+@successBackground:       lighten(@success, 55%); //#dff0d8;
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 
-@infoText:                #3a87ad;
-@infoBackground:          #d9edf7;
+@infoText:                @info; //#3a87ad;
+@infoBackground:          @infoDark; //#d9edf7;
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
 

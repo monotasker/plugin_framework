@@ -9,102 +9,32 @@
 /*@import "../../../../../plugin_widgets/static/plugin_widgets/plugin_widgets.less";*/
 /*@import "../../../../../plugin_slider/static/plugin_slider/plugin_slider.less";*/
 
-/*Hero Unit*/
-@heroUnitBackground: @pallette2;
-@heroUnitHeadingColor: @pallette3;
-@heroUnitLeadColor: inherit;
-
-/*pagination*/
-@paginationBackground: #fff;
-@paginationBorder: #ddd;
-@paginationActiveBackground: #f5f5f5;
-
-/*Tooltips*/
-@tooltipColor: #fff;
-@tooltipBackground: #000;
-@tooltipArrowWidth: 5px;
-@tooltipArrowColor: @tooltipBackground;
-
-/*Popover*/
-@popoverBackground: #fff;
-@popoverArrowWidth: 10px;
-@popoverArrowColor: #fff;
-@popoverTitleBackground: darken(@popoverBackground, 3%);
-@popoverArrowOuterWidth: @popoverArrowWidth + 1;
-@popoverArrowOuterColor: rgba(0,0,0,.25);
-
-/*Info Spans*/
-@warningBackground: lighten(@warning, 50%);
-@warningBorder: darken(spin(@warningBackground, -10), 3%);
-@warningText: @warning;
-@errorBackground: lighten(@red, 50%);
-@errorBorder: darken(spin(@errorBackground, -10), 3%);
-@errorText: @red;
-@successBackground: lighten(@green, 50%);
-@successBorder: darken(spin(@successBackground, -10), 5%);
-@successText: @green;
-@infoBackground: lighten(@blueDark, 50%);
-@infoBorder: darken(spin(@infoBackground, -10), 7%);
-@infoText: @blueDark;
-@wellBackground: @pallette1;
-
-/*Grid*/
-@gridColumnWidth: 60px;
-@gridColumns: 12;
-@gridGutterWidth: 20px;
-
-
-/* 2.2.0 Migration*/
-/* Component sizing*/
-/* -------------------------*/
-/* Based on 14px font-size and 20px line-height*/
-
-@fontSizeLarge:         @baseFontSize * 1.25; // ~18px
-@fontSizeSmall:         @baseFontSize * 0.85; // ~12px
-@fontSizeMini:          @baseFontSize * 0.75; // ~11px
-
-@paddingLarge:          11px 19px; // 44px
-@paddingSmall:          2px 10px;  // 26px
-@paddingMini:           0px 6px;   // 22px
-
-@baseBorderRadius:      0; //4px;
-@borderRadiusLarge:     0; //6px;
-@borderRadiusSmall:     0; //3px;
-
-
-
 body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
             background-repeat: repeat;
 
-    .navbar.top .navbar-inner     
-                       {
-                        /*height: @baseLineHeight * 2.5;*/
-                        /*background-color: @cream;*/
-                        background-image: url("/paideia/static/images/page_border_top-bottom.svg");
+    .navbar.top .navbar-inner     {
+            background-image: url("/paideia/static/images/page_border_top-bottom.svg");
+            height: @baseFontSize * 2; 
+            background-color: @chalk;
 
-        h1,
-        h1 a           {display: block;
-                        color: @red;}
-        li             {background: @cream;
-            a          {color: @blueDark;}
-            li         {background: @white;}
-            }
+        a.brand        {display: block;
+                        color: @red;
+                        font-size: @fontSizeLargest;
+                        .blockletter;}
         }
 
-    .main              {background: transparent;
-                        margin-top: @baseLineHeight * 2;
+    .main              {background-color: @palletteBG;
         .left-sidebar,
         .right-sidebar {
-                        background-color: @cream;
+                        background-color: @putty;
                         background-image: url("/paideia/static/images/Drawing15_neutral_sides.svg");
                         background-repeat: repeat-y;
                         height:100%;
-                        margin-left:0;}
+                        min-height:480px;}
 
-        .right-sidebar {background-position: -60px 0px;}
+        .right-sidebar {background-position: 0px 0px;}
         }
-        #page          {background-color: @chalk;
-                        margin-left: 0;
+        #page          {background-color: @palletteBG;
                         overflow: hidden;
                         min-height:670px;
 
@@ -116,6 +46,7 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
                 overflow: hidden;
             }
 
+            /* the background images for each map location */
             .bg_image      {position: absolute;
                             z-index:1;
                             width:100%;
