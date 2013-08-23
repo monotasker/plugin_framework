@@ -4,17 +4,34 @@
 /* licensed under GPL 3.0 as a free, open-source resource */
 
 @import "../framework.less";
+@import "../font-awesome/css/font-awesome.min.css";
+                   
 /*@import "../../../../../plugin_ajaxselect/static/plugin_ajaxselect/plugin_ajaxselect.less";*/
-/*@import "../../../../../plugin_listandedit/static/plugin_listandedit/plugin_listandedit.less";*/
+@import "../../../../../plugin_listandedit/static/plugin_listandedit/plugin_listandedit.less";
 /*@import "../../../../../plugin_widgets/static/plugin_widgets/plugin_widgets.less";*/
 /*@import "../../../../../plugin_slider/static/plugin_slider/plugin_slider.less";*/
 
+@media (max-width: 979px){
+    .navbar-fixed-top          {margin-bottom: 0;
+        .nav-collapse.collapse {background-color: @putty;}
+    }
+    .container                 {
+        .main                  {padding-top: 0;
+                                margin-top: 0;}
+    } 
+} 
+    
+@media (max-width: 767px) {
+    .left-sidebar,
+    .right-sidebar         {display: none;}
+}
+
 body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
             background-repeat: repeat;
-
+    .navbar-fixed-top             {margin-bottom: 0;}
     .navbar.top .navbar-inner     {
             background-image: url("/paideia/static/images/page_border_top-bottom.svg");
-            height: @baseFontSize * 2; 
+            height: @baseLineHeight* 2; 
             background-color: @chalk;
 
         a.brand        {display: block;
@@ -22,22 +39,54 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
                         font-size: @fontSizeLargest;
                         .blockletter;}
         }
-
-    .main              {background-color: @palletteBG;
-        .left-sidebar,
-        .right-sidebar {
-                        background-color: @putty;
-                        background-image: url("/paideia/static/images/Drawing15_neutral_sides.svg");
-                        background-repeat: repeat-y;
-                        height:100%;
-                        min-height:480px;}
-
-        .right-sidebar {background-position: 0px 0px;}
-        }
-        #page          {background-color: @palletteBG;
-                        overflow: hidden;
-                        min-height:670px;
-
+    .container         {background-color: @palletteBG;//coloring main creates unwanted left margin
+                         
+        .main              {background-color: transparent;
+                            margin-top: @baseLineHeight* 2;
+                            padding-top: 0;
+            .left-sidebar,
+            .right-sidebar {background-color: @putty;
+                            background-image: url("/paideia/static/images/Drawing15_neutral_sides.svg");
+                            background-repeat: repeat-y;
+                            height:100%;
+                            min-height:480px;}
+            .left-sidebar  {//.span1;
+                            .left-sidebar;}
+            .right-sidebar {//.span1;
+                            .right-sidebar;
+                            background-position: 0px 0px;}
+        
+        #page                      {//.span10;
+                                    background-color: @palletteBG;
+                                    overflow: hidden;
+                                    min-height:670px;
+            #intro                 {
+                .hero-unit         {
+                    #alpha-warning          {.alert;
+                                            .alert-danger;
+                                            font-size: @baseFontSize;
+                                            line-height: @baseLineHeight;}
+                }
+                .panel-group                {
+                    .panel-title            {margin: 0;}
+                    .panel:first-child      {
+                        .panel-title:before    {content:"";
+                                                font-family: FontAwesome;}
+                    }
+                    .panel:nth-child(2)      {
+                        .panel-title:before    {content:"";
+                                                font-family: FontAwesome;}
+                    }
+                    .panel:nth-child(3)      {
+                        .panel-title:before    {content:"";
+                                                font-family: FontAwesome;}
+                    }
+                    .panel:nth-child(4)     {
+                        .panel-title:before    {content:"";
+                                                font-family: FontAwesome;}
+                    }
+                }
+            }
             /* The main map for navigating the town */
             #town_map {
                 width:100%;
@@ -53,7 +102,7 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
 
                 img                {width:100%;
                                     opacity:0.5;}
-                }
+            }
             .speaker               {position: absolute;
                                     z-index:2;
                                     left:0px;
@@ -62,8 +111,8 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
                 img                {position:relative;
                                     /*width:100%;*/
                                     height:680px;}
-                }
-            .townmap_key_trigger                   {position: absolute;
+            }
+            .townmap_key_trigger           {position: absolute;
                                             display:inline-block;
                                             top:@baseFontSize;
                                             right:@baseFontSize;
@@ -78,8 +127,8 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
                                             z-index:10;
                                             padding-bottom:4px;
                                             .box-shadow();
-                                            .inset-text();}
-
+                                            .inset-text();
+            }
             #townmap_key           {position: absolute;
                                     height:181px + ((@baseLineHeight /2) * 2);
                                     display:block;
@@ -93,9 +142,11 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
                 &.tip-visible      {display:block;}
                 img                {width:277px;
                                     border: 2px solid @white}
-                }
+            }
         } 
     }
+    }
+}
 
 body #main.exploring #page           {
 
@@ -133,7 +184,7 @@ body #main.exploring #page           {
                             width:100%;
                             font-size:@baseFontSize;}
         .readable_short,
-        .readable_long     {color:@accent7;}
+        .readable_long     {color:@accent3;}
         .prompt_badges_wrapper,
         .bug_reporter_wrapper,
         .prompt_tips_wrapper
@@ -145,22 +196,22 @@ body #main.exploring #page           {
         .bug_reporter,
         .prompt_tips       {font-size: @baseFontSize;
                             line-height: @baseLineHeight;
-                            color: @neutral6;
+                            color: @pallette1;
                             padding: @baseLineHeight;
                             left:-320px;
                             top:-@baseLineHeight * 3;
                             margin-left:0;
                             display:none;
                             z-index:10;
-                            .tip-left(#fff);
             span,
             a              {font-size: @baseFontSize;}
             }
         }
         .bug_reporter_icon,
         .prompt_badges_icon,
-        .prompt_tips_icon      {.sticker(@baseLineHeight * 1.5, @baseFontSize2);
-                                background-color: @accent4;
+        .prompt_tips_icon      {
+                                /*.sticker(@baseLineHeight * 1.5, @baseFontSize * 1.5);*/
+                                background-color: @accent3;
                                 color: @white;
                                 font-size: @baseLineHeight / 2;
                                 line-height: @baseLineHeight * 1.5;
@@ -169,36 +220,67 @@ body #main.exploring #page           {
     .prompt                {.speech-bubble-left(@baseLineHeight, @baseFontSize);
                             min-height: @baseFontSize * 4;
                             z-index:4;
-        div                {.group();} [> clearfix class <]
+        div                {.group;} 
         }
-    .responder             {.speech-bubble-down(@baseLineHeight, @baseFontSize, @neutral3);
-                            color: @neutral1;
+    .responder             {.speech-bubble-down(@baseLineHeight, @baseFontSize, @pallette1);
+                            color: @accent3;
                             z-index:3;}
     }
 
-/*#page.listing              {*/
-    /*#viewpane              {background-color:@neutral1;*/
+/* Plugin listandedit styles ***************************************/
 
-        /*input[type=text],*/
-        /*textarea           {width:100%;}*/
+#listpane                          {background-color: @pallette1;
+                                    width:35%;
+                                    height:600px;
+                                    overflow:auto;
+                                    padding:0;
+                                    position:relative;
 
-        /*select             {width:100%;}*/
+    li                             {display:block;
+                                    list-style-type:none;
+                                    padding: @paddingSmall;
+        a                          {font-size: @fontSizeSmall;}
+        }
+    }
 
-        /*.plugin_ajaxselect select[multiple=multiple]*/
-                           /*{height:300px;}*/
-        /*label              {color:@accent4;*/
-                            /*line-height:@baseLineHeight;}*/
-        /*.w2p_fl            {margin-top:@baseLineHeight;}*/
+#page .list_control                {padding:0;
+                                    background: @pallette2;
+    h2                             {color:@palletteBG;
+                                    .text-shadow(0,0,3px, rgba(0,0,0,0.1));
+                                    display: inline-block;
+        .restrictor                {font-size:@baseFontSize;}
+    }
+    a                              {.pull-right;
+                                    color:@accent2;
+                                    display:block;
+                                    line-height: 100%;
+                                    height: 100%;
+                                    margin-right:@baseLineHeight;
+        &:hover                    {color:@white;
+                                    .text-shadow(0);}
+    }
+}
 
-        /*li#steps_id_row,*/
-        /*#delete_record_row,*/
-        /*#submit_row        {*/
-            /*div.w2p_fl,*/
-            /*div.w2p_fw     {display:inline-block;*/
-                            /*float:left;}*/
-            /*}*/
-        /*}*/
-    /*}*/
+#viewpane                          {.pull-right;
+                                    overflow:auto;
+                                    width: 65%;
+                                    height: 600px;
+                                    position:relative;
+    form                           {margin: 0 0 0 @baseLineHeight;} 
+    .plugin_listandedit_duplicate  {position:absolute;
+                                    display:block;
+                                    right:1em;
+                                    top:0;
+                                    background-color:#607890;
+                                    color:white;
+                                    padding:0.25em 1em;
+                                    font-size:0.8em;
+        &:hover                    {background-color:#003366;
+                                    .transition();}
+        }
+}
+
+}
 
 /*[> profile pages ***********************************************<]*/
 /*#page.profile,*/
