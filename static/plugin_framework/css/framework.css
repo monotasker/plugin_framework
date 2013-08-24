@@ -11065,13 +11065,6 @@ a:link {
 /* flow****************************************************************/
 /* clearfix class; see http://css-tricks.com/snippets/css/clear-fix/ */
 /*.clear         {clear: both; padding: 0;}*/
-/*.group()       {zoom: 1; activate hasLayout in ie6-7; */
-/*&:before   {content: " ";*/
-/*display:block;}*/
-/*&:after    {content: " ";*/
-/*display: table;*/
-/*clear: both;}*/
-/*}*/
 /* centering *****************************************************/
 /*.centered-horizontalA(@vmargin:0)      {margin: @vmargin auto;}*/
 /*.centered-horizontalB(@width:200px)    {position: relative;*/

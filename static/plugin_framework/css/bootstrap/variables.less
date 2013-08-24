@@ -151,16 +151,16 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @white;
+@dropdownBackground:            @navbarBackground;
 @dropdownBorder:                @pallette2; //rgba(0,0,0,.2);
-@dropdownDividerTop:            #e5e5e5;
+@dropdownDividerTop:            @pallette2;
 @dropdownDividerBottom:         @white;
 
-@dropdownLinkColor:             @accent2; // @grayDark
-@dropdownLinkColorHover:        @white;
-@dropdownLinkColorActive:       @white;
+@dropdownLinkColor:             @navbarLinkColor; // @grayDark
+@dropdownLinkColorHover:        @navbarLinkColorHover;
+@dropdownLinkColorActive:       @navbarLinkColorActive;
 
-@dropdownLinkBackgroundActive:  @linkColor;
+@dropdownLinkBackgroundActive:  @navbarLinkBackgroundActive;
 @dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
 
 
@@ -213,22 +213,18 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    @baseLineHeight * 2; //40px;
-@navbarBackgroundHighlight:       @pallette2; //#ffffff;
-@navbarBackground:                @pallette1; //darken(@navbarBackgroundHighlight, 5%);
+@navbarBackgroundHighlight:       lighten(@navbarBackground, 5%);//#ffffff;
+@navbarBackground:                @palletteBG;
 @navbarBorder:                    transparent; //darken(@navbarBackground, 12%);
 
 @navbarText:                      @pallette2; // #777
-@navbarLinkColor:                 #777;
-@navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @gray;
+@navbarLinkColor:                 darken(@pallette2, 30%);// #777
+@navbarLinkColorActive:           @palletteBG; //@gray; 
+@navbarLinkColorHover:            @palletteBG; //@grayDark;
+@navbarLinkBackgroundHover:       @pallette2; 
+@navbarLinkBackgroundActive:      @pallette2;
 
-@navbarLinkColor:                 @pallette3; // #777
-@navbarLinkColorActive:           #ffc; //@gray; 
-@navbarLinkColorHover:            #ffc; //@grayDark;
-@navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
-
-@navbarSearchBackground:          lighten(@navbarBackground, 55%);
+@navbarSearchBackground:          @navbarBackground;
 @navbarSearchBackgroundFocus:     @white;
 @navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
 @navbarSearchPlaceholderColor:    #ccc;
