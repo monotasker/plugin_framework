@@ -1,0 +1,282 @@
+/* blog_theme */
+/* a sub-theme for the "framework" layout plugin for web2py */
+/* copyright Ian W. Scott, 2011 */
+/* licensed under GPL 3.0 as a free, open-source resource */
+
+@import "../framework";
+
+/*@accent1: @sol_orange;*/
+/*@accent2: @sol_green;*/
+/*@accent3: @sol_cyan;*/
+/*@neutral1: @sol_cream;*/
+/*@neutral2: @sol_beige;*/
+/*@neutral3: @sol_grey4;*/
+/*@neutral4: @sol_grey2;*/
+/*@neutral5: @sol_aqua;*/
+/*@text: @neutral4;*/
+
+/*body                               {background-color:@neutral3;*/
+                                    /*.linear-gradient(@neutral3,@neutral4);*/
+                                    /*background-repeat: no-repeat;*/
+                                    /*z-index:1;*/
+                                    /*.English;}*/
+
+/*header                             {position:relative;*/
+                                    /*display:block;*/
+                                    /*height:@lineheight2;*/
+                                    /*line-height:@lineheight2;*/
+                                    /*.linear-gradient(@brown1, @brown2);*/
+                                    /*.box-shadow(0,2px,6px,rgba(0,0,0,0.3));*/
+                                    /*z-index:99;*/
+                                    /*padding:0;*/
+
+    /*#appname                       {height:@lineheight2;*/
+                                    /*line-height:@lineheight2;*/
+                                    /*margin:0;}*/
+
+    /*h1 a                           {margin:0 @lineheight3;*/
+                                    /*line-height:@lineheight2;*/
+                                    /*height:@lineheight2;*/
+                                    /*color:#fff;*/
+                                    /*display:block;*/
+                                    /*.blockletter;*/
+                                    /*.inset-text;}*/
+    /*}*/
+
+/*nav                                {background-color:transparent;*/
+                                    /*padding: 0;*/
+                                    /*margin:0;*/
+                                    /*height:100%;*/
+                                    /*border-left:1px solid rgba(0,0,0,0.1);*/
+
+    /*.sf-menu                       {*/
+        /*li                         {background-color:transparent;*/
+                                    /*height:@lineheight2;*/
+                                    /*line-height:@lineheight2;*/
+                                    /*.blockletter();*/
+            /*a,*/
+            /*a:link,*/
+            /*a:visited              {color:#fff;*/
+                                    /*.blockletter-small;*/
+                                    /*.inset-text;*/
+                                    /*border-left:1px solid rgba(270,270,270,0.3);*/
+                                    /*border-right:1px solid rgba(0,0,0,0.1);*/
+                                    /*padding:0 @typeheight;}*/
+            /*a:hover,*/
+            /*a:active,*/
+            /*a:focus                {.linear-gradient(rgba(270,270,270,0.1), rgba(270,270,270,0));}*/
+            /*}*/
+        /*li:hover,*/
+        /*li.sfHover                 {background-color:transparent;*/
+
+            /*li                     {line-height: @lineheight2;*/
+                                    /*height: @lineheight2;*/
+                                    /*background-color:@neutral5;*/
+                                    /*.blockletter-small;*/
+                /*a:hover            {color:@accent3;}*/
+                /*}*/
+            /*}*/
+
+        /*li:last-child              {*/
+            /*a                      {border-right:none;*/
+                                    /*padding-l:@lineheight2;}*/
+            /*li                     {.blockletter;}*/
+            /*}*/
+        /*}*/
+    /*}*/
+
+/*.auth_navbar                       {.inset-text;*/
+                                    /*.blockletter;*/
+                                    /*color:#fff;*/
+                                    /*height:@lineheight2;*/
+                                    /*line-height:@lineheight2;*/
+                                    /*display:none;  [> shut off to avoid confusion <]*/
+    /*a,*/
+    /*a:link,*/
+    /*a:visited                  {.inset-text;*/
+                                /*height:@lineheight2;*/
+                                /*line-height:@lineheight2;*/
+                                /*color:#fff;*/
+                                /*border-left:1px solid rgba(270,270,270,0.3);*/
+                                /*border-right:1px solid rgba(0,0,0,0.1);*/
+                                /*padding:0 @typeheight;*/
+                                /*display:block;*/
+                                /*float:right;}*/
+    /*a:hover,*/
+    /*a:active,*/
+    /*a:focus                    { .linear-gradient(rgba(270,270,270,0.1), rgba(270,270,270,0));}*/
+    /*a:last-child               { margin-left: @typeheight;}*/
+    /*a:first-child              { border-right:none;}*/
+    /*}*/
+
+/*#page                          {background-color:@neutral1;*/
+                                /*.box-shadow(0,2px,6px,rgba(0,0,0,0.3));*/
+                                /*z-index:1;*/
+
+    /*article                    {position:relative;*/
+                                /*padding:@lineheight3;*/
+                                /*padding-left:@lineheight * 4;*/
+                                /*margin-right:30%;*/
+                                /*padding-right:@lineheight * 4;*/
+                                /*text-align:justify;*/
+                                /*-moz-hyphens:auto;*/
+                                /*-webkit-hyphens:auto;*/
+                                /*color:@text;*/
+        /*h2                     {color:@accent1;*/
+                                /*.blockletter;*/
+                                /*text-transform:uppercase;*/
+                                /*text-align: left;*/
+            /*a,*/
+            /*a:link,*/
+            /*a:visited,*/
+            /*a:active           {color:@accent1;}*/
+            /*}*/
+        /*h3                     {color:@accent3;*/
+                                /*.blockletter();}*/
+        /*.article_date          {display:block;*/
+                                /*position:absolute;*/
+                                /*width:@lineheight * 6;*/
+                                /*color:@accent2;*/
+                                /*.rotate(270deg, 0, 100%);*/
+                                /*margin-left:-((@lineheight * 6) + @lineheight2);*/
+                                /*text-align:right;*/
+        /*}*/
+        /*.article_wrapper       {padding:0;}*/
+        /*p                      { }*/
+        /*ul                     {padding-left:@lineheight;}*/
+        /*li                     {list-style-type: disc;*/
+                                /*color:@neutral4;*/
+                                /*list-style-position: outside;*/
+            /*ul                 {padding-left:@lineheight;}*/
+            /*&.comment_list     {line-height: @lineheight;*/
+                                /*border-bottom: 1px solid @greye5;}*/
+            /*}*/
+        /*a,*/
+        /*a:link,*/
+        /*a:visited              {color: @accent3;}*/
+        /*a:hover                {color: @accent3;}*/
+        /*}*/
+
+    /*&.index                    {*/
+        /*article                {padding-bottom:0;*/
+                                /*padding-top:@lineheight;*/
+            /*&:first-of-type    {padding-top:@lineheight3;}*/
+            /*&:last-of-type     {padding-bottom:@lineheight3;}*/
+            /*}*/
+        /*}*/
+
+
+
+    /*.comments                  {padding: 0;*/
+                                /*margin-top: @lineheight3;*/
+        /*.comment               {padding: 0;*/
+                                /*padding-bottom: @lineheight;*/
+                                /*margin-bottom: @lineheight;*/
+                                /*border-bottom: 1px solid #e6e6e6;*/
+                                /*color: @neutral4;*/
+            /*.comment_author    {color: @accent1;}*/
+            /*.comment_date      {color: @accent2;*/
+                                /*display: block;*/
+                                /*float: right;}*/
+            /*.comment_body      {display: block;}*/
+            /*}*/
+        /*textarea               {border: 1px solid #ccc;}*/
+        /*}*/
+
+    /*#left_sidebar,*/
+    /*#right_sidebar             {padding:@lineheight3 @lineheight 0 @lineheight;*/
+                                /*width:30%;*/
+                                /*float:right;*/
+                                /*border-left:1px solid #e6e6e6;*/
+                                /*clear:right;*/
+                                /*margin-left:@lineheight3;*/
+        /*h2                     {.blockletter;*/
+                                /*font-weight: normal;*/
+                                /*color: #aaa;*/
+                                /*cursor:pointer;}*/
+        /*a,*/
+        /*a:link,*/
+        /*a:visited              {color:@accent1;}*/
+        /*a:hover                {color:@accent1;}*/
+        /*div                    {padding: 0;*/
+                                /*margin-bottom: @lineheight;*/
+            /*ul                 {display:none;*/
+                /*li:hover       {list-style: circle;}*/
+                /*}*/
+            /*}*/
+        /*}*/
+    /*#right_sidebar             {padding-top:0;}*/
+
+    /*#viewpane,*/
+    /*#listpane                  {position:relative;*/
+                                /*padding:0;}*/
+
+
+    /*&.appadmin                 {padding: @lineheight3;}*/
+    /*}*/
+
+/*footer                             {background-color:transparent;*/
+                                    /*color:@accent3;*/
+
+    /*.copyright                     {font-size: @typeheight * .8;*/
+                                    /*background-color: transparent;}*/
+    /*#poweredby                     {float:right;}*/
+    /*}*/
+
+/*.flash                             {position:absolute;*/
+                                    /*width:280px;*/
+                                    /*left:50%;*/
+                                    /*top:0;*/
+                                    /*margin-left:-140px;*/
+                                    /*z-index:100;}*/
+
+/*[> ================= iPad in portrait ================= <]*/
+/*@media all and (orientation:portrait){*/
+    /*.min-480                       {display:none;}*/
+    /*.max-480                       {display:block;}*/
+/*}*/
+
+/*[> ================= iPad in landscape ================= <]*/
+/*@media all and (orientation:landscape){*/
+    /*.min-480                       {display:none;}*/
+    /*.max-480                       {display:block;}*/
+/*}*/
+
+/*[> ================= iPhone4 (retina screen) ================= <]*/
+/*@media only screen*/
+/*and (-webkit-min-device-pixel-ratio: 2)*/
+/*and (max-device-width: 480px){*/
+    /*.min-480                       {display:none;}*/
+    /*.max-480                       {display:block;}*/
+    /*}*/
+
+/*[> ================= Intermediate browser viewing area (480px+)================= <]*/
+/*@media screen*/
+/*and (max-width: 480px)             {*/
+    /*#left_sidebar,*/
+    /*#right_sidebar                 {padding:0;*/
+                                    /*width:20px;*/
+                                    /*overflow: hidden;}*/
+    /*#left_sidebar:hover,*/
+    /*#right_sidebar:hover           {padding:@lineheight3;*/
+                                    /*width:30%;}*/
+
+    /*.min-480                       {display:block;}*/
+    /*.max-480                       {display:none;}*/
+    /*}*/
+
+/*[> ================= Wide browser viewing area (768px +) ==================== <]*/
+/*@media only screen*/
+/*and (max-width: 768px) {*/
+    /*.max-480                       {display:none;}*/
+    /*.min-480                       {display:block;}*/
+    /*}*/
+
+/*[> ================= Max browser viewing area (1140px +) ==================== <]*/
+/*@media only screen and (min-width: 1140px) {*/
+    /*.max-480                       {display:none;}*/
+    /*.min-480                       {display:block;}*/
+    /*}*/
+
+/*[> ============================================================================= Print styles. Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ ========================================================================== <]*/
+/*@media print {}*/
