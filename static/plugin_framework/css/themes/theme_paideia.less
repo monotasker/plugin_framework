@@ -83,6 +83,8 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
         .main              {background-color: transparent;
                             margin-top: @baseLineHeight* 2;
                             padding-top: 0;
+                            position: relative;
+                            overflow: none;
             .left-sidebar,
             .right-sidebar {background-color: @palletteBG;
                             background-image: url("/paideia/static/images/Drawing15_neutral_sides.svg");
@@ -100,6 +102,7 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
                                     background-color: @palletteBG;
                                     overflow: hidden;
                                     min-height:670px;
+                                    position: relative;
             #intro                 {
                 .hero-unit         {
                     #alpha-warning          {.alert;
