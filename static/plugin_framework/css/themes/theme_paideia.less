@@ -9,43 +9,24 @@
 @import "../../../../../plugin_ajaxselect/static/plugin_ajaxselect/plugin_ajaxselect.less";
 @import "../../../../../plugin_listandedit/static/plugin_listandedit/plugin_listandedit.less";
 /*@import "../../../../../plugin_widgets/static/plugin_widgets/plugin_widgets.less";*/
-/*@import "../../../../../plugin_slider/static/plugin_slider/plugin_slider.less";*/
+@import "../../../../../plugin_slider/static/plugin_slider/css/plugin_slider.less";
+@import "../plugin_slider/css/plugin_slider.css";
 
-@media (max-width: 979px){
-
-    .navbar.top .navbar-inner  {height: @baseLineHeight* 2;}
-    .navbar-fixed-top          {margin-bottom: 0;
-        .nav-collapse.collapse {background-color: @putty;
-                                color: @palletteBG;}
-    }
-    .container                 {
-        .main                  {padding-top: 0;
-                                margin-top: 0;}
-        .left-sidebar,
-        .right-sidebar         {}
-    } 
-} 
-    
-@media (max-width: 767px)      {
-    body                       {background-color: @palletteBG;
-        .left-sidebar,
-        .right-sidebar         {display: none;}
-    }
-}
 
 body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
             background-repeat: repeat;
-    .navbar-fixed-top              {margin-bottom: 0;
-                                    background-color: transparent;}
-    .navbar.top .navbar-inner      {background-color: transparent;
+            height: 100%;
+    .navbar-fixed-top              {margin-bottom: 0;}
+    .navbar.top .navbar-inner      {background-color: @navbarBackground;
+                                    background-image: url("/paideia/static/images/page_border_top-bottom.svg");
+                                    background-size: auto 200%;
                                     -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
                                     -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
                                     -ms-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
                                     -opera-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
                                     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
                                     font-family: @baseFontFamily;
-        .container                 {background-image: url("/paideia/static/images/page_border_top-bottom.svg");
-                                    background-size: auto 200%;
+        .container                 {
                                     height: @baseLineHeight* 2; 
                                     background-color: transparent;
             .nav li                {
@@ -78,127 +59,129 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
             }
         }
     }
-    .container         {background-color: @palletteBG;//coloring main creates unwanted left margin
-                         
-        .main              {background-color: transparent;
-                            margin-top: @baseLineHeight* 2;
-                            padding-top: 0;
-                            position: relative;
-                            overflow: none;
+    .container                     {background-color: @palletteBG;//coloring main creates unwanted left margin
+                                    position: relative;
+                                    max-height: 80%;                
+                                    overflow: hidden;
+        .main                      {background-color: transparent;
+                                    margin-top: @baseLineHeight* 2;
+                                    padding-top: 0;
+                                    padding-bottom: 0;
+                                    position: relative;
+                                    max-height:100%; 
+>>>>>>> temp
             .left-sidebar,
-            .right-sidebar {background-color: @palletteBG;
+            .right-sidebar {display:none;
+                            background-color: @palletteBG;
                             background-image: url("/paideia/static/images/Drawing15_neutral_sides.svg");
                             background-repeat: repeat-y;
                             background-size: 200% auto;
                             height:100%;
                             min-height:480px;}
-            .left-sidebar  {//.span1;
-                            .left-sidebar;}
-            .right-sidebar {//.span1;
-                            .right-sidebar;
-                            background-position: right;}
-        
-        #page                      {//.span10;
-                                    background-color: @palletteBG;
-                                    overflow: hidden;
-                                    min-height:670px;
-                                    position: relative;
-            #intro                 {
-                .hero-unit         {
-                    #alpha-warning          {.alert;
-                                            .alert-danger;
-                                            font-size: @baseFontSize;
-                                            line-height: @baseLineHeight;}
-                }
-                .panel-group                {
-                    .panel-title            {margin: 0;}
-                    .panel:first-child      {
-                        .panel-title:before    {content:"";
-                                                font-family: FontAwesome;}
+            .left-sidebar  {}
+            .right-sidebar {background-position: right;}
+            #page                      {background-color: @palletteBG;
+                                        overflow: hidden;
+                                        min-height:670px;
+                                        position: relative;
+                #intro                 {
+                    .hero-unit         {
+                        #alpha-warning          {.alert;
+                                                .alert-danger;
+                                                font-size: @baseFontSize;
+                                                line-height: @baseLineHeight;}
                     }
-                    .panel:nth-child(2)      {
-                        .panel-title:before    {content:"";
-                                                font-family: FontAwesome;}
-                    }
-                    .panel:nth-child(3)      {
-                        .panel-title:before    {content:"";
-                                                font-family: FontAwesome;}
-                    }
-                    .panel:nth-child(4)     {
-                        .panel-title:before    {content:"";
-                                                font-family: FontAwesome;}
+                    .panel-group                {
+                        .panel-title            {margin: 0;}
+                        .panel:first-child      {
+                            .panel-title:before    {content:"";
+                                                    font-family: FontAwesome;}
+                        }
+                        .panel:nth-child(2)      {
+                            .panel-title:before    {content:"";
+                                                    font-family: FontAwesome;}
+                        }
+                        .panel:nth-child(3)      {
+                            .panel-title:before    {content:"";
+                                                    font-family: FontAwesome;}
+                        }
+                        .panel:nth-child(4)     {
+                            .panel-title:before    {content:"";
+                                                    font-family: FontAwesome;}
+                        }
                     }
                 }
-            }
-            /* The main map for navigating the town */
-            #town_map {
-                width:100%;
-            }
+                /* The main map for navigating the town */
+                #town_map {
+                    width:100%;
+                }
 
-            /* the background images for each map location */
-            .bg_image      {position: absolute;
-                            top:0;
-                            left:0;
-                            z-index:1;
-                            height:100%;
+                /* the background images for each map location */
+                .bg_image      {position: absolute;
+                                z-index:1;
+                                width:100%;
 
-                img                {height:100%;
-                                    opacity:0.5;}
-            }
-            .speaker               {position: absolute;
-                                    z-index:2;
-                                    left:0px;
-                                    top:48px;
-                                    width:380px;
-                img                {position:relative;
-                                    /*width:100%;*/
-                                    height:680px;}
-            }
-            .townmap_key_trigger           {position: absolute;
-                                            display:inline-block;
-                                            top:@baseFontSize;
-                                            right:@baseFontSize;
-                                            color:@white;
-                                            background-color: @white;
-                                            line-height: @baseLineHeight * 1.5 + 4px;
-                                            height: @baseLineHeight * 1.5 + 4px;
-                                            width: @baseLineHeight * 1.5 + 4px;
-                                            border-radius: (@baseLineHeight * 1.5 / 2) + 2px;
-                                            border:4px solid @white;
-                                            text-align: center;
-                                            z-index:10;
-                                            padding-bottom:4px;
-                                            .box-shadow();
-                                            .inset-text();
-            }
-            #townmap_key           {position: absolute;
-                                    height:181px + ((@baseLineHeight /2) * 2);
-                                    display:block;
-                                    top: @baseLineHeight * 1.5;
-                                    right:@baseLineHeight * 1.5;
-                                    background-color: #fff;
-                                    .box-shadow();
-                                    display:none;
-                                    z-index:9;
-                                    border: (@baseLineHeight / 2) solid @white;
-                &.tip-visible      {display:block;}
-                img                {width:277px;
-                                    border: 2px solid @white}
-            }
-        } 
+                    img                {width:100%;
+                                        opacity:0.5;}
+                }
+                .speaker               {position: absolute;
+                                        z-index:2;
+                                        left:0px;
+                                        top:48px;
+                                        width:380px;
+                    img                {position:relative;
+                                        /*width:100%;*/
+                                        height:680px;}
+                }
+                .townmap_key_trigger           {position: absolute;
+                                                display:inline-block;
+                                                top:@baseFontSize;
+                                                right:@baseFontSize;
+                                                color:@white;
+                                                background-color: @white;
+                                                line-height: @baseLineHeight * 1.5 + 4px;
+                                                height: @baseLineHeight * 1.5 + 4px;
+                                                width: @baseLineHeight * 1.5 + 4px;
+                                                border-radius: (@baseLineHeight * 1.5 / 2) + 2px;
+                                                border:4px solid @white;
+                                                text-align: center;
+                                                z-index:10;
+                                                padding-bottom:4px;
+                                                .box-shadow();
+                                                .inset-text();
+                }
+                #townmap_key           {position: absolute;
+                                        height:181px + ((@baseLineHeight /2) * 2);
+                                        display:block;
+                                        top: @baseLineHeight * 1.5;
+                                        right:@baseLineHeight * 1.5;
+                                        background-color: #fff;
+                                        .box-shadow();
+                                        display:none;
+                                        z-index:9;
+                                        border: (@baseLineHeight / 2) solid @white;
+                    &.tip-visible      {display:block;}
+                    img                {width:277px;
+                                        border: 2px solid @white}
+                }
+            } 
+        }
     }
+    .footer                        {background-image: url("/paideia/static/images/page_border_top-bottom.svg");
+                                    background-size: auto 200%;
+                                    height: (@baseLineHeight * 1.5);
     }
 }
 
-body #main.exploring #page           {
-
+body #main.exploring #page         {
     .prompt,
-    .responder                     {margin-top: @baseLineHeight/2;
-                                    margin-left:260px;
-                                    max-width: 65%;
-                                    font-size: @baseFontSize * 1.25;
-                                    line-height: @baseLineHeight * 1.25;
-        p                          {margin:0;}
+    .responder                         {margin-top: @baseLineHeight/2;
+                                        margin-left:260px;
+                                        max-width: 65%;
+                                        font-size: @baseFontSize * 1.25;
+                                        line-height: @baseLineHeight * 1.25;
+        p                              {margin:0;
+        }
         #no_table_response__row        {
             td                         {text-align: left;
                 label                  {margin-left: @baseFontSize;
@@ -206,85 +189,170 @@ body #main.exploring #page           {
                                         font-size: @baseLineHeight * 1.5;
                                         font-family: SBLGreekRegular}
                 &.w2p_fl:first-child   {display: none;}
-                }
-            input                      {font-size: @baseLineHeight * 1.5;
-                                        height: @baseLineHeight * 2.5;
-                                        font-family: SBLGreekRegular}
             }
-        #submit_record__row        {
-            td.w2p_fl:first-child  {display: none;}
+            input                      {height: @baseLineHeight * 1.8;
+                                        font-size: @baseLineHeight * 1.5;
+                                        width: 70%;
+                                        font-family: SBLGreekRegular
             }
+        }
+        #submit_record__row            {
+            td.w2p_fl:first-child      {display: none;}
+            submit                     {.btn;
+                                        .btn-success;}
+        }
         ul                         {padding-left: @baseLineHeight;
             li                     {font-size: @baseFontSize * 1.25;
                                     color:@accent2;}
-            }
-        .button            {display:inline-block;}
+        }
         .prompt_image      {height: 200px;
                             float: right;}
-        .guidelines        {z-index:10;
-                            clear:both;}
-        .q_counter         {color:#ccc;
+        .q_counter         {color:#cccccc;
                             width:100%;
                             font-size:@baseFontSize;}
-        .readable_short,
-        .readable_long     {color:@accent3;}
-        .prompt_badges_wrapper,
-        .bug_reporter_wrapper,
-        .prompt_tips_wrapper
-                           {display: block;
-                            position: absolute;
-                            bottom: -@baseFontSize;
-                            right: -@baseFontSize;}
-        .prompt_badges,
-        .bug_reporter,
-        .prompt_tips       {font-size: @baseFontSize;
-                            line-height: @baseLineHeight;
-                            color: @pallette1;
-                            padding: @baseLineHeight;
-                            left:-320px;
-                            top:-@baseLineHeight * 3;
-                            margin-left:0;
-                            display:none;
-                            z-index:10;
-            span,
-            a              {font-size: @baseFontSize;}
-            }
-        }
-        .bug_reporter_icon,
-        .prompt_badges_icon,
-        .prompt_tips_icon      {
-                                /*.sticker(@baseLineHeight * 1.5, @baseFontSize * 1.5);*/
-                                background-color: @accent3;
-                                color: @white;
-                                font-size: @baseLineHeight / 2;
-                                line-height: @baseLineHeight * 1.5;
-                                text-align: center;
-                                border:2px solid @white;}
-    .prompt                {.speech-bubble-left(@baseLineHeight, @baseFontSize);
-                            min-height: @baseFontSize * 4;
-                            z-index:4;
-        div                {.group;} 
-        }
-    .responder             {.speech-bubble-down(@baseLineHeight, @baseFontSize, @pallette1);
-                            color: @accent3;
-                            z-index:3;}
+        .btn               {margin-right: @baseLineHeight/2;}
+    }
+    .prompt                    {.speech-bubble-left(@baseLineHeight, @baseFontSize);
+                                min-height: @baseFontSize * 4;
+                                z-index:4;
+        div                    {.group;} 
+        ul                     {color: @pallette3;}
+        .popover-toggle        {float: left;}
+        .popover-content       {
+            ul                 {padding: 0;
+                                margin-left: 0;
+                                font-size: @baseFontSize;
+                                list-style-type: none;}
+        } 
+    }
+    .responder                 {.speech-bubble-down(@baseLineHeight, @baseFontSize, @pallette1);
+                                color: @accent3;
+                                z-index:3;
+    }
+}
+
+body #main.profile #page,
+body #main.user #page          {
+    /*tab content */
+    .tab-pane                  {padding:@baseLineHeight;
+        h4                     {color: @accent2;
+                                font-size: @baseFontSize * 1.5;}
     }
 
-/* Plugin listandedit styles ***************************************/
+    /* common styles for reporting tables */
+    table              {text-align:left;
+                        border-collapse:separate;
+                        border-spacing:2px;
+        th             {font-weight:bold;
+                        background-color:@white;
+                        vertical-align:middle;
+                        text-align:center;}
+        td             {background-color: @pallette1;
+                        padding: (@baseFontSize / 2) @baseFontSize;}
+    }
 
+    /*summary stats (badges) tab*/
+    p.overview             {
+        li                 {color: @accent2;
+                            padding-left: @baseLineHeight * 2;}
+        .total_len,
+        .max_set           {background:@pallette1;
+                            border:3px solid @pallette2;
+                            display:inline-block;
+                            height: @baseLineHeight * 1.5;
+                            width: @baseLineHeight * 1.5;
+                            border-radius:@baseLineHeight * 1.5 / 2;
+                            color:@pallette3;
+                            line-height:@baseLineHeight * 1.5;
+                            text-align:center;
+                            box-shadow:0px 2px 6px rgba(0,0,0,0.3);}
+    }
+    .most_recent       {color: @accent2;}
+    table.summary_stats    {border-collapse:separate;
+                            border-spacing:2px;
+                            border-radius: @baseLineHeight/4;
+                            padding:(@baseLineHeight/4) 0;
+                            background:@white;
+        td                 {vertical-align:middle;
+                            background: @pallette1;
+                            padding: (@baseLineHeight/2) @baseLineHeight;
+            ul             {max-height: @baseLineHeight * 6;
+                            overflow: auto;}
+          
+        }
+        td.total_cat1,
+        td.total_cat2,
+        td.total_cat3,
+        td.total_cat4      {height:40px;
+                            width:40px;
+                            color:#fff;
+                            height:40px;
+                            text-align:center;
+                            font-size:20px;
+                            padding:0;
+                            text-shadow:0px 1px 3px rgba(0,0,0,0.3);}
+        td.total_cat4      {background-color:@accent3;}
+        td.total_cat3      {background-color:@pallette3;}
+        td.total_cat2      {background-color:@accent2;}
+        td.total_cat1      {background-color:@accent3;}
+    }
+    /*calendar for monthly user statistics */
+    .paideia_monthcal          {position: relative;
+                                width: 430px;
+                                margin:0 auto;
+                                text-align: center;
+        .monthcal_intro_line   {.group;
+                                color: @pallette2;
+                                margin-bottom: @baseFontSize/2;}
+        h4                     {display: block;
+                                margin: (@baseFontSize/2) 120px;
+                                text-align: center;}
+        .monthcal_next_link,
+        .monthcal_prev_link    {color: @accent3;
+                                font-size: @fontSizeSmall;
+                                margin-top: @baseFontSize/2;
+            &:after            {opacity: 0.7;}
+        }
+        .monthcal_next_link    {float: right;}
+        .monthcal_prev_link    {float:left;} 
+        .paideia_monthcal_table
+                               {border-spacing:2px;
+            thead td           {height: @baseLineHeight;
+                                font-size: @fontSizeSmall;
+                                background: transparent;}
+            td                 {width:@baseLineHeight * 2.5;
+                                height:@baseLineHeight * 2.5;
+                                color:@pallette3;
+                                font-size:@baseFontSize;
+                                position:relative;
+                                padding:2px;
+                span.cal_num   {position:relative;
+                                padding:4px, 2px;}
+                span.cal_count {position:relative;
+                                font-size:@baseFontSize * 1.5;
+                                font-weight:bold;
+                                top:@baseLineHeight;
+                                float:right;
+                                padding-right:2px;
+                                color:@accent2;}
+            }
+        }
+    }
+}
+
+/* Plugin listandedit styles ***************************************/
 #listpane                          {background-color: @pallette1;
                                     width:35%;
                                     height:600px;
                                     overflow:auto;
                                     padding:0;
                                     position:relative;
-
     li                             {display:block;
                                     list-style-type:none;
                                     padding: @paddingSmall;
         a                          {font-size: @fontSizeSmall;}
-        }
     }
+}
 
 #page .list_control                {padding:0;
                                     background: @pallette2;
@@ -303,7 +371,6 @@ body #main.exploring #page           {
                                     .text-shadow(0);}
     }
 }
-
 #viewpane                          {.pull-right;
                                     overflow:auto;
                                     width: 65%;
@@ -322,139 +389,6 @@ body #main.exploring #page           {
                                     .transition();}
         }
 }
-
-}
-
-/*[> profile pages ***********************************************<]*/
-/*#page.profile,*/
-/*#page.user                 {*/
-    /*[> jquery ui tabs <]*/
-    /*.ui-widget-content     {border:1px solid transparent;}*/
-    /*.ui-widget-header      {background: @neutral5;*/
-                            /*.blockletter-small;*/
-                            /*border:1px solid transparent;*/
-
-        /*.ui-state-default  {background: transparent;*/
-                            /*border:1px solid transparent;}*/
-        /*.ui-state-default.ui-state-active*/
-                           /*{background: @neutral1;*/
-            /*a              {color: @accent1;}*/
-            /*}*/
-        /*}*/
-
-    /*[> tab content <]*/
-    /*div.tab                {padding:@baseLineHeight;*/
-                            /*background-color:@neutral1;*/
-                            /*.textdefaults;*/
-
-        /*h4                 {color: @accent2;*/
-                            /*font-size: @baseFontSize2;}*/
-        /*}*/
-
-    /*[> common styles for reporting tables <]*/
-
-    /*table              {text-align:left;*/
-                        /*border-collapse:separate;*/
-                        /*border-spacing:2px;*/
-        /*th             {font-weight:bold;*/
-                        /*background-color:@white;*/
-                        /*vertical-align:middle;*/
-                        /*text-align:center;}*/
-        /*td             {background-color: @neutral5;*/
-                        /*padding: (@baseFontSize / 2) @baseFontSize;}*/
-        /*}*/
-
-    /*[> summary stats (badges) tab <]*/
-    /*p.overview             {*/
-        /*li                 {color: @accent2;*/
-                            /*padding-left: @baseLineHeight3;}*/
-        /*.total_len,*/
-        /*.max_set           {background:@neutral9;*/
-                            /*border:3px solid @neutral8;*/
-                            /*display:inline-block;*/
-                            /*height: @baseLineHeight * 1.5;*/
-                            /*width: @baseLineHeight * 1.5;*/
-                            /*border-radius:@baseLineHeight * 1.5 / 2;*/
-                            /*color:@neutral7;*/
-                            /*line-height:@baseLineHeight * 1.5;*/
-                            /*text-align:center;*/
-                            /*box-shadow:0px 2px 6px rgba(0,0,0,0.3);}*/
-        /*}*/
-        /*.most_recent       {color: @accent2;}*/
-    /*table.summary_stats    {border-collapse:separate;*/
-                            /*border-spacing:2px;*/
-                            /*border-radius: @baseLineHeight/4;*/
-                            /*padding:(@baseLineHeight/4) 0;*/
-                            /*background:@white;*/
-
-        /*td                 {vertical-align:middle;*/
-                            /*background: @neutral5;*/
-                            /*padding: (@baseLineHeight/2) @baseLineHeight;*/
-            /*ul             {max-height: @baseLineHeight * 6;*/
-                            /*overflow: auto;}*/
-          
-            /*}*/
-
-        /*td.total_cat1,*/
-        /*td.total_cat2,*/
-        /*td.total_cat3,*/
-        /*td.total_cat4      {height:40px;*/
-                            /*width:40px;*/
-                            /*color:#fff;*/
-                            /*height:40px;*/
-                            /*text-align:center;*/
-                            /*font-size:20px;*/
-                            /*padding:0;*/
-                            /*font-family:"Droid Sans", @fonts3;*/
-                            /*text-shadow:0px 1px 3px rgba(0,0,0,0.3);}*/
-        /*td.total_cat4      {background-color:@accent11;}*/
-        /*td.total_cat3      {background-color:@accent10;}*/
-        /*td.total_cat2      {background-color:@accent2;}*/
-        /*td.total_cat1      {background-color:@accent9;}*/
-        /*}*/
-
-    /*[> calendar for monthly user statistics <]*/
-    /*.paideia_monthcal          {position: relative;*/
-                                /*width: 430px;*/
-        /*.monthcal_intro_line   {.group;*/
-                                /*margin-bottom: @baseFontSize/2;}*/
-        /*h4                     {display: block;*/
-                                /*margin: (@baseFontSize/2) 120px;*/
-                                /*text-align: center;}*/
-        /*.monthcal_next_link,*/
-        /*.monthcal_prev_link    {.icon-only;*/
-                                /*color: @neutral5;*/
-                                /*font-size: 0;*/
-                                /*margin-top: @baseFontSize/2;*/
-            /*&:after            {opacity: 0.7;}*/
-            /*}*/
-        /*.monthcal_next_link    {float: right;*/
-                                /*.arrow-right;}*/
-        /*.monthcal_prev_link    {float:left;*/
-                                /*.arrow-left;}*/
-        /*.paideia_monthcal_table*/
-                               /*{border-spacing:2px;*/
-            /*thead td           {height: @baseLineHeight;*/
-                                /*font-size: @smalltype;*/
-                                /*background: transparent;}*/
-            /*td                 {width:@baseLineHeight * 2.5;*/
-                                /*height:@baseLineHeight * 2.5;*/
-                                /*color:@neutral7;*/
-                                /*font-size:@baseFontSize;*/
-                                /*position:relative;*/
-                                /*padding:2px;*/
-                /*span.cal_num   {position:relative;*/
-                                /*padding:4px, 2px;}*/
-                /*span.cal_count {position:relative;*/
-                                /*font-size:@baseFontSize2;*/
-                                /*font-weight:bold;*/
-                                /*top:@baseLineHeight;*/
-                                /*float:right;*/
-                                /*padding-right:2px;*/
-                                /*color:@accent6;}*/
-                /*}*/
-            /*}*/
-        /*}*/
 
     /*[>** step logs on user profile **<]*/
     /*.step_log_table        {max-width:100%;*/
@@ -585,3 +519,33 @@ body #main.exploring #page           {
 /*@media print {*/
 
 /*}*/
+
+
+
+@media (max-width: 979px){
+
+    body                           {
+        .navbar.top .navbar-inner  {}
+        .navbar-fixed-top          {margin-bottom: 0;
+            .nav-collapse.collapse {background-color: @putty;
+                                    color: @palletteBG;}
+        }
+        .container                 {
+            .main                  {padding-top: 0;
+                                    margin-top: 0;}
+        }
+        .left-sidebar,
+        .right-sidebar         {display: none;}
+    }
+} 
+    
+@media (max-width: 767px)      {
+    body                       {background-color: @palletteBG;
+        .container             {
+            .main                  {padding-top: 0;
+                                    margin-top: 0;}
+        }
+        .left-sidebar,
+        .right-sidebar         {display: none;}
+    }
+}
