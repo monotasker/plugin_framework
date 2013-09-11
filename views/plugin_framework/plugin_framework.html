@@ -10,7 +10,7 @@
 <head>
     <!-- adapted by Ian W. Scott from the default layout.html file included in the web2py scaffolding app -->
     <meta charset="utf-8" />
-    {{parts = ['{} |'.format(c) for c in
+    {{parts = ['{} | '.format(c) for c in
                [response.title, request.controller, request.function]
                if c and c not in ['default', 'index']]}}
     <title>{{for p in parts:}}{{=p.capitalize()}}{{pass}}</title>
@@ -103,8 +103,6 @@
         {{if left_sidebar_cols:}}
         <div id="left-sidebar" class="{{='span{} left-sidebar'.format(str(left_sidebar_cols))}}">
             {{block left_sidebar}}
-            <h3>L</h3>
-            <p></p>
             {{end}}
         </div>
         {{pass}}
@@ -118,8 +116,6 @@
         {{if right_sidebar_cols:}}
         <div id="right_sidebar" class="{{='span{} right-sidebar'.format(str(right_sidebar_cols))}}">
             {{block right_sidebar}}
-            <h3>R</h3>
-            <p></p>
             {{end}}
         </div>
         {{pass}}
