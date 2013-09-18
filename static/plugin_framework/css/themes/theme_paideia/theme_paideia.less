@@ -3,19 +3,19 @@
 /* copyright Ian W. Scott, 2011-2012 */
 /* licensed under GPL 3.0 as a free, open-source resource */
 
-@import "../framework.less";
-@import "../font-awesome/font-awesome.less";
+@import "../../framework.less";
+@import "../../font-awesome/font-awesome.less";
                    
-@import "../../../../../plugin_ajaxselect/static/plugin_ajaxselect/plugin_ajaxselect.less";
-@import "../../../../../plugin_listandedit/static/plugin_listandedit/plugin_listandedit.less";
+@import "../../../../../../plugin_ajaxselect/static/plugin_ajaxselect/plugin_ajaxselect.less";
+@import "../../../../../../plugin_listandedit/static/plugin_listandedit/plugin_listandedit.less";
 /*@import "../../../../../plugin_widgets/static/plugin_widgets/plugin_widgets.less";*/
-@import "../../../../../plugin_slider/static/plugin_slider/css/plugin_slider.less";
+@import "../../../../../../plugin_slider/static/plugin_slider/css/plugin_slider.less";
 @import "../plugin_slider/css/plugin_slider.css";
 
 
-body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
-            background-repeat: repeat;
-            height: 100%;
+body                               {background-image: url('/paideia/static/images/mosaic_texture1.png');
+                                    background-repeat: repeat;
+                                    height: 100%;
     .navbar-fixed-top              {margin-bottom: 0;}
     .navbar.top .navbar-inner      {background-color: @navbarBackground;
                                     background-image: url("/paideia/static/images/page_border_top-bottom.svg");
@@ -26,9 +26,12 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
                                     -opera-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
                                     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
                                     font-family: @baseFontFamily;
+                                    z-index: 999;
         .container                 {
                                     height: @baseLineHeight* 2; 
                                     background-color: transparent;
+                                    overflow: visible;
+                                    z-index: 999;
             .nav li                {
                 a                  {background-color: @navbarBackground;
                                     background-image: url('/paideia/static/images/mosaic_texture1.png');
@@ -63,13 +66,13 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
                                     position: relative;
                                     max-height: 80%;                
                                     overflow: hidden;
+                                    z-index: 10;
         .main                      {background-color: transparent;
                                     margin-top: @baseLineHeight* 2;
                                     padding-top: 0;
                                     padding-bottom: 0;
                                     position: relative;
                                     max-height:100%; 
->>>>>>> temp
             .left-sidebar,
             .right-sidebar {display:none;
                             background-color: @palletteBG;
@@ -94,20 +97,16 @@ body       {background-image: url('/paideia/static/images/mosaic_texture1.png');
                     .panel-group                {
                         .panel-title            {margin: 0;}
                         .panel:first-child      {
-                            .panel-title:before    {content:"";
-                                                    font-family: FontAwesome;}
+                            .panel-title        {.my-icon-laptop;}
                         }
-                        .panel:nth-child(2)      {
-                            .panel-title:before    {content:"";
-                                                    font-family: FontAwesome;}
+                        .panel:nth-child(2)     {
+                            .panel-title        {.my-icon-keyboard;} 
                         }
-                        .panel:nth-child(3)      {
-                            .panel-title:before    {content:"";
-                                                    font-family: FontAwesome;}
+                        .panel:nth-child(3)     {
+                            .panel-title        {.my-icon-cog;} 
                         }
                         .panel:nth-child(4)     {
-                            .panel-title:before    {content:"";
-                                                    font-family: FontAwesome;}
+                            .panel-title        {.my-icon-globe;}
                         }
                     }
                 }
@@ -198,7 +197,7 @@ body #main.exploring #page         {
         }
         #submit_record__row            {
             td.w2p_fl:first-child      {display: none;}
-            submit                     {.btn;
+            input[type=submit]         {.btn;
                                         .btn-success;}
         }
         ul                         {padding-left: @baseLineHeight;
@@ -218,16 +217,23 @@ body #main.exploring #page         {
         div                    {.group;} 
         ul                     {color: @pallette3;}
         .popover-toggle        {float: left;}
+        .slides-popover        {.my-icon-picture;}
         .popover-content       {
             ul                 {padding: 0;
                                 margin-left: 0;
-                                font-size: @baseFontSize;
+                                font-size: @fontSizeSmall;
                                 list-style-type: none;}
+        span.progress_text     {font-size: @fontSizeMini;
+                                color: @pallette3;}
         } 
     }
     .responder                 {.speech-bubble-down(@baseLineHeight, @baseFontSize, @pallette1);
                                 color: @accent3;
                                 z-index:3;
+        .retry                 {.my-icon-repeat;}
+        .back_to_map           {.my-icon-map-marker;}
+        .next_q                {.my-icon-arrow-right;}
+        .submit                {.my-icon-arrow-right;}
     }
 }
 
@@ -527,6 +533,7 @@ body #main.user #page          {
     body                           {
         .navbar.top .navbar-inner  {}
         .navbar-fixed-top          {margin-bottom: 0;
+            .container             {height: (@baseLineHeight * 2);}
             .nav-collapse.collapse {background-color: @putty;
                                     color: @palletteBG;}
         }

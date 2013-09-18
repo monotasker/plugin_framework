@@ -18,14 +18,35 @@ function ajax(u,s,t) {
         }
         if (pcs.length>0){query = pcs.join("&");}
     }
-    jQuery.ajax({type: "POST", url: u, data: query, success: function(msg) { if(t) { if(t==':eval') eval(msg); else jQuery("#" + t).html(msg); } } });
+    jQuery.ajax({
+        type: "POST",
+        url: u,
+        data: query,
+        beforeSend: function(xhr) {
+            if(t) {
+                alert('hi');
+                //jQuery("#" + t).html("<div id='loading_mask'>I'm loading . . .</div>");
+            };
+        },
+        success: function(msg) {
+            if(t) {
+                if(t==':eval') eval(msg);
+                else {
+                    //jQuery('#loading_mask').fadeOut(400, function(){
+                    jQuery("#" + t).html(msg).hide().fadeIn(400);
+                    //});
+                }
+            }
+        }
+    });
 }
 
 String.prototype.reverse = function () { return this.split('').reverse().join('');};
 function web2py_ajax_init() {
   jQuery('.hidden').hide();
   jQuery('.error').hide().slideDown('slow');
-  jQuery('.flash').click(function(e) { jQuery(this).fadeOut('slow'); e.preventDefault(); });
+  jQuery('.flash').click(function(e) { jQuery(this).fadeOut('slow'); e.preventDefault(); });//my hack for loading image
+
   // jQuery('input[type=submit]').click(function(){var t=jQuery(this);t.hide();t.after('<input class="submit_disabled" disabled="disabled" type="submit" name="'+t.attr("name")+'_dummy" value="'+t.val()+'">')});
   jQuery('input.integer').on('keyup', function(){this.value=this.value.reverse().replace(/[^0-9\-]|\-(?=.)/g,'').reverse();});
   jQuery('input.double,input.decimal').on('keyup', function(){this.value=this.value.reverse().replace(/[^0-9\-\.,]|[\-](?=.)|[\.,](?=[0-9]*[\.,])/g,'').reverse();});
@@ -78,6 +99,8 @@ function web2py_ajax_page(method,action,data,target) {
       web2py_ajax_init();
       if(command) eval(command);
       if(flash) jQuery('.flash').html(flash).slideDown();
+      var mask = jQuery('#loading_mask');  //my hack for loading image
+      if(mask.length > 0) mask.hide();  //my hack for loading image
       }
     });
 }
