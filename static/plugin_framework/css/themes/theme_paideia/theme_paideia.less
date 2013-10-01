@@ -157,37 +157,6 @@ body                               {background-image: url('/paideia/static/image
                                         /*width:100%;*/
                                         height:680px;}
                 }
-                .townmap_key_trigger           {position: absolute;
-                                                display:inline-block;
-                                                top:@baseFontSize;
-                                                right:@baseFontSize;
-                                                color:@white;
-                                                background-color: @white;
-                                                line-height: @baseLineHeight * 1.5 + 4px;
-                                                height: @baseLineHeight * 1.5 + 4px;
-                                                width: @baseLineHeight * 1.5 + 4px;
-                                                border-radius: (@baseLineHeight * 1.5 / 2) + 2px;
-                                                border:4px solid @white;
-                                                text-align: center;
-                                                z-index:10;
-                                                padding-bottom:4px;
-                                                .box-shadow();
-                                                .inset-text();
-                }
-                #townmap_key           {position: absolute;
-                                        height:181px + ((@baseLineHeight /2) * 2);
-                                        display:block;
-                                        top: @baseLineHeight * 1.5;
-                                        right:@baseLineHeight * 1.5;
-                                        background-color: #fff;
-                                        .box-shadow();
-                                        display:none;
-                                        z-index:9;
-                                        border: (@baseLineHeight / 2) solid @white;
-                    &.tip-visible      {display:block;}
-                    img                {width:277px;
-                                        border: 2px solid @white}
-                }
             } 
         }
     }
@@ -201,10 +170,16 @@ body #main.exploring #page         {
     .prompt,
     .responder                         {margin-top: @baseLineHeight/2;
                                         margin-left:260px;
+                                        margin-right: @baseLineHeight/2;
                                         max-width: 65%;
+                                        display:block;
+                                        z-index:99;
+                                        position:relative;
+                                        .box-shadow;
+                                        padding: @baseLineHeight;
                                         font-size: @baseFontSize * 1.25;
                                         line-height: @baseLineHeight * 1.25;
-                                        .border-radius(@baseBorderRadius;);
+                                        .border-radius(@borderRadiusLarge;);
                                         padding: @baseLineHeight;
                                         background-color: @white;
                                         position: relative;
@@ -242,12 +217,16 @@ body #main.exploring #page         {
                             font-size:@baseFontSize;}
         .btn               {margin-right: @baseLineHeight/2;}
     }
-    .prompt                    {min-height: @baseFontSize * 4;
+    .prompt                    {.clearfix;
                                 z-index:4;
+                                min-height: @baseFontSize * 4;
+        p.prompt-text          {margin-bottom: @baseLineHeight;
+                                min-width: 50%;}
         img                    {max-height: 200px;
                                 float: right;}
-        p.prompt-text          {margin-bottom: @baseLineHeight;}
         div                    {.group;} 
+        .widget-image          {max-height: 250px;
+                                float: right;}
         ul                     {color: @pallette3;}
         .popover-toggle        {}
         .popover-title         {color: @navbarLinkColor;
@@ -259,7 +238,8 @@ body #main.exploring #page         {
                                 list-style-type: disc;}
             }
         } 
-        .instructions-popover  {display: inline-block;}
+        .instructions-popover  {float: left;
+                                clear: right;}
         .slides-popover        {.my-icon-picture;
                                 float: right;
                                 clear: right;
@@ -275,6 +255,9 @@ body #main.exploring #page         {
                                 margin: 0;
             td                 {padding: 0;}
         }
+        span.progress_text     {font-size: @fontSizeMini;
+                                color: @pallette4;
+                                clear: both;}
         .retry                 {.my-icon-repeat;}
         .back_to_map           {.my-icon-map-marker;}
         .next_q                {.my-icon-arrow-right;}
