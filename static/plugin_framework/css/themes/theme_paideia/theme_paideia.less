@@ -15,7 +15,7 @@
 @import "../plugin_listandedit/plugin_listandedit.css";
 
 
-body                               {background-image: url('/paideia/static/images/mosaic_texture1.png');
+body                               {background-image:; //url('/paideia/static/images/mosaic_texture1.png');
                                     background-repeat: repeat;
                                     height: 100%;
     .navbar-fixed-top              {margin-bottom: 0;}
@@ -114,25 +114,34 @@ body                               {background-image: url('/paideia/static/image
                     img                {margin:40%;}
                 }
                 #intro                 {
-                    .hero-unit         {
-                        #alpha-warning          {.alert;
+                    .hero-unit         {background-image: url('/paideia/static/images/town_map.png');
+                                        margin-top: @baseLineHeight;
+                                        width: 100%;
+                        .hero-text-wrapper     {background-color: rgba(255,255,255,0.9);
+                                                .box-shadow();
+                                                padding: @paddingLarge;
+                                                .border-radius(@borderRadiusLarge);
+                                                .clearfix;
+                                                max-width: 60%;
+                            #alpha-warning     {.alert;
                                                 .alert-danger;
                                                 font-size: @baseFontSize;
                                                 line-height: @baseLineHeight;}
+                        }
                     }
-                    .panel-group                {
-                        .panel-title            {margin: 0;}
-                        .panel:first-child      {
-                            .panel-title        {.my-icon-laptop;}
-                        }
-                        .panel:nth-child(2)     {
-                            .panel-title        {.my-icon-keyboard;} 
-                        }
-                        .panel:nth-child(3)     {
-                            .panel-title        {.my-icon-cog;} 
-                        }
-                        .panel:nth-child(4)     {
-                            .panel-title        {.my-icon-globe;}
+                    .modal-set                 {
+                        div.info-pane          {display: block;
+                                                float:left;
+                                                width: 25%;
+                                                max-width: 25%;
+                                                text-align: center;
+                                                height: (@baseLineHeight * 8);
+                                                padding-top: @baseLineHeight;
+                            a[id$='trigger']  {text-transform: uppercase;
+                                               letter-spacing: 0.1em;
+                                               cursor: pointer;
+                                               
+                            }
                         }
                     }
                 }
@@ -145,7 +154,6 @@ body                               {background-image: url('/paideia/static/image
                 .bg_image      {position: absolute;
                                 z-index:1;
                                 width:100%;
-
                     img                {width:100%;
                                         opacity:0.5;}
                 }
@@ -273,6 +281,7 @@ body #main.exploring #page         {
         .submit                {.my-icon-arrow-right;}
         div#bug_reporter       {color: @danger;
                                 font-size: @fontSizeSmall;
+                                cursor: pointer;
         }
         .popover               {
             .popover-content p {color: @textColor;
@@ -590,18 +599,41 @@ body #main.user #page          {
         }
         .container                 {
             .main                  {padding-top: 0;
-                                    margin-top: 0;}
+                #page #intro       {
+                    .hero-unit     {width: 100%;
+                    }
+                    .modal-set     {
+                        div.info-pane   {max-width: 50%;
+                                         width: 50%;
+                                         height: (@baseLineHeight * 4);
+                        }
+                    }
+                }                    
+            }
         }
         .left-sidebar,
         .right-sidebar         {display: none;}
     }
 } 
     
-@media (max-width: 767px)      {
-    body                       {background-color: @palletteBG;
-        .container             {
-            .main                  {padding-top: 0;
-                                    margin-top: 0;}
+@media (max-width: 767px)              {
+    body                               {background-color: @palletteBG;
+        .container                     {margin: 0;
+            .main                      {padding-top: 0;
+                                        margin-top: 0;
+                #page #intro   {
+                    .hero-unit         {width: 100%;
+                                        .border-radius(0);
+                                        margin: 0;
+                    }
+                    .modal-set         {
+                        div.info-pane  {max-width: 100%;
+                                        width: 100%;
+                                        height: (@baseLineHeight * 2);
+                        }
+                    }
+                }                    
+            }
         }
         .left-sidebar,
         .right-sidebar         {display: none;}
