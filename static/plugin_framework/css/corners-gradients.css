@@ -1,3 +1,9 @@
 /* corners, gradients, and shadows for my reusable UI framework */
 /* Ian W Scott */
 /* public domain */
+/*.border-radius(@a:0, @b:0, @c:0, @d:0)*/
+/*{-moz-border-radius: @arguments;*/
+/*-webkit-border-radius: @arguments;*/
+/*-o-border-radius: @arguments;*/
+/*-ms-border-radius: @arguments;*/
+/*border-radius: @arguments;}*/

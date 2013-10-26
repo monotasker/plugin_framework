@@ -69,7 +69,7 @@ body                               {background-image:; //url('/paideia/static/im
                                     max-height: 80%;                
                                     overflow: hidden;
         .main                      {background-color: transparent;
-                                    margin-top: @baseLineHeight* 2;
+                                    margin-top: 0;
                                     padding-top: 0;
                                     padding-bottom: 0;
                                     position: relative;
@@ -408,15 +408,17 @@ body #main.user #page          {
 
 /* Plugin listandedit styles ***************************************/
 #listpane                          {background-color: @pallette1;
-                                    width:35%;
+                                    width:33%;
                                     height:600px;
                                     overflow:auto;
                                     padding:0;
                                     position:relative;
-    li                             {display:block;
+    ul                             {margin-left:0;
+        li                         {display:block;
                                     list-style-type:none;
                                     padding: @paddingSmall;
-        a                          {font-size: @fontSizeSmall;}
+            a                      {font-size: @fontSizeSmall;}
+        }
     }
 }
 
@@ -508,115 +510,30 @@ body #main.user #page          {
         /*td:nth-child(4)    {color: @accent12;}*/
         /*}*/
 
-    /*[>** tag progress on user profile **<]*/
-    /*#tag_progress_table    {*/
-        /*td:first-child     {color: @accent6;}*/
-        /*}*/
-
-    /*[>** bug reports on user profile **<]*/
-    /*#tab_bug_reports table {*/
-        /*td                 {min-width:140px;*/
-            /*&:nth-child(3) {min-width:100px;}*/
-            /*}*/
-        /*}*/
-    /*}*/
-
-/*[> main page footer <]*/
-/*body footer                {background-color:transparent;*/
-                            /*color:@accent3;*/
-                            /*.text-shadow();*/
-
-    /*#poweredby             {float: right;}*/
-    /*}*/
-
-/*.flash                     {position:absolute;*/
-                            /*width:280px;*/
-                            /*left:50%;*/
-                            /*top:0;*/
-                            /*margin-left:-140px;*/
-                            /*z-index:100;}*/
-
 /*[> ================= iPad in portrait ================= <]*/
-/*@media all and (orientation:portrait){*/
-/*}*/
+@media all and (orientation:portrait){
+}
 
 /*[> ================= iPad in landscape ================= <]*/
-/*@media all and (orientation:landscape){*/
-/*}*/
+@media all and (orientation:landscape){
+}
 
 /*[> ================= iPhone4 (retina screen) ================= <]*/
-/*@media only screen*/
-/*and (-webkit-min-device-pixel-ratio: 2)*/
-/*and (max-device-width: 480px){*/
-/*}*/
+@media only screen
+and (-webkit-min-device-pixel-ratio: 2)
+and (max-device-width: 480px)          {
 
-/*[> ================= Intermediate browser viewing area (480px+)================= <]*/
-/*@media screen*/
-/*and (max-width: 480px){*/
+}
 
-/*#left_sidebar, #right_sidebar {*/
-    /*padding:0;*/
-    /*width:20px;*/
-    /*overflow: hidden;*/
-/*}*/
+/*[>========== small tablet browser viewing area (480px+)================= <]*/
+@media screen 
+and (max-width: 480px)                 {
 
-/*#left_sidebar:hover, #right_sidebar:hover {*/
-    /*padding:@baseLineHeight3;*/
-    /*width:30%;*/
-/*}*/
+}
 
-
-/*}*/
-
-/*[> ================= Wide browser viewing area (768px +) ==================== <]*/
-/*@media only screen*/
-/*and (max-width: 768px) {*/
-
-
-
-/*}*/
-
-/*[> ================= Max browser viewing area (1140px +) ==================== <]*/
-/*@media only screen and (min-width: 1140px) {*/
-
-/*}*/
-
-/*[> ============================================================================= Print styles. Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ ========================================================================== <]*/
-/*@media print {*/
-
-/*}*/
-
-
-
-@media (max-width: 979px){
-
-    body                           {
-        .navbar.top .navbar-inner  {}
-        .navbar-fixed-top          {margin-bottom: 0;
-            .container             {height: (@baseLineHeight * 2);}
-            .nav-collapse.collapse {background-color: @putty;
-                                    color: @palletteBG;}
-        }
-        .container                 {
-            .main                  {padding-top: 0;
-                #page #intro       {
-                    .hero-unit     {width: 100%;
-                    }
-                    .modal-set     {
-                        div.info-pane   {max-width: 50%;
-                                         width: 50%;
-                                         height: (@baseLineHeight * 4);
-                        }
-                    }
-                }                    
-            }
-        }
-        .left-sidebar,
-        .right-sidebar         {display: none;}
-    }
-} 
-    
-@media (max-width: 767px)              {
+/*[>============= medium browser viewing area (768px +) ==================== <]*/
+@media only screen 
+and (max-width: 767px)                 {
     body                               {background-color: @palletteBG;
         .container                     {margin: 0;
             .main                      {padding-top: 0;
@@ -639,3 +556,54 @@ body #main.user #page          {
         .right-sidebar         {display: none;}
     }
 }
+
+/*[>==========medium desktop/laptop viewing area (768px +) ================ <]*/
+
+@media only screen 
+and (max-width: 979px)             {
+    body                           {
+        .navbar.top .navbar-inner  {}
+        .navbar-fixed-top          {margin-bottom: 0;
+            .container             {height: (@baseLineHeight * 2);}
+            .nav-collapse.collapse {background-color: @putty;
+                                    color: @palletteBG;}
+        }
+        .container                 {
+            .main                  {padding-top: 0;
+                                    margin-top: 0;
+                #page #intro       {
+                    .hero-unit     {width: 100%;
+                    }
+                    .modal-set     {
+                        div.info-pane   {max-width: 50%;
+                                         width: 50%;
+                                         height: (@baseLineHeight * 4);
+                        }
+                    }
+                }                    
+            }
+        }
+        .left-sidebar,
+        .right-sidebar         {display: none;}
+    }
+} 
+
+/*[> ================= widest viewing area (980px +) =============== <]*/
+@media only screen 
+and (min-width: 980px)             {
+    body                           {
+        .container                 {
+            .main                  {margin-top: (@baseLineHeight * 2);
+            }
+        }
+    }
+}
+
+/*[>=== Print styles inlined www.phpied.com/delay-loading-your-print-css/  <]*/
+@media print {
+
+}
+
+
+
+    
