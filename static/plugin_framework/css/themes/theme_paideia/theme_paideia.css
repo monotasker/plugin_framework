@@ -5169,7 +5169,7 @@ input[type="submit"].btn.btn-mini {
   background-image: linear-gradient(to bottom, #e1ddc4, #d8d3b3);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe1ddc4', endColorstr='#ffd8d3b3', GradientType=0);
-  border: 1px solid transparent;
+  border: 1px solid #c3bc8b;
   -moz-border-radius: 6px 6px 6px 6px 0 0 0;
   -webkit-border-radius: 6px 6px 6px 6px 0 0 0;
   -o-border-radius: 6px 6px 6px 6px 0 0 0;
@@ -9788,7 +9788,7 @@ body .navbar-fixed-top {
   margin-bottom: 0;
 }
 body .navbar.top .navbar-inner {
-  background-color: #d8d3b3;
+  background-color: #ffffff;
   background-image: url("/paideia/static/images/page_border_top-bottom.svg");
   background-size: auto 200%;
   -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -9990,10 +9990,11 @@ body .container .main #page #town_map {
 body .container .main #page .bg_image {
   position: absolute;
   z-index: 1;
-  width: 100%;
+  height: 100%;
+  top: 0;
 }
 body .container .main #page .bg_image img {
-  width: 100%;
+  height: 100%;
   opacity: 0.5;
 }
 body .container .main #page .speaker {
@@ -10270,10 +10271,11 @@ body #main.exploring #page .responder .submit:before {
   font-family: FontAwesome;
   padding-right: 0.3333333333333333em;
 }
-body #main.exploring #page .responder div#bug_reporter {
+body #main.exploring #page .responder #bug_reporter_modal_trigger {
   color: #bd362f;
   font-size: 13.6px;
   cursor: pointer;
+  display: block;
 }
 body #main.exploring #page .responder .popover .popover-content p {
   color: #333333;
@@ -10718,8 +10720,13 @@ body #main.user #page .paideia_monthcal .paideia_monthcal_table td span.cal_coun
 }
 /*[> ================= widest viewing area (980px +) =============== <]*/
 @media only screen and (min-width: 980px) {
-  body .container .main {
+  body .container #main {
     margin-top: 48px;
+  }
+  body .container #main.exploring #page .prompt,
+  body .container #main.exploring #page .responder {
+    max-width: 480px;
+    margin-left: 480px;
   }
 }
 /*[>=== Print styles inlined www.phpied.com/delay-loading-your-print-css/  <]*/

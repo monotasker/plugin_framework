@@ -19,7 +19,7 @@ body                               {background-image:; //url('/paideia/static/im
                                     background-repeat: repeat;
                                     height: 100%;
     .navbar-fixed-top              {margin-bottom: 0;}
-    .navbar.top .navbar-inner      {background-color: @navbarBackground;
+    .navbar.top .navbar-inner      {background-color: lighten(@navbarBackground, 30%);
                                     background-image: url("/paideia/static/images/page_border_top-bottom.svg");
                                     background-size: auto 200%;
                                     -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -151,10 +151,11 @@ body                               {background-image:; //url('/paideia/static/im
                 }
 
                 /* the background images for each map location */
-                .bg_image      {position: absolute;
-                                z-index:1;
-                                width:100%;
-                    img                {width:100%;
+                .bg_image              {position: absolute;
+                                        z-index:1;
+                                        height:100%;
+                                        top:0;
+                    img                {height:100%;
                                         opacity:0.5;}
                 }
                 .speaker               {position: absolute;
@@ -279,9 +280,10 @@ body #main.exploring #page         {
         .back_to_map           {.my-icon-map-marker;}
         .next_q                {.my-icon-arrow-right;}
         .submit                {.my-icon-arrow-right;}
-        div#bug_reporter       {color: @danger;
+        #bug_reporter_modal_trigger       {color: @danger;
                                 font-size: @fontSizeSmall;
                                 cursor: pointer;
+                                display: block;
         }
         .popover               {
             .popover-content p {color: @textColor;
@@ -610,7 +612,12 @@ and (max-width: 979px)             {
 and (min-width: 980px)             {
     body                           {
         .container                 {
-            .main                  {margin-top: (@baseLineHeight * 2);
+            #main                  {margin-top: (@baseLineHeight * 2);
+                &.exploring #page  {
+                  .prompt,
+                  .responder       {max-width: 480px;
+                                    margin-left:480px;}
+                }
             }
         }
     }
