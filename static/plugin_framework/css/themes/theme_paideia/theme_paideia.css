@@ -13370,20 +13370,17 @@ body #main.user #page .tab-pane h4 {
 body #main.profile #page table,
 body #main.user #page table {
   text-align: left;
-  border-collapse: separate;
-  border-spacing: 2px;
+  /*border-collapse:separate;*/
+
+  /*border-spacing:2px;*/
+
 }
 body #main.profile #page table th,
 body #main.user #page table th {
-  font-weight: bold;
-  background-color: #ffffff;
-  vertical-align: middle;
-  text-align: center;
-}
-body #main.profile #page table td,
-body #main.user #page table td {
-  background-color: #f8f0e5;
-  padding: 8px 16px;
+  /*background-color:@white;*/
+
+  /*vertical-align:middle;*/
+
 }
 body #main.profile #page p.overview li,
 body #main.user #page p.overview li {
