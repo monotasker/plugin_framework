@@ -19,7 +19,7 @@ body                               {background-image:; //url('/paideia/static/im
                                     height: 100%;
     .navbar-fixed-top              {margin-bottom: 0;}
     .navbar.top .navbar-inner      {background-color: lighten(@navbarBackground, 30%);
-                                    background-image: url("/paideia/static/images/page_border_top-bottom.svg");
+                                    //background-image: url("/paideia/static/images/page_border_top-bottom.svg");
                                     background-size: auto 200%;
                                     -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
                                     -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -28,14 +28,14 @@ body                               {background-image:; //url('/paideia/static/im
                                     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
                                     font-family: @baseFontFamily;
                                     z-index: 999;
-        .container                 {
-                                    height: @baseLineHeight* 2; 
+        .container,
+        .container-fluid           {height: @baseLineHeight* 2; 
                                     background-color: transparent;
                                     overflow: visible;
                                     z-index: 999;
             .nav li                {
                 a                  {background-color: @navbarBackground;
-                                    background-image: url('/paideia/static/images/mosaic_texture1.png');
+                                    //background-image: url('/paideia/static/images/mosaic_texture1.png');
                                     background-size: auto 100%;
                                     font-family: @baseFontFamily;
                     &:hover        {background-color: @navbarLinkBackgroundHover;}
@@ -58,15 +58,18 @@ body                               {background-image:; //url('/paideia/static/im
                                     .blockletter;
                                     margin-left: @gridColumnWidth;
                                     background-color: @navbarBackground;
-                                    background-image: url('/paideia/static/images/mosaic_texture1.png');
-                                    background-size: auto 100%;
+                                    //background-image: url('/paideia/static/images/mosaic_texture1.png');
+                                    //background-size: auto 100%;
             }
         }
     }
-    .container                     {background-color: @palletteBG;//coloring main creates unwanted left margin
+    .container,
+    .container-fluid               {background-color: @palletteBG;//coloring main creates unwanted left margin
                                     position: relative;
                                     max-height: 80%;                
                                     overflow: hidden;
+                                    padding-right: 0;
+                                    padding-left: 0;
         .main                      {background-color: transparent;
                                     margin-top: 0;
                                     padding-top: 0;
@@ -114,7 +117,7 @@ body                               {background-image:; //url('/paideia/static/im
                 }
                 #intro                 {
                     .hero-unit         {background-image: url('/paideia/static/images/town_map.png');
-                                        margin-top: @baseLineHeight;
+                                        margin: 0;
                                         width: 100%;
                         .hero-text-wrapper     {background-color: rgba(255,255,255,0.9);
                                                 .box-shadow();
@@ -131,15 +134,23 @@ body                               {background-image:; //url('/paideia/static/im
                     .modal-set                 {
                         div.info-pane          {display: block;
                                                 float:left;
-                                                width: 25%;
-                                                max-width: 25%;
-                                                text-align: center;
+                                                /*width: 50%;*/
+                                                /*max-width: 50%;*/
+                                                text-align: left;
                                                 height: (@baseLineHeight * 8);
                                                 padding-top: @baseLineHeight;
-                            a[id$='trigger']  {text-transform: uppercase;
+                                                overflow: hidden;
+                            img               {height:100%;
+                                               float:left;
+                            }
+                            a[id$='trigger']  {font-family: @headingsFontFamily;
+                                               font-size: @fontSizeLargest;
                                                letter-spacing: 0.1em;
                                                cursor: pointer;
                                                
+                            }
+                            p                  {
+                                h3, h4         {font-size: @baseFontSize;}
                             }
                         }
                     }
@@ -483,7 +494,7 @@ and (max-width: 480px)                 {
 @media only screen 
 and (max-width: 767px)                 {
     body                               {background-color: @palletteBG;
-        .container                     {margin: 0;
+        .container, .container-fluid   {margin: 0;
             .main                      {padding-top: 0;
                                         margin-top: 0;
                 #page #intro   {
@@ -491,7 +502,7 @@ and (max-width: 767px)                 {
                                         .border-radius(0);
                                         margin: 0;
                     }
-                    .modal-set         {
+                    .modal-set         {height: (@baseLineHeight * 4);
                         div.info-pane  {max-width: 100%;
                                         width: 100%;
                                         height: (@baseLineHeight * 2);
@@ -512,11 +523,13 @@ and (max-width: 979px)             {
     body                           {
         .navbar.top .navbar-inner  {}
         .navbar-fixed-top          {margin-bottom: 0;
-            .container             {height: (@baseLineHeight * 2);}
+            .container,
+            .container-fluid       {height: (@baseLineHeight * 2);}
             .nav-collapse.collapse {background-color: @putty;
                                     color: @palletteBG;}
         }
-        .container                 {
+        .container, 
+        .container-fluid           {
             .main                  {padding-top: 0;
                                     margin-top: 0;
                 #page #intro       {
@@ -540,7 +553,8 @@ and (max-width: 979px)             {
 @media only screen 
 and (min-width: 980px)             {
     body                           {
-        .container                 {
+        .container,
+        .container-fluid           {
             #main                  {margin-top: (@baseLineHeight * 2);
                 &.exploring #page  {
                   .prompt,
