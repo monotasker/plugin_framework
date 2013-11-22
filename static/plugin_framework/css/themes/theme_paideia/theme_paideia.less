@@ -34,7 +34,7 @@ body                               {background-image:; //url('/paideia/static/im
                                     overflow: visible;
                                     z-index: 999;
             .nav li                {
-                a                  {background-color: @navbarBackground;
+                a                  {background-color: transparent;
                                     //background-image: url('/paideia/static/images/mosaic_texture1.png');
                                     background-size: auto 100%;
                                     font-family: @baseFontFamily;
@@ -57,7 +57,7 @@ body                               {background-image:; //url('/paideia/static/im
                                     font-size: @fontSizeLargest;
                                     .blockletter;
                                     margin-left: @gridColumnWidth;
-                                    background-color: @navbarBackground;
+                                    background-color: transparent;
                                     //background-image: url('/paideia/static/images/mosaic_texture1.png');
                                     //background-size: auto 100%;
             }
@@ -134,10 +134,9 @@ body                               {background-image:; //url('/paideia/static/im
                     .modal-set                 {
                         div.info-pane          {display: block;
                                                 float:left;
-                                                /*width: 50%;*/
-                                                /*max-width: 50%;*/
                                                 text-align: left;
                                                 height: (@baseLineHeight * 8);
+                                                max-height: (@baseLineHeight * 8);
                                                 padding-top: @baseLineHeight;
                                                 overflow: hidden;
                             img               {height:100%;
@@ -180,9 +179,9 @@ body                               {background-image:; //url('/paideia/static/im
             } 
         }
     }
-    .footer                        {background-image: url("/paideia/static/images/page_border_top-bottom.svg");
+    .footer                        {//background-image: url("/paideia/static/images/page_border_top-bottom.svg");
                                     background-size: auto 200%;
-                                    height: (@baseLineHeight * 1.5);
+                                    height: (@baseLineHeight * 2);
     }
 }
 
@@ -505,6 +504,8 @@ and (max-width: 767px)                 {
                         div.info-pane  {max-width: 100%;
                                         width: 100%;
                                         height: (@baseLineHeight * 2);
+                            &:first-child,
+                            &:nth-child(4)    {display:none;}
                         }
                     }
                 }                    
@@ -535,9 +536,8 @@ and (max-width: 979px)             {
                     .hero-unit     {width: 100%;
                     }
                     .modal-set     {
-                        div.info-pane   {max-width: 50%;
-                                         width: 50%;
-                                         height: (@baseLineHeight * 4);
+                        div.info-pane.span6   {height: (@baseLineHeight * 4);
+                            &:first-child   {display:none;}
                         }
                     }
                 }                    
