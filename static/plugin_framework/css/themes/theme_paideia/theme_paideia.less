@@ -38,20 +38,20 @@ body                               {background-image:; //url('/paideia/static/im
                                     //background-image: url('/paideia/static/images/mosaic_texture1.png');
                                     background-size: auto 100%;
                                     font-family: @baseFontFamily;
-                    &:hover        {background-color: @navbarLinkBackgroundHover;}
+                    &:hover,
                     &:active       {background-color: @navbarLinkBackgroundHover;}
                 }
                 li a               {background-image: none;
                                     background-color: @navbarBackground;
                                     font-family: @baseFontFamily;
-                    &:hover        {background-color: @navbarLinkBackgroundHover;
-                                    color: @navbarLinkColorHover;}
+                    &:hover,
                     &:active       {background-color: @navbarLinkBackgroundHover;
-                                    color: @navbarLinkColorHover;}
+                                    color: @navbarLinkColorHover;
+                    }
                 }
                                     
             }
-            .dropdown-open a.dropdown-toggle {background-color: @navbarLinkBackgroundHover;}
+            .dropdown.open a.dropdown-toggle {background-color: @navbarLinkBackgroundHover;}
             a.brand                {display: block;
                                     color: @red;
                                     font-size: @fontSizeLargest;
@@ -143,8 +143,8 @@ body                               {background-image:; //url('/paideia/static/im
                                                float:left;
                             }
                             a[id$='trigger']  {font-family: @headingsFontFamily;
-                                               font-size: @fontSizeLargest;
-                                               letter-spacing: 0.1em;
+                                               font-size: @fontSizeLarge;
+                                               /*letter-spacing: 0.1em;*/
                                                cursor: pointer;
                                                
                             }
@@ -180,8 +180,15 @@ body                               {background-image:; //url('/paideia/static/im
         }
     }
     .footer                        {//background-image: url("/paideia/static/images/page_border_top-bottom.svg");
-                                    background-size: auto 200%;
+                                    /*background-size: auto 200%;*/
+                                    margin-top: @baseLineHeight;
+                                    background-color: @accent3;
                                     height: (@baseLineHeight * 2);
+        .footer-content            {bottom:0;
+                                    margin-right: @gridGutterWidth;
+                                    margin-left: @gridGutterWidth;
+                                    width: (100% - (@gridGutterWidth * 2));
+        }
     }
 }
 
@@ -215,15 +222,18 @@ body #main.exploring #page         {
         #no_table_response__row        {
             td                         {text-align: left;
                 label                  {margin-left: @baseFontSize;
-                                        text-transform: lowercase;
+                                        display: inline;
                                         font-size: @baseLineHeight * 1.5;
                                         font-family: SBLGreekRegular}
                 &.w2p_fl:first-child   {display: none;}
             }
-            input                      {height: @baseLineHeight * 1.8;
+            input[type=text]           {height: @baseLineHeight * 1.8;
                                         font-size: @baseLineHeight * 1.5;
                                         width: 100%;
-                                        font-family: SBLGreekRegular
+                                        font-family: SBLGreekRegular;
+            }
+            input[type=radio]          {top: -2px;
+                        
             }
         }
         #submit_record__row            {
@@ -329,6 +339,12 @@ body #main.user #page          {
 
     /*summary stats (badges) tab*/
     p.overview             {
+        table              {
+            &.dc-table-label    {color: @accent3;
+                                 font-size: @fontSizeLarge;
+                                 font-weight: bold;
+            }
+        }
         li                 {color: @accent2;
                             padding-left: @baseLineHeight * 2;}
         .total_len,
@@ -493,6 +509,13 @@ and (max-width: 480px)                 {
 @media only screen 
 and (max-width: 767px)                 {
     body                               {background-color: @palletteBG;
+                                        padding: 0;
+        #navbar                        {top:0;
+        }
+        .navbar.top                    {margin: 0;
+                                        height: (@baseLineHeight * 2);
+            .navbar-inner              {padding: 0;}
+        }
         .container, .container-fluid   {margin: 0;
             .main                      {padding-top: 0;
                                         margin-top: 0;
@@ -522,8 +545,12 @@ and (max-width: 767px)                 {
 @media only screen 
 and (max-width: 979px)             {
     body                           {
-        .navbar.top .navbar-inner  {}
-        .navbar-fixed-top          {margin-bottom: 0;
+        #navbar                    {top:0;
+        }
+        .navbar-fixed-top,          
+        .navbar.top                {margin: 0;
+                                    height: (@baseLineHeight * 2);
+            .navbar-inner          {padding: 0;}
             .container,
             .container-fluid       {height: (@baseLineHeight * 2);}
             .nav-collapse.collapse {background-color: @putty;
