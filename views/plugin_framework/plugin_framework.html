@@ -38,6 +38,9 @@
     {{response.files.append(URL('static','css/theme.css'))}}
     {{include 'web2py_ajax.html'}}
 
+    <!--switch fluid and fixed columns-->
+    {{col_type = ' ' if not response.fluid_layout else '-fluid'}}
+
     <!--sidebar settings-->
     {{left_sidebar_cols = response.left_sidebar_enabled}}
     {{right_sidebar_cols = response.right_sidebar_enabled}}
@@ -58,7 +61,7 @@
     <div class="navbar top navbar-fixed-top">
         <div class="flash">{{=response.flash or ''}}</div>
         <div class="navbar-inner">
-        <div class="container">
+        <div class="container{{=col_type}}">
             <!-- the next tag is necessary for bootstrap menus, do not remove -->
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
@@ -83,9 +86,9 @@
         </div>
     </div><!--/top navbar -->
 
-  <div class="container">
+  <div class="container{{=col_type}}">
     <!-- Masthead ================================================== -->
-    <!--<header class="mastheader row" id="header">-->
+    <!--<header class="mastheader row{{=col_type}}" id="header">-->
         <!--<div class="span12">-->
             <!--<div class="page-header">-->
                 <!--<h1>-->
@@ -96,7 +99,7 @@
     <!--</header>-->
 
     <!--used to be 'page'-->
-    <section id="main" class="main row
+    <section id="main" class="main row{{=col_type}}
                               {{=request.controller}}
                               {{=request.function}}
                               {{for a in request.args:}}{{=a}}{{pass}}">
@@ -121,8 +124,8 @@
         {{pass}}
     </section><!--/main-->
 
-    <!-- Footer ================================================== -->
-    <div class="row">
+<!-- Footer ================================================== -->
+    <div class="row{{=col_type}}">
         <footer class="footer span12" id="footer">
             <div class="footer-content">
                 {{block footer}} <!-- this is default footer -->
@@ -155,7 +158,7 @@
   <script src="{{=URL('static','plugin_framework/js/analytics.min.js')}}"></script>
   <script type="text/javascript">
   analytics.initialize({
-    'Google Analytics':{trackingId:'{{=response.google_analytics_id}}'} 
+    'Google Analytics':{trackingId:'{{=response.google_analytics_id}}'}
   });</script>
   {{pass}}
   <script src="{{=URL('static','plugin_framework/js/share.js',vars=dict(static=URL('static','plugin_framework/images')))}}"></script>

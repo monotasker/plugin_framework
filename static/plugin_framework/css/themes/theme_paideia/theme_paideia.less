@@ -28,7 +28,8 @@ body                               {background-image:; //url('/paideia/static/im
                                     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
                                     font-family: @baseFontFamily;
                                     z-index: 999;
-        .container                 {
+        .container,
+        .container-fluid           {
                                     height: @baseLineHeight* 2; 
                                     background-color: transparent;
                                     overflow: visible;
@@ -63,7 +64,8 @@ body                               {background-image:; //url('/paideia/static/im
             }
         }
     }
-    .container                     {background-color: @palletteBG;//coloring main creates unwanted left margin
+    .container,
+    .container-fluid               {background-color: @palletteBG;//coloring main creates unwanted left margin
                                     position: relative;
                                     max-height: 80%;                
                                     overflow: hidden;
@@ -115,7 +117,9 @@ body                               {background-image:; //url('/paideia/static/im
                 #intro                 {
                     .hero-unit         {background-image: url('/paideia/static/images/town_map.png');
                                         margin-top: @baseLineHeight;
+                                        margin: 0;
                                         width: 100%;
+                                        .border-radius(0);
                         .hero-text-wrapper     {background-color: rgba(255,255,255,0.9);
                                                 .box-shadow();
                                                 padding: @paddingLarge;
@@ -131,16 +135,15 @@ body                               {background-image:; //url('/paideia/static/im
                     .modal-set                 {
                         div.info-pane          {display: block;
                                                 float:left;
-                                                width: 25%;
-                                                max-width: 25%;
-                                                text-align: center;
+                                                width: (@fluidGridColumnWidth * 6);      
                                                 height: (@baseLineHeight * 8);
                                                 padding-top: @baseLineHeight;
-                            a[id$='trigger']  {text-transform: uppercase;
-                                               letter-spacing: 0.1em;
-                                               cursor: pointer;
-                                               
-                            }
+                            &:nth-child(2)     {margin-left:@fluidGridGutterWidth; } 
+                            img.info-pane-illustration {height:100%,
+                                                        width:auto;}
+                            a[id$='trigger']   {text-transform: uppercase;
+                                                letter-spacing: 0.1em;
+                                                cursor: pointer;}
                         }
                     }
                 }
@@ -405,57 +408,6 @@ body #main.user #page          {
     }
 }
 
-    /*[>** step logs on user profile **<]*/
-    /*.step_log_table        {max-width:100%;*/
-                            /*min-width:100%;*/
-        /*.step              {max-width: 7%;}*/
-        /*.prompt            {max-width: 40%;*/
-                            /*min-width: 40%;}*/
-        /*.count             {max-width: 7%;*/
-                            /*color: @accent6;}*/
-        /*.right             {max-width: 7%;*/
-                            /*color: @accent4;}*/
-        /*.wrong             {max-width: 7%;*/
-                            /*color: @accent12;}*/
-        /*.last_wrong        {max-width: 14%;*/
-                            /*color: @accent12;*/
-                            /*min-width: 14%;}*/
-        /*.right_since       {max-width: 7%;*/
-                            /*color: @accent4;}*/
-        /*.tags              {width:auto;*/
-                            /*min-width: 20%;}*/
-        /*}*/
-
-    /*[>** tag records on user profile **<]*/
-    /*#tag_records_table     {*/
-        /*td:first-child     {max-width:7%;}*/
-        /*td:nth-child(2)    {color: #fff;*/
-                            /*padding-left:0;*/
-                            /*padding-right:0;*/
-            /*span           {height:@baseFontSize;*/
-                            /*display:inline-block;*/
-                            /*max-width:10em;*/
-                            /*position:relative;*/
-                /*&.right    {.linear-gradient(lighten(@accent8, 10%), darken(@accent8, 5%));}*/
-                /*&.right_num {color: @accent8;*/
-                             /*margin-left: @baseFontSize/4;*/
-                             /*top:-1px;*/
-                             /*vertical-align: top;}*/
-                /*&.wrong    {.linear-gradient(lighten(@accent12, 10%), darken(@accent12, 5%));}*/
-                /*&.wrong_num {color: @accent12;*/
-                             /*margin-left: @baseFontSize/4;*/
-                             /*top:-1px;*/
-                             /*vertical-align: top;}*/
-                /*&.ratio    {.linear-gradient(lighten(@accent6, 10%), darken(@accent6, 5%));}*/
-                /*&.ratio_num {color: @accent6;*/
-                             /*margin-left: @baseFontSize/4;*/
-                             /*top:-1px;*/
-                             /*vertical-align: top;}*/
-                /*}*/
-            /*}*/
-        /*td:nth-child(3)    {color: @accent6;}*/
-        /*td:nth-child(4)    {color: @accent12;}*/
-        /*}*/
 
 /*[> ================= iPad in portrait ================= <]*/
 @media all and (orientation:portrait){
@@ -480,20 +432,20 @@ and (max-width: 480px)                 {
 
 /*[>============= medium browser viewing area (768px +) ==================== <]*/
 @media only screen 
-and (max-width: 767px)                 {
-    body                               {background-color: @palletteBG;
-        .container                     {margin: 0;
-            .main                      {padding-top: 0;
-                                        margin-top: 0;
-                #page #intro   {
-                    .hero-unit         {width: 100%;
-                                        .border-radius(0);
-                                        margin: 0;
+and (max-width: 767px)                         {
+    body                                       {background-color: @palletteBG;
+        .container,
+        .container-fluid                       {margin: 0;
+            .main                              {padding-top: 0;
+                                                margin-top: 0;
+                #page #intro                   {
+                    .hero-unit                 {margin: 0;
                     }
-                    .modal-set         {
-                        div.info-pane  {max-width: 100%;
-                                        width: 100%;
-                                        height: (@baseLineHeight * 2);
+                    .modal-set                 {
+                        div.info-pane          {min-height: (@baseLineHeight * 2);
+                                                width: @fluidGridColumnWidth768;      
+                            &:nth-child(2)     {margin-left: @fluidGridGutterWidth768;}      
+                            &:nth-child(4)     {margin-left: @fluidGridGutterWidth768;}      
                         }
                     }
                 }                    
@@ -511,20 +463,20 @@ and (max-width: 979px)             {
     body                           {
         .navbar.top .navbar-inner  {}
         .navbar-fixed-top          {margin-bottom: 0;
-            .container             {height: (@baseLineHeight * 2);}
-            .nav-collapse.collapse {background-color: @putty;
-                                    color: @palletteBG;}
+            .container,
+            .container-fluid       {height: (@baseLineHeight * 2);}
+            .nav-collapse.collapse {background-color: @palletteBG;
+                                    color: @pallette2;}
         }
-        .container                 {
+        .container,
+        .container-fluid           {
             .main                  {padding-top: 0;
                                     margin-top: 0;
                 #page #intro       {
                     .hero-unit     {width: 100%;
                     }
                     .modal-set     {
-                        div.info-pane   {max-width: 50%;
-                                         width: 50%;
-                                         height: (@baseLineHeight * 4);
+                        div.info-pane   {height: (@baseLineHeight * 4);
                         }
                     }
                 }                    
@@ -539,7 +491,8 @@ and (max-width: 979px)             {
 @media only screen 
 and (min-width: 980px)             {
     body                           {
-        .container                 {
+        .container,
+        .container-fluid           {
             #main                  {margin-top: (@baseLineHeight * 2);
                 &.exploring #page  {
                   .prompt,
