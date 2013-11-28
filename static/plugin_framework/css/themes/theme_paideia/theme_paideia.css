@@ -9805,20 +9805,15 @@ body .container-fluid .main #page #intro .modal-set div.info-pane {
   height: 192px;
   max-height: 192px;
   padding-top: 24px;
-}
-body .container .main #page #intro .modal-set div.info-pane:nth-child(2),
-body .container-fluid .main #page #intro .modal-set div.info-pane:nth-child(2) {
-  margin-right: 2.127659574468085%;
+  overflow: hidden;
 }
 body .container .main #page #intro .modal-set div.info-pane img.info-pane-illustration,
 body .container-fluid .main #page #intro .modal-set div.info-pane img.info-pane-illustration {
-  height: 100%,
-                                                        width:auto;
+  height: 100%;
 }
 body .container .main #page #intro .modal-set div.info-pane a[id$='trigger'],
 body .container-fluid .main #page #intro .modal-set div.info-pane a[id$='trigger'] {
   cursor: pointer;
-  overflow: hidden;
   font-family: "League Gothic";
   font-size: 20px;
 }

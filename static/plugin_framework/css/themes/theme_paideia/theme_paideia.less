@@ -139,11 +139,10 @@ body                               {background-image:; //url('/paideia/static/im
                                                 height: (@baseLineHeight * 8);
                                                 max-height: (@baseLineHeight * 8);
                                                 padding-top: @baseLineHeight;
-                            &:nth-child(2)     {margin-right:@fluidGridGutterWidth; } 
-                            img.info-pane-illustration {height:100%,
-                                                        width:auto;}
+                                                overflow:hidden;
+                            img.info-pane-illustration {height:100%;
+                            }
                             a[id$='trigger']   {cursor: pointer;
-                                                overflow: hidden;
                                                 font-family: @headingsFontFamily;
                                                 font-size: @fontSizeLarge;
                             }
