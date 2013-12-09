@@ -10173,13 +10173,33 @@ body #main.profile #page ul.nav-tabs,
 body #main.user #page ul.nav-tabs {
   background-color: #f2eed5;
   border-bottom: 1px solid #d8d3b3;
+  font-size: 20px;
+  font-family: "League Gothic";
+}
+body #main.profile #page ul.nav-tabs li a,
+body #main.user #page ul.nav-tabs li a {
+  border: 1px solid transparent;
+}
+body #main.profile #page ul.nav-tabs li a:hover,
+body #main.user #page ul.nav-tabs li a:hover {
+  background-color: #d8d3b3;
 }
 body #main.profile #page ul.nav-tabs li.active,
 body #main.user #page ul.nav-tabs li.active {
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+body #main.profile #page ul.nav-tabs li.active a,
+body #main.user #page ul.nav-tabs li.active a {
   background-color: #fcfbf7;
   border-top: 1px solid #d8d3b3;
   border-left: 1px solid #d8d3b3;
   border-right: 1px solid #d8d3b3;
+  border-bottom: 1px solid transparent;
+}
+body #main.profile #page ul.nav-tabs li.active a:hover,
+body #main.user #page ul.nav-tabs li.active a:hover {
+  background-color: #fcfbf7;
 }
 body #main.profile #page ul.profile-user-info,
 body #main.user #page ul.profile-user-info {
@@ -10204,6 +10224,10 @@ body #main.profile #page ul.profile-user-info li:first-child,
 body #main.user #page ul.profile-user-info li:first-child {
   font-size: 20px;
   color: #333333;
+}
+body #main.profile #page ul.profile-user-info li:nth-child(2),
+body #main.user #page ul.profile-user-info li:nth-child(2) {
+  color: #96bc44;
 }
 body #main.profile #page p.overview table.dc-table-label,
 body #main.user #page p.overview table.dc-table-label {
@@ -10313,8 +10337,7 @@ body #main.user #page .paideia_monthcal .monthcal_intro_line:after {
 }
 body #main.profile #page .paideia_monthcal table.month,
 body #main.user #page .paideia_monthcal table.month {
-  border-spacing: 2px;
-  border: 0px solid transparent;
+  border: 1px solid #d8d3b3;
 }
 body #main.profile #page .paideia_monthcal table.month tr:first-child,
 body #main.user #page .paideia_monthcal table.month tr:first-child {
