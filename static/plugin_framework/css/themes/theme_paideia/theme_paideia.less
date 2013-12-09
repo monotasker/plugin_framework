@@ -319,18 +319,35 @@ body #main.user #page          {
     .tab-pane                  {padding:@baseLineHeight;
         h4                     {color: @accent2;
                                 font-size: @fontSizeLarge;}
+
     }
 
     /* common styles for reporting tables */
-    table              {text-align:left;
-                        /*border-collapse:separate;*/
-                        /*border-spacing:2px;*/
-        th             {//font-weight:bold;
-                        /*background-color:@white;*/
-                        /*vertical-align:middle;*/
-                        //text-align:center;
+    table              {text-align:left;}
+
+    ul.nav-tabs        {background-color: @pallette1;
+                        border-bottom: 1px solid @pallette2;
+        li.active      {background-color: @palletteBG;
+                        border-top: 1px solid @pallette2;
+                        border-left: 1px solid @pallette2;
+                        border-right: 1px solid @pallette2;
         }
-        td             {//padding: (@baseFontSize / 2) @baseFontSize;
+    }
+
+    /* user info */
+    ul.profile-user-info   {list-style-type: none;
+                            background-color: @pallette1;
+                            display:block;
+                            padding:(@baseLineHeight / 2);
+                            margin: 0;
+        li                 {display: inline-block;
+                            margin-right: @baseLineHeight;
+                            font-size: @fontSizeSmall;
+                            color: @warning;
+            .profile-label {display: none;}
+            &:first-child  {font-size:@fontSizeLarge;
+                            color:@textColor;
+            }
         }
     }
 
@@ -391,45 +408,55 @@ body #main.user #page          {
                                 margin:0 auto;
                                 text-align: center;
         .monthcal_intro_line   {.group;
-                                color: @pallette2;
-                                margin-bottom: @baseFontSize/2;}
-        h4                     {display: block;
-                                margin: (@baseFontSize/2) 120px;
-                                text-align: center;}
-        .monthcal_nav_link.previous,
-        .monthcal_nav_link.next     {color: @accent3;
-                                     font-size: @fontSizeSmall;
-                                     margin-top: @baseFontSize/2;
-            &:after                 {opacity: 0.7;}
-        }
-        .monthcal_nav_link.next     {float: right;}
-        .monthcal_nav_link.previous {float:left;} 
+                                color: @pallette4;
+                                margin-bottom: (@baseFontSize/2);}
         table.month
                                {border-spacing:2px;
-                                border: 1px solid @pallette1;
-            tr:first-child th  {text-align: center;}
+                                border: 0px solid transparent;
+            tr:first-child     {font-size: @fontSizeLargest; 
+                th             {text-align: center;
+                                padding: (@baseLineHeight/2);
+                    .monthcal_nav_link.previous,
+                    .monthcal_nav_link.next     {font-size: @fontSizeLarge;
+                    }
+                    .monthcal_nav_link.next     {float: right;}
+                    .monthcal_nav_link.previous {float:left;} 
+                    #month-label    {font-size: @fontSizeLarge;
+                    }
+                }
+            }
             th                 {font-family: @headingsFontFamily;
                                 font-weight: normal;
                                 font-size: @baseFontSize; 
                                 background-color: @pallette1;
+                                border: 1px solid @pallette1;
                                 color: @navbarLinkColor;
             }
             td                 {width:@baseLineHeight * 2.5;
                                 height:@baseLineHeight * 2.5;
-                                color:@pallette3;
+                                color:#666; //@pallette3;
                                 font-size:@baseFontSize;
                                 border: 1px solid @pallette1;
-                                /*position:relative;*/
-                                /*padding:2px;*/
+                                position:relative;
                 span.cal_num   {position:relative;
-                                padding:4px, 2px;}
+                                padding:4px, 2px;
+                                color: #aaa; //@navbarLinkColor;
+                                font-family: @headingsFontFamily;}
                 span.daycount  {position:relative;
-                                font-size:@baseFontSize * 1.5;
-                                font-weight:bold;
+                                font-size:@fontSizeLarge;
+                                /*font-weight:bold;*/
                                 top:@baseLineHeight;
                                 float:right;
                                 padding-right:2px;
-                                color:@accent2;}
+                                color:@accent3;
+                    &.full     {color:@success;}
+                }
+                span.success   {position: absolute;
+                                left: 72px;
+                                top: 24px;
+                                font-size: @fontSizeLargest;
+                                color: @success;
+                }
             }
         }
     }
