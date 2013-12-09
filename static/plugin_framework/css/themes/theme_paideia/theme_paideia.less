@@ -394,28 +394,34 @@ body #main.user #page          {
         h4                     {display: block;
                                 margin: (@baseFontSize/2) 120px;
                                 text-align: center;}
-        .monthcal_next_link,
-        .monthcal_prev_link    {color: @accent3;
-                                font-size: @fontSizeSmall;
-                                margin-top: @baseFontSize/2;
-            &:after            {opacity: 0.7;}
+        .monthcal_nav_link.previous,
+        .monthcal_nav_link.next     {color: @accent3;
+                                     font-size: @fontSizeSmall;
+                                     margin-top: @baseFontSize/2;
+            &:after                 {opacity: 0.7;}
         }
-        .monthcal_next_link    {float: right;}
-        .monthcal_prev_link    {float:left;} 
-        .paideia_monthcal_table
+        .monthcal_nav_link.next     {float: right;}
+        .monthcal_nav_link.previous {float:left;} 
+        table.month
                                {border-spacing:2px;
-            thead td           {height: @baseLineHeight;
-                                font-size: @fontSizeSmall;
-                                background: transparent;}
+                                border: 1px solid @pallette1;
+            tr:first-child th  {text-align: center;}
+            th                 {font-family: @headingsFontFamily;
+                                font-weight: normal;
+                                font-size: @baseFontSize; 
+                                background-color: @pallette1;
+                                color: @navbarLinkColor;
+            }
             td                 {width:@baseLineHeight * 2.5;
                                 height:@baseLineHeight * 2.5;
                                 color:@pallette3;
                                 font-size:@baseFontSize;
-                                position:relative;
-                                padding:2px;
+                                border: 1px solid @pallette1;
+                                /*position:relative;*/
+                                /*padding:2px;*/
                 span.cal_num   {position:relative;
                                 padding:4px, 2px;}
-                span.cal_count {position:relative;
+                span.daycount  {position:relative;
                                 font-size:@baseFontSize * 1.5;
                                 font-weight:bold;
                                 top:@baseLineHeight;

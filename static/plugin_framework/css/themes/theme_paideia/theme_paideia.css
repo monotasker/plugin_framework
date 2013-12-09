@@ -10288,54 +10288,64 @@ body #main.user #page .paideia_monthcal h4 {
   margin: 8px 120px;
   text-align: center;
 }
-body #main.profile #page .paideia_monthcal .monthcal_next_link,
-body #main.user #page .paideia_monthcal .monthcal_next_link,
-body #main.profile #page .paideia_monthcal .monthcal_prev_link,
-body #main.user #page .paideia_monthcal .monthcal_prev_link {
+body #main.profile #page .paideia_monthcal .monthcal_nav_link.previous,
+body #main.user #page .paideia_monthcal .monthcal_nav_link.previous,
+body #main.profile #page .paideia_monthcal .monthcal_nav_link.next,
+body #main.user #page .paideia_monthcal .monthcal_nav_link.next {
   color: #f89406;
   font-size: 13.6px;
   margin-top: 8px;
 }
-body #main.profile #page .paideia_monthcal .monthcal_next_link:after,
-body #main.user #page .paideia_monthcal .monthcal_next_link:after,
-body #main.profile #page .paideia_monthcal .monthcal_prev_link:after,
-body #main.user #page .paideia_monthcal .monthcal_prev_link:after {
+body #main.profile #page .paideia_monthcal .monthcal_nav_link.previous:after,
+body #main.user #page .paideia_monthcal .monthcal_nav_link.previous:after,
+body #main.profile #page .paideia_monthcal .monthcal_nav_link.next:after,
+body #main.user #page .paideia_monthcal .monthcal_nav_link.next:after {
   opacity: 0.7;
 }
-body #main.profile #page .paideia_monthcal .monthcal_next_link,
-body #main.user #page .paideia_monthcal .monthcal_next_link {
+body #main.profile #page .paideia_monthcal .monthcal_nav_link.next,
+body #main.user #page .paideia_monthcal .monthcal_nav_link.next {
   float: right;
 }
-body #main.profile #page .paideia_monthcal .monthcal_prev_link,
-body #main.user #page .paideia_monthcal .monthcal_prev_link {
+body #main.profile #page .paideia_monthcal .monthcal_nav_link.previous,
+body #main.user #page .paideia_monthcal .monthcal_nav_link.previous {
   float: left;
 }
-body #main.profile #page .paideia_monthcal .paideia_monthcal_table,
-body #main.user #page .paideia_monthcal .paideia_monthcal_table {
+body #main.profile #page .paideia_monthcal table.month,
+body #main.user #page .paideia_monthcal table.month {
   border-spacing: 2px;
+  border: 1px solid #f8f0e5;
 }
-body #main.profile #page .paideia_monthcal .paideia_monthcal_table thead td,
-body #main.user #page .paideia_monthcal .paideia_monthcal_table thead td {
-  height: 24px;
-  font-size: 13.6px;
-  background: transparent;
+body #main.profile #page .paideia_monthcal table.month tr:first-child th,
+body #main.user #page .paideia_monthcal table.month tr:first-child th {
+  text-align: center;
 }
-body #main.profile #page .paideia_monthcal .paideia_monthcal_table td,
-body #main.user #page .paideia_monthcal .paideia_monthcal_table td {
+body #main.profile #page .paideia_monthcal table.month th,
+body #main.user #page .paideia_monthcal table.month th {
+  font-family: "League Gothic";
+  font-weight: normal;
+  font-size: 16px;
+  background-color: #f8f0e5;
+  color: #a09552;
+}
+body #main.profile #page .paideia_monthcal table.month td,
+body #main.user #page .paideia_monthcal table.month td {
   width: 60px;
   height: 60px;
   color: #96bc44;
   font-size: 16px;
-  position: relative;
-  padding: 2px;
+  border: 1px solid #f8f0e5;
+  /*position:relative;*/
+
+  /*padding:2px;*/
+
 }
-body #main.profile #page .paideia_monthcal .paideia_monthcal_table td span.cal_num,
-body #main.user #page .paideia_monthcal .paideia_monthcal_table td span.cal_num {
+body #main.profile #page .paideia_monthcal table.month td span.cal_num,
+body #main.user #page .paideia_monthcal table.month td span.cal_num {
   position: relative;
   padding: 4px, 2px;
 }
-body #main.profile #page .paideia_monthcal .paideia_monthcal_table td span.cal_count,
-body #main.user #page .paideia_monthcal .paideia_monthcal_table td span.cal_count {
+body #main.profile #page .paideia_monthcal table.month td span.daycount,
+body #main.user #page .paideia_monthcal table.month td span.daycount {
   position: relative;
   font-size: 24px;
   font-weight: bold;
