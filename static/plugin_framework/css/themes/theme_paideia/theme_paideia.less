@@ -174,15 +174,13 @@ body                               {background-image:; //url('/paideia/static/im
             } 
         }
     }
-    .footer                        {//background-image: url("/paideia/static/images/page_border_top-bottom.svg");
-                                    /*background-size: auto 200%;*/
-                                    margin-top: @baseLineHeight;
-                                    background-color: @accent3;
-                                    height: (@baseLineHeight * 2);
-        .footer-content            {bottom:0;
-                                    margin-right: @gridGutterWidth;
-                                    margin-left: @gridGutterWidth;
-                                    width: (100% - (@gridGutterWidth * 2));
+    .footer                        {background-color: @accent3;
+        .footer-content            {width: 100%;
+                                    position:static;
+                                    font-family: @headingsFontFamily;
+                                    font-size: @fontSizeLarge;
+            div,
+            span                   {margin: 0 @baseLineHeight;}
         }
     }
 }

@@ -1088,33 +1088,6 @@ td.w2p_fw ul {
 /* ocp - text on latte */
 /*google black*/
 /*@blueDark:              #0064cd;*/
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.clearfix:after {
-  clear: both;
-}
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 34px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 article,
 aside,
 details,
@@ -6530,6 +6503,33 @@ a.badge:focus {
 /* ocp - text on latte */
 /*google black*/
 /*@blueDark:              #0064cd;*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 34px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 @-ms-viewport {
   width: device-width;
 }
@@ -9854,17 +9854,17 @@ body .container-fluid .main #page .speaker img {
   height: 680px;
 }
 body .footer {
-  /*background-size: auto 200%;*/
-
-  margin-top: 24px;
   background-color: #f89406;
-  height: 48px;
 }
 body .footer .footer-content {
-  bottom: 0;
-  margin-right: 20px;
-  margin-left: 20px;
-  width: 60%;
+  width: 100%;
+  position: static;
+  font-family: "League Gothic";
+  font-size: 20px;
+}
+body .footer .footer-content div,
+body .footer .footer-content span {
+  margin: 0 24px;
 }
 body #main.listing #page table tr {
   border-top: 1px solid #f2eed5;
