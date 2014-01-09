@@ -10,10 +10,16 @@
 <head>
     <!-- adapted by Ian W. Scott from the default layout.html file included in the web2py scaffolding app -->
     <meta charset="utf-8" />
-    {{parts = ['{} | '.format(c) for c in
-               [response.title, request.controller, request.function]
-               if c and c not in ['default', 'index']]}}
-    <title>{{for p in parts:}}{{=p.capitalize()}}{{pass}}</title>
+    {{parts = [c.capitalize() for c in [response.title, request.controller, request.function]
+               if c and c not in ['default', 'index']]
+      mytitle = ' | '.join(parts)
+      if request.args:
+          myargs = ', '.join(request.args)
+          print myargs
+          mytitle = ' ~ '.join([myargs, mytitle])
+      pass
+    }}
+    <title>{{=mytitle}}{{pass}}</title>
     <!--[if !HTML5]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge{{=not request.is_local and ',chrome=1' or ''}}">
     <![endif]-->
