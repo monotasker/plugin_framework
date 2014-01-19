@@ -40,9 +40,12 @@
     <link rel="apple-touch-icon" href="{{=URL('static','plugin_framework/images/favicon.png')}}">
 
     <!-- All JavaScript at the bottom, except for Modernizr -->
-    <script src="{{=URL('static','plugin_framework/js/modernizr-1.7.min.js')}}"></script>
     {{response.files.append(URL('static','css/theme.css'))}}
     {{include 'web2py_ajax.html'}}
+    <script src="{{=URL('static','plugin_framework/js/modernizr-1.7.min.js')}}"></script>
+    <script type='text/javascript' src="{{=URL('static', 'plugin_framework/js/bootstrap.min.js')}}"></script>
+    <script type='text/javascript' src="{{=URL('static', 'plugin_framework/js/web2py_bootstrap.js')}}"></script>
+
 
     <!--switch fluid and fixed columns-->
     {{col_type = ' ' if not response.fluid_layout else '-fluid'}}
@@ -148,25 +151,22 @@
 <!-- The javascript =============================================
 (Placed at the end of the document so the pages load faster) -->
 
-<script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<!--if cdn not working-->
-<!--<script src="{{=URL('static','plugin_framework/js/bootstrap.min.js')}}"></script>-->
-
-<script src="{{=URL('static','plugin_framework/js/web2py_bootstrap.js')}}"></script>
+{{#response.files.append(URL("http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"))}}
 
 <!--[if lt IE 7 ]>
     <script src="{{=URL('static','plugin_framework/js/dd_belatedpng.js')}}"></script>
     <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
     <![endif]-->
 
-  {{if response.google_analytics_id:}}
-  <script src="{{=URL('static','plugin_framework/js/analytics.min.js')}}"></script>
-  <script type="text/javascript">
-  analytics.initialize({
-    'Google Analytics':{trackingId:'{{=response.google_analytics_id}}'}
-  });</script>
-  {{pass}}
-  <script src="{{=URL('static','plugin_framework/js/share.js',vars=dict(static=URL('static','plugin_framework/images')))}}"></script>
+{{if response.google_analytics_id:}}
+<script src="{{=URL('static','plugin_framework/js/analytics.min.js')}}"></script>
+<script type="text/javascript">
+analytics.initialize({
+'Google Analytics':{trackingId:'{{=response.google_analytics_id}}'}
+});</script>
+{{pass}}
+
+  <!--<script src="{{=URL('static','plugin_framework/js/share.js',vars=dict(static=URL('static','plugin_framework/images')))}}"></script>-->
 
   <!-- browser update message from browser-update.org -->
   <script type="text/javascript">
