@@ -1,6 +1,5 @@
 <!--[if HTML5]><![endif]-->
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]><html class="ie ie6 ie-lte9 ie-lte8 ie-lte7 no-js" lang="{{=T.accepted_language or 'en'}}"> <![endif]-->
 <!--[if IE 7]><html class="ie ie7 ie-lte9 ie-lte8 ie-lte7 no-js" lang="{{=T.accepted_language or 'en'}}"> <![endif]-->
 <!--[if IE 8]><html class="ie ie8 ie-lte9 ie-lte8 no-js" lang="{{=T.accepted_language or 'en'}}"> <![endif]-->
@@ -14,42 +13,25 @@
                if c and c not in ['default', 'index']]
       mytitle = ' | '.join(parts)
       if request.args:
-          myargs = ', '.join(request.args)
-          print myargs
-          mytitle = ' ~ '.join([myargs, mytitle])
+          mytitle = ' | '.join([', '.join(request.args), mytitle])
       pass
     }}
     <title>{{=mytitle}}{{pass}}</title>
+    <meta name="application-name" content="{{=response.title}}" />
+    <meta name="google-site-verification" content="" />
     <!--[if !HTML5]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge{{=not request.is_local and ',chrome=1' or ''}}">
     <![endif]-->
-    <!-- www.phpied.com/conditional-comments-block-downloads/ -->
-    <!-- Always force latest IE rendering engine & Chrome Frame; Remove if you use .htaccess -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{=URL('static','images/favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
 
-    <!-- http://dev.w3.org/html5/markup/meta.name.html -->
-    <meta name="application-name" content="{{=response.title}}" />
-
-    <!-- http://google.com/webmasters -->
-    <meta name="google-site-verification" content="" />
-
-    <!--  Mobile Viewport Fix (j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
-    <link rel="shortcut icon" href="{{=URL('static','plugin_framework/images/favicon.ico')}}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{{=URL('static','plugin_framework/images/favicon.png')}}">
-
-    <!-- All JavaScript at the bottom, except for Modernizr -->
-    {{response.files.append(URL('static','css/theme.css'))}}
+    <script src="{{=URL('static','js/modernizr.custom.js')}}"></script>
+    {{response.files.insert(0, URL('static','css/theme.css'))}}
     {{include 'web2py_ajax.html'}}
-    <script src="{{=URL('static','plugin_framework/js/modernizr-1.7.min.js')}}"></script>
-    <script type='text/javascript' src="{{=URL('static', 'plugin_framework/js/bootstrap.min.js')}}"></script>
-    <script type='text/javascript' src="{{=URL('static', 'plugin_framework/js/web2py_bootstrap.js')}}"></script>
-
 
     <!--switch fluid and fixed columns-->
     {{col_type = ' ' if not response.fluid_layout else '-fluid'}}
-
     <!--sidebar settings-->
     {{left_sidebar_cols = response.left_sidebar_enabled}}
     {{right_sidebar_cols = response.right_sidebar_enabled}}
@@ -57,7 +39,7 @@
     {{middle_columns = 'span{}'.format(mid)}}
 
     <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" type="text/css" media="all" />-->
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 
 
     {{block head}}{{end}}
@@ -151,22 +133,22 @@
 <!-- The javascript =============================================
 (Placed at the end of the document so the pages load faster) -->
 
-{{#response.files.append(URL("http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"))}}
+<script src="{{=URL('static','plugin_framework/js/bootstrap.min.js')}}"></script>
+<script src="{{=URL('static','plugin_framework/js/web2py_bootstrap.js')}}"></script>
 
 <!--[if lt IE 7 ]>
-    <script src="{{=URL('static','plugin_framework/js/dd_belatedpng.js')}}"></script>
+    <script src="{{=URL('static','js/dd_belatedpng.js')}}"></script>
     <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
     <![endif]-->
 
-{{if response.google_analytics_id:}}
-<script src="{{=URL('static','plugin_framework/js/analytics.min.js')}}"></script>
-<script type="text/javascript">
-analytics.initialize({
-'Google Analytics':{trackingId:'{{=response.google_analytics_id}}'}
-});</script>
-{{pass}}
-
-  <!--<script src="{{=URL('static','plugin_framework/js/share.js',vars=dict(static=URL('static','plugin_framework/images')))}}"></script>-->
+  {{if response.google_analytics_id:}}
+  <script src="{{=URL('static','js/analytics.min.js')}}"></script>
+  <script type="text/javascript">
+  analytics.initialize({
+    'Google Analytics':{trackingId:'{{=response.google_analytics_id}}'}
+  });</script>
+  {{pass}}
+  <script src="{{=URL('static','js/share.js',vars=dict(static=URL('static','/images')))}}"></script>
 
   <!-- browser update message from browser-update.org -->
   <script type="text/javascript">

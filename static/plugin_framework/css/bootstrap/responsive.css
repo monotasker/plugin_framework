@@ -1028,9 +1028,9 @@
   .nav-collapse .btn {
     padding: 4px 10px 4px;
     font-weight: normal;
-    -webkit-border-radius: 6px 6px 6px 6px;
-    -moz-border-radius: 6px 6px 6px 6px;
-    border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
   }
   .nav-collapse .dropdown-menu li + li a {
     margin-bottom: 2px;
@@ -1039,7 +1039,7 @@
   .nav-collapse .nav > li > a:focus,
   .nav-collapse .dropdown-menu a:hover,
   .nav-collapse .dropdown-menu a:focus {
-    background-color: #d8d3b3;
+    background-color: #efefef;
   }
   .navbar-inverse .nav-collapse .nav > li > a,
   .navbar-inverse .nav-collapse .dropdown-menu a {
@@ -1092,8 +1092,8 @@
     float: none;
     padding: 12px 15px;
     margin: 12px 0;
-    border-top: 1px solid #d8d3b3;
-    border-bottom: 1px solid #d8d3b3;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
     -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
