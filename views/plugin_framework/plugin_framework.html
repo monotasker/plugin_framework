@@ -44,7 +44,6 @@
 
     {{block head}}{{end}}
     <!--detect mobile viewport-->
-    {{print request.user_agent()}}
     {{is_mobile=request.user_agent()['is_mobile']}}
     {{is_tablet=request.user_agent()['is_tablet']}}
 </head>
