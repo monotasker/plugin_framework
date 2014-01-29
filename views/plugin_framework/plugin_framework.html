@@ -48,7 +48,7 @@
     {{is_tablet=request.user_agent()['is_tablet']}}
 </head>
 
-<body>
+<body data-spy='scroll' data-target='#sidemenu'>
     <!-- Navbar ================================================== -->
     <div class="navbar top navbar-fixed-top">
         <div class="flash">{{=response.flash or ''}}</div>

@@ -1074,33 +1074,6 @@ td.w2p_fw ul {
 /* ocp - text on latte */
 /*google black*/
 /*@blueDark:              #0064cd;*/
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.clearfix:after {
-  clear: both;
-}
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 34px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 article,
 aside,
 details,
@@ -6448,6 +6421,33 @@ a.badge:focus {
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 34px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 @-ms-viewport {
   width: device-width;
 }
@@ -9495,8 +9495,32 @@ a:link {
 /*@import "./jquery-ui-custom.less";*/
 /*@import "../../../../../plugin_ajaxselect/static/plugin_ajaxselect/plugin_ajaxselect.less";*/
 /*@import "../../../../../../plugin_listandedit/static/plugin_listandedit/plugin_listandedit.less";*/
-.nav-collapse.in {
+#page article h2 a {
+  color: #96bc44;
+}
+#right_sidebar .nav-collapse.in {
   background-color: #fcfbf7;
+}
+#right_sidebar .accordion-group {
+  border: 0 solid transparent;
+  border-left: 1px solid #d8d3b3;
+}
+#right_sidebar .accordion-group .accordion-heading {
+  border: 0 solid transparent;
+}
+#right_sidebar .accordion-group .accordion-heading a {
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #9d261d;
+}
+#right_sidebar .accordion-group .accordion-inner {
+  padding: 0;
+  border: 0 solid transparent;
+}
+#right_sidebar .accordion-group .accordion-inner ul {
+  list-style-type: none;
+  list-style-position: outside;
+  padding-left: 0;
 }
 a:hover {
   text-decoration: dotted;
