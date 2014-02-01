@@ -9,14 +9,40 @@
 @import "../plugin_ajaxselect/plugin_ajaxselect.css";
 @import "../plugin_listandedit/plugin_listandedit.css";
 
-.nav-collapse.in    {background-color: @palletteBG;}
-a:hover         {text-decoration: dotted;}
-h2              {color: darken(@pallette2, 30%);
-                 font-size: @fontSizeLargest;
+#page                   {
+  article               {
+    h2  a               {color: @pallette3;}
+  }
 }
-h3              {color: @accent3;
-                 font-size: @fontSizeLarge;
-                 line-height: (@baseLineHeight * 1.5);}
+
+#right_sidebar          {
+  .nav-collapse.in      {background-color: @palletteBG;
+  }
+  .accordion-group      {border: 0 solid transparent;
+                         border-left: 1px solid @pallette2;
+    .accordion-heading  {border: 0 solid transparent;
+      a                 {font-family: @headingsFontFamily;
+                         font-weight: @headingsFontWeight;
+                         color: @accent1;
+      }
+    }
+    .accordion-inner    {padding: 0;
+                         border: 0 solid transparent;
+      ul                {list-style-type: none;
+                         list-style-position: outside;
+                         padding-left:0; 
+      }
+    }
+  }
+}
+
+a:hover                 {text-decoration: dotted;}
+h2                      {color: darken(@pallette2, 30%);
+                         font-size: @fontSizeLargest;
+}
+h3                      {color: @accent3;
+                         font-size: @fontSizeLarge;
+                         line-height: (@baseLineHeight * 1.5);}
 .woh-par-num    {color: @pallette2;
                  margin-bottom: @baseLineHeight;
                  .transition();
