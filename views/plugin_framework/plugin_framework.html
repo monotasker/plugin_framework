@@ -59,12 +59,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
+            {{response.homeurl = URL('default', 'index')}}
             {{if is_mobile:}}
                 {{=A(response.mobiletitle.capitalize(),
                      _href=URL('default', 'index'), _class='brand')}}
             {{else:}}
                 {{=A(response.title.capitalize(),
-                     _href=URL('default', 'index'), _class='brand')}}
+                     _href=response.homeurl, _class='brand')}}
             {{pass}}
 
             <ul id="navbar" class="nav pull-right">{{='auth' in globals() and auth.navbar(mode="dropdown") or ''}}</ul>
