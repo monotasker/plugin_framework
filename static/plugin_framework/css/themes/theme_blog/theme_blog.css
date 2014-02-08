@@ -1074,6 +1074,33 @@ td.w2p_fw ul {
 /* ocp - text on latte */
 /*google black*/
 /*@blueDark:              #0064cd;*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 34px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 article,
 aside,
 details,
@@ -6421,33 +6448,6 @@ a.badge:focus {
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.clearfix:after {
-  clear: both;
-}
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 34px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 @-ms-viewport {
   width: device-width;
 }
@@ -9570,6 +9570,17 @@ audio:hover {
 }
 .nav-pills li a {
   line-height: 24px;
+}
+form select.generic-widget,
+form input.string {
+  width: 90%;
+}
+form textarea#articles_body {
+  width: 90%;
+  min-height: 700px;
+}
+form div.w2p_fw {
+  width: 100%;
 }
 /*[> ================= iPad in portrait ================= <]*/
 /*[> ================= iPad in landscape ================= <]*/
