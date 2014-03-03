@@ -275,6 +275,9 @@ body #main.exploring #page         {
                                 clear: right;
             ul li              {color: @linkColor;}
         }
+        span.progress_text     {font-size: @fontSizeMini;
+                                color: @pallette4;
+                                clear: both;}
     }
     .responder                 {color: @textColor;
                                 z-index:3;
@@ -285,9 +288,6 @@ body #main.exploring #page         {
                                 margin: 0;
             td                 {padding: 0;}
         }
-        span.progress_text     {font-size: @fontSizeMini;
-                                color: @pallette4;
-                                clear: both;}
         .retry                 {.my-icon-repeat;}
         .back_to_map           {.my-icon-map-marker;}
         .next_q                {.my-icon-arrow-right;}
@@ -305,7 +305,7 @@ body #main.exploring #page         {
         span.progress_text,
         span.prompt-editlinks      {font-size: @fontSizeSmall;
                                     color: @pallette4;
-                                    clear: left;
+                                    clear: both;
                                     margin-right: @baseLineHeight;
         }
     }
