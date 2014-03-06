@@ -34,24 +34,24 @@ body                               {background-image:; //url('/paideia/static/im
                                     overflow: visible;
                                     z-index: 999;
             .nav li                {
-                a                  {background-color: transparent;
-                                    //background-image: url('/paideia/static/images/mosaic_texture1.png');
-                                    background-size: auto 100%;
-                                    font-family: @baseFontFamily;
-                    &:hover,
-                    &:active       {background-color: @navbarLinkBackgroundHover;}
-                }
-                li a               {background-image: none;
-                                    background-color: @navbarBackground;
-                                    font-family: @baseFontFamily;
-                    &:hover,
-                    &:active       {background-color: @navbarLinkBackgroundHover;
-                                    color: @navbarLinkColorHover;
-                    }
-                }
+                /*a                  {background-color: transparent;*/
+                                    /*//background-image: url('/paideia/static/images/mosaic_texture1.png');*/
+                                    /*background-size: auto 100%;*/
+                                    /*font-family: @baseFontFamily;*/
+                    /*[>&:hover,<]*/
+                    /*[>&:active       {background-color: @navbarLinkBackgroundHover;}<]*/
+                /*}*/
+                /*li a               {background-image: none;*/
+                                    /*background-color: @navbarBackground;*/
+                                    /*font-family: @baseFontFamily;*/
+                    /*&:hover,*/
+                    /*&:active       {background-color: @navbarLinkBackgroundHover;*/
+                                    /*color: @navbarLinkColorHover;*/
+                    /*}*/
+                /*}*/
                                     
             }
-            .dropdown.open a.dropdown-toggle {background-color: @navbarLinkBackgroundHover;}
+            /*.dropdown.open a.dropdown-toggle {background-color: @navbarLinkBackgroundHover;}*/
             a.brand                {display: block;
                                     color: @red;
                                     font-size: @fontSizeLargest;
@@ -67,13 +67,15 @@ body                               {background-image:; //url('/paideia/static/im
     .container-fluid               {background-color: @palletteBG;//coloring main creates unwanted left margin
                                     max-height: 80%;                
                                     overflow: hidden;
-                                    padding-right: 0;
-                                    padding-left: 0;
+                                    /*padding-right: 0;*/
+                                    /*padding-left: 0;*/
         .main                      {background-color: transparent;
                                     margin-top: 0;
-                                    padding-top: 0;
-                                    padding-bottom: 0;
+                                    padding: 0 @gridGutterWidth;
                                     max-height:80%; 
+            &.exploring,
+            &.slides,
+            &.editing              {padding: 0;}
             .left-sidebar,
             .right-sidebar {display:none;
                             background-color: @palletteBG;
@@ -105,8 +107,8 @@ body                               {background-image:; //url('/paideia/static/im
                                         top:0;
                                         left:0;
                                         width:100%;
-                                        height:100%;
-                                        min-height:100%;
+                                        height:200%;
+                                        min-height:200%;
                                         background:#000000;
                                         background-color:rgba(0,0,0,0.6);
                                         text-align: center; 
@@ -376,7 +378,7 @@ body #main.user #page          {
                             display:inline-block;
                             height: @baseLineHeight * 1.5;
                             width: @baseLineHeight * 1.5;
-                            border-radius:@baseLineHeight * 1.5 / 2;
+                            border-radius: ((@baseLineHeight * 1.5) / 2);
                             color:@pallette3;
                             line-height:@baseLineHeight * 1.5;
                             text-align:center;
@@ -385,7 +387,7 @@ body #main.user #page          {
     .most_recent       {color: @accent2;}
     table.summary_stats    {border-collapse:separate;
                             border-spacing:2px;
-                            border-radius: @baseLineHeight/4;
+                            border-radius: (@baseLineHeight/4);
                             padding:(@baseLineHeight/4) 0;
                             background:@white;
         td                 {vertical-align:middle;
@@ -546,6 +548,10 @@ and (max-width: 979px)             {
         .container-fluid           {
             .main                  {padding-top: 0;
                                     margin-top: 0;
+                                    padding: 0 @gridGutterWidth768;
+                &.exploring,
+                &.slides,
+                &.editing          {padding: 0;}
                 #page #intro       {
                     .hero-unit     {width: 100%;
                     }
@@ -569,7 +575,11 @@ and (min-width: 980px)             {
         .container,
         .container-fluid           {
             #main                  {margin-top: (@baseLineHeight * 2);
-                &.exploring #page  {
+                                    padding: 0 @gridGutterWidth;
+                &.exploring,
+                &.slides,
+                &.editing          {padding:0;}
+                #page  {
                   .prompt,
                   .responder       {max-width: 480px;
                                     margin-left:480px;}
