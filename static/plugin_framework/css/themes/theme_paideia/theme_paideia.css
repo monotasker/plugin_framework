@@ -1,6 +1,6 @@
 @import "../plugin_slider/css/plugin_slider.css";
+
 @import "../plugin_ajaxselect/plugin_ajaxselect.css";
-@import "../plugin_listandedit/plugin_listandedit.css";
 /* Paideia theme */
 /* a sub-theme for the "framework" layout plugin for web2py */
 /* copyright Ian W. Scott, 2011-2012 */
@@ -391,6 +391,7 @@ select {
 }
 .header {
   /* background:<fill here for header image>; */
+
 }
 fieldset {
   padding: 16px;
@@ -721,13 +722,21 @@ div.flash.flash-top:hover {
 }
 #header .mastheader {
   /*h1          {margin-bottom:9px;*/
+
   /*font-size:81px;*/
+
   /*font-weight:bold;*/
+
   /*letter-spacing:-1px;*/
+
   /*line-height:1;*/
+
   /*font-size:54px;}*/
+
   /*small       {font-size:20px;*/
+
   /*font-weight:300;}*/
+
 }
 /* auth navbar - primitive style */
 .auth_navbar,
@@ -773,7 +782,9 @@ div.controls .error {
   padding: 0;
   margin: 0;
   /*display:inline;*/
+
   /* uncommenting this, the animation effect is lost */
+
 }
 div.controls .help-inline {
   color: #3A87AD;
@@ -1153,12 +1164,16 @@ sub {
 }
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
+
   max-width: 100%;
   /* Part 1: Set a maxium relative to the parent */
+
   width: auto\9;
   /* IE7-8 need help adjusting responsive images */
+
   height: auto;
   /* Part 2: Scale the height according to the width, otherwise you get stretching */
+
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
@@ -1253,7 +1268,7 @@ textarea {
   img {
     max-width: 100% !important;
   }
-  @page {
+  @page  {
     margin: 0.5cm;
   }
   p,
@@ -1775,6 +1790,7 @@ ol.inline > li {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
+
   *zoom: 1;
   padding-left: 5px;
   padding-right: 5px;
@@ -2063,6 +2079,7 @@ input[type="color"]:focus,
   outline: 0;
   outline: thin dotted \9;
   /* IE6-9 */
+
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
@@ -2077,8 +2094,10 @@ input[type="checkbox"] {
   margin: 4px 0 0;
   *margin-top: 0;
   /* IE7 */
+
   margin-top: 1px \9;
   /* IE8-9 */
+
   line-height: normal;
 }
 input[type="file"],
@@ -2094,8 +2113,10 @@ select,
 input[type="file"] {
   height: 34px;
   /* In IE7, the height of the select element cannot be changed by height, only font-size */
+
   *margin-top: 4px;
   /* For IE7, add top margin to align select with labels */
+
   line-height: 34px;
 }
 select {
@@ -2543,6 +2564,7 @@ select:focus:invalid:focus {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
+
   *zoom: 1;
   vertical-align: middle;
   padding-left: 5px;
@@ -2693,6 +2715,7 @@ input.search-query {
   padding-left: 14px;
   padding-left: 4px \9;
   /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
   margin-bottom: 0;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -2749,6 +2772,7 @@ input.search-query {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
+
   *zoom: 1;
   margin-bottom: 0;
   vertical-align: middle;
@@ -3071,8 +3095,7 @@ table th[class*="span"],
 .table-hover tbody tr.info:hover > td {
   background-color: #2a85a0;
 }
-/*@import "sprites.less";*/
-.dropup,
+/*@import "sprites.less";*/.dropup,
 .dropdown {
   position: relative;
 }
@@ -3379,6 +3402,7 @@ button.close {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
+
   *zoom: 1;
   padding: 4px 12px;
   margin-bottom: 0;
@@ -3401,6 +3425,7 @@ button.close {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #edd9bd;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   border: 1px solid #d8d3b3;
   *border: 0;
@@ -3556,6 +3581,7 @@ input[type="button"].btn-block {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #0020cd;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-primary:hover,
@@ -3587,6 +3613,7 @@ input[type="button"].btn-block {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #f89406;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-warning:hover,
@@ -3618,6 +3645,7 @@ input[type="button"].btn-block {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #bd362f;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-danger:hover,
@@ -3649,6 +3677,7 @@ input[type="button"].btn-block {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #789736;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-success:hover,
@@ -3680,6 +3709,7 @@ input[type="button"].btn-block {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #2f96b4;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-info:hover,
@@ -3711,6 +3741,7 @@ input[type="button"].btn-block {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #7e7641;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .btn-inverse:hover,
@@ -3790,6 +3821,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
+
   *zoom: 1;
   font-size: 0;
   vertical-align: middle;
@@ -3975,6 +4007,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
+
   *zoom: 1;
 }
 .btn-group-vertical > .btn {
@@ -4691,6 +4724,7 @@ input[type="submit"].btn.btn-mini {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #f5f2e4;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
@@ -4949,6 +4983,7 @@ input[type="submit"].btn.btn-mini {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #040404;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .navbar-inverse .btn-navbar:hover,
@@ -4978,6 +5013,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
+
   *zoom: 1;
   text-shadow: 0 1px 0 #ffffff;
 }
@@ -4995,6 +5031,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
+
   *zoom: 1;
   margin-left: 0;
   margin-bottom: 0;
@@ -5200,6 +5237,7 @@ input[type="submit"].btn.btn-mini {
   border: 1px solid rgba(0, 0, 0, 0.3);
   *border: 1px solid #999;
   /* IE6-7 */
+
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -9119,24 +9157,40 @@ body .navbar.top .navbar-inner .container-fluid {
   overflow: visible;
   z-index: 999;
   /*.dropdown.open a.dropdown-toggle {background-color: @navbarLinkBackgroundHover;}*/
+
 }
 body .navbar.top .navbar-inner .container .nav li,
 body .navbar.top .navbar-inner .container-fluid .nav li {
   /*a                  {background-color: transparent;*/
+
   /*//background-image: url('/paideia/static/images/mosaic_texture1.png');*/
+
   /*background-size: auto 100%;*/
+
   /*font-family: @baseFontFamily;*/
+
   /*[>&:hover,<]*/
+
   /*[>&:active       {background-color: @navbarLinkBackgroundHover;}<]*/
+
   /*}*/
+
   /*li a               {background-image: none;*/
+
   /*background-color: @navbarBackground;*/
+
   /*font-family: @baseFontFamily;*/
+
   /*&:hover,*/
+
   /*&:active       {background-color: @navbarLinkBackgroundHover;*/
+
   /*color: @navbarLinkColorHover;*/
+
   /*}*/
+
   /*}*/
+
 }
 body .navbar.top .navbar-inner .container a.brand,
 body .navbar.top .navbar-inner .container-fluid a.brand {
@@ -9154,7 +9208,9 @@ body .container-fluid {
   max-height: 80%;
   overflow: hidden;
   /*padding-right: 0;*/
+
   /*padding-left: 0;*/
+
 }
 body .container .main,
 body .container-fluid .main {
@@ -9194,7 +9250,9 @@ body .container-fluid .main #page {
   height: 75%;
   min-height: 470px;
   /* The main map for navigating the town */
+
   /* the background images for each map location */
+
 }
 body .container .main #page .admin-panel,
 body .container-fluid .main #page .admin-panel {
@@ -9343,6 +9401,7 @@ body .container .main #page .speaker img,
 body .container-fluid .main #page .speaker img {
   position: relative;
   /*width:100%;*/
+
   height: 680px;
 }
 body .footer {
@@ -9449,6 +9508,7 @@ body #main.exploring #page .responder #submit_record__row input[type=submit] {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #789736;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 body #main.exploring #page .prompt #submit_record__row input[type=submit]:hover,
@@ -9526,6 +9586,7 @@ body #main.exploring #page .prompt img {
 }
 body #main.exploring #page .prompt div {
   /*zoom: 1; activate hasLayout in ie6-7; */
+
 }
 body #main.exploring #page .prompt div:before {
   content: " ";
@@ -9631,10 +9692,15 @@ body #main.exploring #page .responder span.prompt-editlinks {
 body #main.profile #page,
 body #main.user #page {
   /*tab content */
+
   /* common styles for reporting tables */
+
   /* user info */
+
   /*summary stats (badges) tab*/
+
   /*calendar for monthly user statistics */
+
 }
 body #main.profile #page .tab-pane,
 body #main.user #page .tab-pane {
@@ -9800,6 +9866,7 @@ body #main.user #page .paideia_monthcal {
 body #main.profile #page .paideia_monthcal .monthcal_intro_line,
 body #main.user #page .paideia_monthcal .monthcal_intro_line {
   /*zoom: 1; activate hasLayout in ie6-7; */
+
   color: #809240;
   margin-bottom: 8px;
 }
@@ -9875,6 +9942,7 @@ body #main.user #page .paideia_monthcal table.month td span.daycount {
   position: relative;
   font-size: 20px;
   /*font-weight:bold;*/
+
   top: 24px;
   float: right;
   padding-right: 2px;
@@ -9893,9 +9961,21 @@ body #main.user #page .paideia_monthcal table.month td span.success {
   color: #96bc44;
 }
 /*[> ================= iPad in portrait ================= <]*/
+@media all and (orientation: portrait) {
+  
+}
 /*[> ================= iPad in landscape ================= <]*/
+@media all and (orientation: landscape) {
+  
+}
 /*[> ================= iPhone4 (retina screen) ================= <]*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
+  
+}
 /*[>========== small tablet browser viewing area (480px+)================= <]*/
+@media screen and (max-width: 480px) {
+  
+}
 /*[>============= medium browser viewing area (768px +) ==================== <]*/
 @media only screen and (max-width: 767px) {
   body {
@@ -10030,3 +10110,6 @@ body #main.user #page .paideia_monthcal table.month td span.success {
   }
 }
 /*[>=== Print styles inlined www.phpied.com/delay-loading-your-print-css/  <]*/
+@media print {
+  
+}
