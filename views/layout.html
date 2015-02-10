@@ -28,8 +28,7 @@
     <title>{{=response.pagetitle or request.application}}</title>
     <!-- http://dev.w3.org/html5/markup/meta.name.html -->
     <meta name="application-name" content="{{=request.application}}" />
-    <!-- set your site up with http://google.com/webmasters -->
-    <meta name="google-site-verification" content="" />
+    <meta name="google-site-verification" content="{{=response.meta.google_verify}}" />
 
     <!-- include stylesheets -->
     {{
