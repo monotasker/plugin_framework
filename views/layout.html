@@ -87,6 +87,9 @@ class='{{=request.controller}} {{=request.function}}'>
             <ul class="nav navbar-nav navbar-right">
             {{='auth' in globals() and auth.navbar('Welcome', mode='dropdown') or ''}}
             </ul>
+            {{if response.badges:
+                  =response.badges
+              pass}}
             {{if response.menu:}}
             {{=bs3.menu()}}
             {{pass}}
