@@ -69,33 +69,32 @@ class='{{=request.controller}} {{=request.function}}'>
 <!-- Navbar ================================================== -->
     <header class="navbar top navbar-fixed-top" role="navigation">
         <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            {{=response.logo or ''}}
-            {{=A(response.title.capitalize(),
-                    _href=response.homeurl,
-                    _class='navbar-brand')}}
-            <small>{{=response.subtitle or ''}}</small>
-        </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                {{=response.logo or ''}}
+                {{=A(response.title.capitalize(),
+                        _href=response.homeurl,
+                        _class='navbar-brand')}}
+                <small>{{=response.subtitle or ''}}</small>
+            </div>
 
-        <nav id="bs-navbar" class="collapse navbar-collapse ">  <!--navbar-ex1-collapse-->
-            <ul class="nav navbar-nav navbar-right">
-            {{='auth' in globals() and auth.navbar('Welcome', mode='dropdown') or ''}}
-            </ul>
-            {{if response.badges:
-                  =response.badges
-              pass}}
-            {{if response.menu:}}
-            {{=bs3.menu()}}
-            {{pass}}
-        </nav>
+            <nav id="bs-navbar" class="collapse navbar-collapse ">  <!--navbar-ex1-collapse-->
+                <ul class="nav navbar-nav navbar-right">
+                {{='auth' in globals() and auth.navbar('Welcome', mode='dropdown') or ''}}
+                </ul>
+                {{if response.badges:
+                      =response.badges
+                  pass}}
+                {{if response.menu:}}
+                {{=bs3.menu()}}
+                {{pass}}
+            </nav>
 
-        </div>
         </div>
     </header>
 
@@ -109,10 +108,9 @@ class='{{=request.controller}} {{=request.function}}'>
         </div>
     </div>
 <!--# Main ============================================================== -->
-    <main  id="content" role="main" class="container {{=request.controller}}
+    <main  id="content" role="main" class="row {{=request.controller}}
                               {{=request.function}}
                               {{for a in request.args:}}{{=a}}{{pass}}">
-        <div class="row">
 
             {{if left_sidebar_enabled:}}
 <!--# left sidebar ------------------------------------------------------- -->
@@ -136,15 +134,14 @@ class='{{=request.controller}} {{=request.function}}'>
                 {{end right_sidebar}}
             </div>
             {{pass}}
-        </div>
     </main>
 
 <!--# Footer ============================================================ -->
-    <footer id="footer" class="container-fluid clearfix">
-        <div class="row">
+    <footer id="footer" class="row ">
+        <div class='container'>
             {{block footer}}
             <div class="col-xs-6">
-                <p>{{=T('Copyright')}} &#169; {{=request.now.year}}, Ian W. Scott</p>
+                <p>{{=T('Copyright')}} &#169; 2013-{{=request.now.year}}, Ian W. Scott</p>
             </div>
             <div class="col-xs-6">
                 <p class="pull-right">{{=T('Powered by')}} <a href="http://www.web2py.com/">web2py</a></p>
