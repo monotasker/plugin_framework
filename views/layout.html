@@ -86,8 +86,7 @@
 
 </head>
 
-<body data-spy='scroll' data-target='#sidemenu'
-class='{{=request.controller}} {{=request.function}}'>
+<body data-spy='scroll' data-target='#sidemenu' class='{{=request.controller}} {{=request.function}}'>
 
     <div class="flash alert alert-dismissable">{{=response.flash or ''}}</div>
 
@@ -162,16 +161,18 @@ class='{{=request.controller}} {{=request.function}}'>
     </main>
 
 <!--# Footer ============================================================ -->
-    <footer id="footer" class="row ">
+    <footer id="footer">
         <div class='container'>
+            <div class='row'>
             {{block footer}}
-            <div class="col-xs-6">
-                <p>{{=T('Copyright')}} &#169; 2013-{{=request.now.year}}, Ian W. Scott</p>
-            </div>
-            <div class="col-xs-6">
-                <p class="pull-right">{{=T('Powered by')}} <a href="http://www.web2py.com/">web2py</a></p>
-            </div>
+                <div class="col-xs-6">
+                    <p>{{=T('Copyright')}} &#169; 2013-{{=request.now.year}}, Ian W. Scott</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="pull-right">{{=T('Powered by')}} <a href="http://www.web2py.com/">web2py</a></p>
+                </div>
             {{end footer}}
+            </div>
         </div>
     </footer>
 
